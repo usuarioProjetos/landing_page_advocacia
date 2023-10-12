@@ -1,0 +1,40 @@
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main {
+    background-image: url("../app/assets/bruno-thethe-nxkinK7hhOk-unsplash 2.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+@media (max-width: 600px) {
+    main {
+        background-image: url("../app/assets/image 2.png");
+    }
+} */
+
+
+
+
+
+
+
+// import './Page.css'
+// import { Abc } from './components/Abc'
+// import BackgroundPageOne from './assets/bruno-thethe-nxkinK7hhOk-unsplash 1.png'
+// import Image from 'next/image'
+
+// export default function Home() {
+//   return (
+//     <main>
+//       <h1>Site</h1>
+//       <Abc />
+//     </main>
+//   )
+// }

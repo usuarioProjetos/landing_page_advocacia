@@ -1,0 +1,99 @@
+.firstPage {
+    /* background-color: rgb(0, 122, 122); */
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    /* margin-bottom: 64px; */
+}
+
+.firstPage .divImageBg {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+.firstPage .divImageBg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: .7;
+}
+
+.firstPage .content {
+    width: 100vw;
+    /* background-color: aqua; */
+    margin-bottom: 10em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.firstPage .content h1 {
+    font-size: 32px;
+    width: 300px;
+    /* background-color: rgb(0, 53, 100); */
+    color: #fff;
+    font-weight: 400;
+    margin-bottom: 42px;
+}
+.firstPage .btns {
+    /* background-color: azure; */
+    display: flex;
+    gap: 30px;
+}
+.firstPage .btns .btn button {
+    cursor: pointer;
+    width: 7.5em;
+    height: 2.5em;
+    text-transform: uppercase;
+    border-radius: .4em;
+    font-size: 16px;
+    transition: all .2s;
+    /* border: 1px solid; */
+}
+.bgDark button {
+    background-color: #001D19;
+    color: #fff;
+    border: 1px solid #001D19;
+}
+.bgDark button:hover {
+    background-color: transparent;
+    border-color: #fff;
+}
+.bgLight button {
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+
+}
+.bgLight button:hover {
+    background-color: #001D19;
+    border-color: #001D19;
+}
+
+.firstPage .scroll-arrow {
+    width: 50px;
+    height: 30px;
+    /* background-color: rgb(6, 79, 143); */
+    position: absolute;
+    bottom: 2em;
+    margin: auto;
+    animation: scrollArrow 1.8s infinite cubic-bezier(.17,.67,.8,.95);
+}
+.firstPage .scroll-arrow img {
+    height: 100%;
+    width: 100%;
+    /* background-color: aquamarine; */
+}
+
+@keyframes scrollArrow {
+    0% {
+        bottom: 2em;
+    } 50% {
+        bottom: 3.5em;
+    } 100% {
+        bottom: 2em;
+    }
+}

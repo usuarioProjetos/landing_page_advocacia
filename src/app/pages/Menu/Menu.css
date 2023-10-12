@@ -1,0 +1,9 @@
+section.menu {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(84, 95, 95);
+    top: 0;
+    left: 0;
+    z-index: 0;
+}

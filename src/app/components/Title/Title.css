@@ -1,0 +1,29 @@
+.title {
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+}
+
+.title .content h2 {
+    color: #fff;
+    position: relative;
+    display: inline-block;
+    padding: 3px;
+    font-size: 24px;
+}
+.title .content h2 span {
+    position: relative;
+    z-index: 1;
+    text-transform: capitalize;
+}
+.title .content h2 .square-detail {
+    bottom: 0;
+    right: 0;
+    height: 50%;
+    background-color: #004A41;
+    padding-inline: 10px;
+    position: absolute;
+    z-index: 0;
+    opacity: .8;
+}
+
