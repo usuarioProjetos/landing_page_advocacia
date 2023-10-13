@@ -16,7 +16,7 @@ export default function Home() {
       <FirstPage />
       {/* <Menu /> */}
       <FieldWork />
-      {/* <DeskPage /> */}
+      <DeskPage />
       <ProfessionalsPage />
       <Contact />
     </main>

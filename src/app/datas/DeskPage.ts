@@ -1,4 +1,4 @@
-import Image1 from '../assets/testsCarousel/img_1.jpg'
+import Image1 from '../assets/image4.png'
 import Image2 from '../assets/testsCarousel/img_2.jpg'
 import Image3 from '../assets/testsCarousel/img_3.jpg'
 import Image4 from '../assets/testsCarousel/img_4.jpg'
@@ -19,17 +19,17 @@ export const DatasDeskPage: IDatasDeskPage = {
             id: 0
         },
         {
-            src: Image2,
+            src: Image3,
             text: 'Item 1',
             id: 1
         },
         {
-            src: Image3,
+            src: Image4,
             text: 'Item 2',
             id: 2
         },
         {
-            src: Image4,
+            src: Image3,
             text: 'Item 3',
             id: 3
         },
