@@ -34,18 +34,4 @@ export const DatasFieldWork: IDatasFirstWork[] = [
         direction: 'left',
         nameClass: 'card3'
     },
-    {
-        title: 'What is Lorem', 
-        text: 'What is Lorem Ipsum?  Lorem Ipsum is simply dummy text of the printing and typesetting industry.What is Lorem Ipsum',
-        image: ImageTest,
-        direction: 'right',
-        nameClass: 'card3'
-    },
-    {
-        title: 'What is Lorem', 
-        text: 'What is Lorem Ipsum?  Lorem Ipsum is simply dummy text of the printing and typesetting industry.What is Lorem Ipsum',
-        image: ImageTest,
-        direction: 'left',
-        nameClass: 'card3'
-    },
 ]

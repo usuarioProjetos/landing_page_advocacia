@@ -1,0 +1,67 @@
+.aggregateContent {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    /* border: 1px solid #0f0; */
+    margin-bottom: 2em;
+}
+.aggregateContent .geometryFormBackground {
+    position: absolute;
+    width: 100%;
+    height: 80%;
+    background-color: #00221e;
+    top: 50%;
+    transform: translateY(-50%); 
+    z-index: 1;
+    -webkit-clip-path: polygon(100% 0, 100% 90%, 0 100%, 0 10%);
+    clip-path: polygon(100% 0, 100% 90%, 0 100%, 0 10%);
+}
+.professionalsPage {
+    width: 100%;
+    background: #01120F;
+}
+.professionalsPage .cardProfessionals {
+    margin-top: 2.5em;
+    width: 100%;
+}
+.professionalsPage .cardProfessionals .cardProfessional {
+    position: relative;
+    z-index: 3;
+    width: 85%;
+    height: 100%;
+    margin: auto;
+}
+.professionalsPage .cardProfessionals .cardProfessional .divImage {
+    text-align: center;
+    width: 100%;
+    height: 55%;
+    border-top-right-radius: 2em;
+    border-bottom-left-radius: 2em;
+    margin-bottom: 2em;
+    overflow: hidden;
+}
+.professionalsPage .cardProfessionals .cardProfessional .divImage img {
+    height: 100%;
+    width: auto;
+}
+.professionalsPage .cardProfessionals .cardProfessional .content-text {
+    position: relative;
+    width: 95%;
+    margin: auto;
+    padding: 0 0 1em 1em;
+    width: 100%;
+}
+.professionalsPage .cardProfessionals .cardProfessional .content-text h3 {
+    margin-left: .5em;
+}
+.professionalsPage .cardProfessionals .cardProfessional .borderComponent {
+    position: absolute;
+    width: 100px;
+    height: 40%;
+    width: 60%;
+    bottom: 0;
+    right: 0;
+    background-color: transparent;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+}

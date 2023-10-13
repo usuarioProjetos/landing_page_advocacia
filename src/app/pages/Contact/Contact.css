@@ -1,0 +1,77 @@
+.contact {
+    background-color: #01120F;
+}
+.contact .contentArea {
+    margin-top: 2em;
+}
+/* Form */
+.contact .contentArea .formArea {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 1em;
+    gap: 1em;
+    margin-bottom: 3.8em;
+}
+.contact .contentArea .formArea .labelItemForm {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-transform: uppercase;
+}
+.contact .contentArea .formArea .labelItemForm .textLabel {
+    margin-left: .7em;
+    font-size: 20px;
+    font-weight: 500;
+}
+.contact .contentArea .formArea .labelItemForm .inputText { 
+    border-radius: .4em;
+    padding: .5em;
+    border: 1px solid #fff;
+    background-color: #000;
+    background-color: #001D19;
+    font-size: 1.5em;
+    color: #fff;
+    outline: none;
+}
+
+/* Social Media */
+.contact .contentArea .followArea {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.2em 2em 1.5em;
+}
+.contact .contentArea .followArea .logo {
+    height: 5em;
+    width: 5em;
+}
+.contact .contentArea .followArea .socialMedias {
+    width: 60%;
+}
+.contact .contentArea .followArea .socialMedias a {
+    text-decoration: none;
+    color: #fff;
+}
+.contact .contentArea .followArea .socialMedias .socialNetwork {
+    display: flex;
+    align-items: center;
+    gap: .5em;
+    margin-bottom: 1em;
+}
+.contact .contentArea .followArea .socialMedias .socialNetwork svg {
+    font-size: 1.8em;
+    color: #a4b5b2;
+}
+.contact .contentArea .followArea .socialMedias .socialNetwork p {
+    text-transform: capitalize;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+/* Logo */
+.contact .contentArea .followArea .logo {
+    display: grid;
+    place-items: center;
+}
