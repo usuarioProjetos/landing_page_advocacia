@@ -1,10 +1,9 @@
 .firstPage {
-    /* background-color: rgb(0, 122, 122); */
+    background-color: rgba(0, 141, 141, .2);
     width: 100vw;
     height: 100vh;
     display: grid;
     place-items: center;
-    /* margin-bottom: 64px; */
 }
 
 .firstPage .divImageBg {
@@ -23,7 +22,7 @@
 .firstPage .content {
     width: 100vw;
     /* background-color: aqua; */
-    margin-bottom: 10em;
+    margin-bottom: 9em;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -41,6 +40,7 @@
 .firstPage .btns {
     /* background-color: azure; */
     display: flex;
+    justify-content: space-between;
     gap: 30px;
 }
 .firstPage .btns .btn button {
@@ -95,5 +95,92 @@
         bottom: 3.5em;
     } 100% {
         bottom: 2em;
+    }
+}
+
+@media (min-width: 900px) {
+    .firstPage .content h1 {
+        font-size: 2.5em;
+        width: 40%;
+    }
+    .firstPage .btns {
+        gap: 3em;
+        width: 35%;
+    }
+    .firstPage .btns .btn button {
+        font-size: 1.2em;
+    }
+}
+@media (min-width: 1100px) {
+    .firstPage .content h1 {
+        width: 32%;
+    }
+    .firstPage .btns {
+        width: 25%;
+    }
+}
+@media (min-width: 1100px) {
+    .firstPage .content h1 {
+        width: 32%;
+    }
+    .firstPage .btns {
+        width: 32%;
+    }
+}
+
+@media (min-width: 1300px) {
+    .firstPage .content h1 {
+        width: 35%;
+        font-size: 3em;
+    }
+    .firstPage .btns {
+        width: 35%;
+        font-size: 1.3em;
+    }
+}
+@media (min-width: 1500px) {
+    .firstPage .content h1 {
+        width: 31%;
+        font-size: 3em;
+    }
+    .firstPage .btns {
+        width: 31%;
+        font-size: 1.3em;
+    }
+}
+@media (min-width: 1650px) {
+
+    .firstPage .btns {
+        width: 28%;
+    }
+}
+@media (min-width: 1800px) {
+    .firstPage .content h1 {
+        width: 25%;
+        font-size: 3em;
+    }
+    .firstPage .btns {
+        width: 26%;
+        font-size: 1.3em;
+    }
+}
+@media (min-width: 2000px) {
+    .firstPage .content h1 {
+        width: 22%;
+        font-size: 3em;
+    }
+    .firstPage .btns {
+        width: 23%;
+        font-size: 1.3em;
+    }
+}
+@media (min-width: 2200px) {
+    .firstPage .content h1 {
+        width: 24%;
+        font-size: 3.5em;
+    }
+    .firstPage .btns {
+        width: 25%;
+        font-size: 1.5em;
     }
 }

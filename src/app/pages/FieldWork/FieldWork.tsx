@@ -10,6 +10,7 @@ export const FieldWork = () => {
                 text='Área de atuação'
                 widthSquare='80%'
             />
+            
             <article className="allCards">
                 {DatasFieldWork.map(card => (
                     <div className={`card ${card.nameClass}`}>
