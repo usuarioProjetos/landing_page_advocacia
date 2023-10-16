@@ -14,16 +14,32 @@ export const Contact = () => {
 
             <div className="contentArea">
 
-                <div className="formArea">
+                <form className="formArea">
                     {DatasInput.map(item => (
-                        <label className='labelItemForm'>
-                            <p className='textLabel'>
-                                {item.name}
-                            </p>
-                            <input className='inputText' type="text" />
-                        </label>
+                        <>
+                            {item.name !== 'mensagem' ? (
+                                <label className='labelItemForm'>
+                                    <p className='textLabel'>
+                                        {item.name}
+                                    </p>
+                                    <input className='inputText' type="text" />
+                                </label>
+                            ) : (
+                                <label className='labelItemForm'>
+                                    <p className='textLabel'>
+                                        {item.name}
+                                    </p>
+                                    <textarea className='inputText' rows={4} />
+                                </label>
+                            )}
+                        </>
                     ))}
-                </div>
+                    <div className="buttonSubmit">
+                        <button type='submit'>Enviar</button>
+                        <div className="squareButton"></div>
+                    </div>
+                    
+                </form>
 
                 <div className="followArea">
                     <div className="socialMedias">
@@ -50,35 +66,3 @@ export const Contact = () => {
         </section>
     )
 }
-
-{/* <section>
-    <Title />
-
-    <div className="contentArea">
-        <div className="formArea">
-            <label htmlFor="">
-                <input type="text" />
-            </label>
-
-            <label htmlFor="">
-                <input type="text" />
-            </label>
-
-            <label htmlFor="">
-                <input type="text" />
-            </label>
-        </div>
-
-        <div className="followArea">
-            <div className="socialMedias">
-                <div className="insta"></div>
-                <div className="wpp"></div>
-                <div className="face"></div>
-            </div>
-
-            <div className="logo">
-                <Image alt='' src='' />
-            </div>
-        </div>
-    </div>
-</section> */}

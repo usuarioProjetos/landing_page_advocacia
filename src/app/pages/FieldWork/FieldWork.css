@@ -17,6 +17,7 @@
 /* All cards */
 .fieldWorkMobile .allCards {
     margin-top: 32px;
+    /* background-color: aqua; */
 }
 
 /* Card */
@@ -31,6 +32,8 @@
 /* Texts */
 .fieldWorkMobile .allCards .card .texts {
     padding-inline: 2em 1em;
+    /* background-color: antiquewhite; */
+    /* width: 80%; */
 }
 .fieldWorkMobile .allCards .card .texts h3 {
     font-size: 28px;
@@ -38,21 +41,25 @@
 }
 .fieldWorkMobile .allCards .card .texts .divParagraph {
     display: flex;
-
-    justify-content: center;
+    position: relative;
+    /* justify-content: center; */
     align-items: center;
     gap: 1em;
-    padding: 0 1em 0 1em;
+    padding: .5em 1.5em .5em 1.5em;
+
 }
 .fieldWorkMobile .allCards .card .texts .divParagraph p {
     font-size: 16px;
+    width: 100%;
 }
 .fieldWorkMobile .allCards .card .texts .divParagraph .lineParagraph {
-    width: .25em;
-    height: 100px;
+    position: absolute;
+    width: .2em;
+    height: 110%;
     background-color: #fff;
     border-top-right-radius: 2em;
     border-top-left-radius: 2em;
+    top: 0;
 }
 
 
@@ -97,6 +104,67 @@
     width: 100%;
 }
 
-@container (max-width: 480px) {
+@media (max-width: 321px) {
+    .fieldWorkMobile .allCards .card .texts h3 {
+        font-size: 25px;
+        font-weight: 600;
+    }
+    .fieldWorkMobile .allCards .card .texts p {
+        font-size: 15px;
+    }
+    .fieldWorkMobile .allCards .card .texts .divParagraph p {
+        width: 100%;
+    }
+    .fieldWorkMobile .allCards .card .texts .divParagraph {
+        padding: .5em 1em .5em 1em;
+    }
+}
 
+@media (min-width: 450px) {
+    .fieldWorkMobile .allCards .card .texts {
+        /* width: 95%; */
+
+    }
+    
+}
+
+@media (min-width: 550px) {
+    .fieldWorkMobile .allCards{
+    }
+    .fieldWorkMobile .allCards .card .texts {
+        width: 80%;
+    }
+    .fieldWorkMobile .allCards .card .lines .bottomLine {
+        width: 85%;
+    }
+    .fieldWorkMobile .allCards .card .squares .bgSquare {
+        width: 70%;
+    }
+    .fieldWorkMobile .allCards .card .squares .image {
+        width: 75%;
+    }
+    .fieldWorkMobile .allCards .card .texts .divParagraph p {
+        width: 80%;
+    }
+}
+
+@media (min-width: 680px) {
+    .fieldWorkMobile .allCards{
+    }
+    .fieldWorkMobile .allCards .card .texts {
+        width: 70%;
+    }
+    .fieldWorkMobile .allCards .card .lines .bottomLine {
+        width: 75%;
+    }
+    .fieldWorkMobile .allCards .card .squares .bgSquare {
+        width: 60%;
+    }
+    .fieldWorkMobile .allCards .card .squares .image {
+        width: 70%;
+        height: 90%;
+    }
+    .fieldWorkMobile .allCards .card .texts .divParagraph p {
+        width: 90%;
+    }
 }

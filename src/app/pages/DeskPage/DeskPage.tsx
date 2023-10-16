@@ -55,10 +55,10 @@ export const DeskPage = () => {
                         className={`item_container`}
                         key={item.id}
                     >
-                        <Image
+                        {/* <Image
                             src={item.src} 
                             alt='Imagem do escritório'
-                        />
+                        /> */}
                     </SwiperSlide>
                 ))}
             </Swiper>

@@ -19,6 +19,7 @@
     overflow: hidden;
     width: 80%;
     opacity: .8;
+    background-color: #00f;
 }
 .container .swiper_container .item_container img {
     height: 100%;
@@ -27,6 +28,7 @@
 .container .swiper_container .item_container.swiper-slide-active { 
     border-radius: 1em;
     opacity: 1;
+    background: #f00;
 }
 
 .swiper-pagination {

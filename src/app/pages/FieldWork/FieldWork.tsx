@@ -26,7 +26,14 @@ export const FieldWork = () => {
                                 className='divParagraph'
                                 style={{ flexDirection: card.direction === 'left' ? 'row' : 'row-reverse' }}
                             >
-                                <div className="lineParagraph"></div>
+                                <div 
+                                    className="lineParagraph"
+                                    style={ card.direction === 'left' ? {
+                                        left: '8px'
+                                    } : {
+                                        right: '8px'
+                                    }} 
+                                ></div>
                                 <p>{card.text}</p>
                             </div>
                         </div>
@@ -45,7 +52,12 @@ export const FieldWork = () => {
                                 <Image src={card.image} alt='' />
                             </div>
                         </div>
-                        <div className="lines">
+                        <div 
+                            className="lines"
+                            style={{
+                                justifyContent: card.direction === 'left' ? 'end' : 'start' 
+                            }}    
+                        >
                             <div className="bottomLine"
                                 style={ card.direction === 'left' ? 
                                 { marginLeft: '2em', borderLeft: '2px solid #fff', borderBottomLeftRadius: '2em' } : 

@@ -18,10 +18,10 @@ export const DatasInput: IDatasInput[] = [
         name: 'nome'
     },
     {
-        name: 'sobrenome'
+        name: 'e-mail'
     },
     {
-        name: 'e-mail'
+        name: 'mensagem'
     }
 ]
 
