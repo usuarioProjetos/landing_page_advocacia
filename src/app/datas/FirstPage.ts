@@ -1,5 +1,7 @@
 import ImageHomeMobile from '../assets/image_home_mobile.png'
 import ImageHomeTest from '../assets/city.jpeg'
+import ImageTestTwo from '../assets/bruno-thethe-nxkinK7hhOk-unsplash.png'
+import ImageTestThree from '../assets/testsCarousel/img_5.jpg'
 
 interface IButton {
     text: string;
@@ -15,10 +17,10 @@ export const ImagesFirstPage = [
         src: ImageHomeTest
     },
     {
-        src: ''
+        src: ImageTestTwo
     },
     {
-        src: ''
+        src: ImageTestThree
     }
 ]
 

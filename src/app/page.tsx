@@ -11,10 +11,8 @@ import './Page.css'
 export default function Home() {
   return (
     <main>
-
       <Navbar />
       <FirstPage />
-      {/* <Menu /> */}
       <FieldWork />
       <DeskPage />
       <ProfessionalsPage />

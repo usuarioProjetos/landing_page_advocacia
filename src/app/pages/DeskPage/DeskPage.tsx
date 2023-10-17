@@ -1,7 +1,7 @@
 "use client"
 // CSS
 // React
-import { useState, useRef, useEffect } from 'react'
+import { useState, useRef, useEffect, useLayoutEffect } from 'react'
 import Image from 'next/image'
 // Swiper
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -19,10 +19,9 @@ import { DatasDeskPage } from '../../datas/DeskPage'
 export const DeskPage = () => {
     const [isSwiperReady, setIsSwiperReady] = useState(false);
 
-    useEffect(() => {
-        setTimeout(() => {
+    useLayoutEffect(() => {
             setIsSwiperReady(true);
-        }, 200);
+
     }, []);
     
 

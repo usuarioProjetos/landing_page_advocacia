@@ -1,16 +1,32 @@
+"use client"
 import { DatasFirstPage, ImagesFirstPage } from '@/app/datas/FirstPage'
 import Arrow from '../../assets/arrow.png'
 import { IoIosArrowDown } from 'react-icons/io'
 import './FirstPage.css'
 import Image from 'next/image'
+import { useState, useEffect } from 'react'
 
 export const FirstPage = () => {
+    const [activeImageIndex, setActiveImageIndex] = useState(0);
+
+    useEffect(() => {
+
+        const interval = setInterval(() => {
+          const nextIndex = (activeImageIndex + 1) % ImagesFirstPage.length;
+          setActiveImageIndex(nextIndex);
+        }, 5000);
+    
+        return () => {
+          clearInterval(interval);
+        };
+      }, [activeImageIndex]);
+
     return (
         <section className="firstPage">
 
             <div className="divImageBg">
                 <Image 
-                    src={ImagesFirstPage[0].src}
+                    src={ImagesFirstPage[activeImageIndex].src}
                     alt='Imagem de fundo'
                 />
             </div>
