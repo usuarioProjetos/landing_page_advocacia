@@ -19,4 +19,3 @@ export const BurguerMenu = ({ showMenu, setShowMenu }: Props) => {
         </div>
     )
 }
-

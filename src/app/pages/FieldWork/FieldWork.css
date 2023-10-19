@@ -1,5 +1,6 @@
 /* Section */
-.fieldWorkMobile {
+
+.fieldWork {
     contain: layout inline-size;
     padding: 68px 0 0 0;
     resize: both;
@@ -10,18 +11,21 @@
         #001412 60%,
         #001411 80%,
         #001D19 100%
-        /* 001D19 */
     );
-}
 
+    background-color: aqua;
+}
+.mobileVersion {
+    display: block;
+}
 /* All cards */
-.fieldWorkMobile .allCards {
+.fieldWork .allCards {
     margin-top: 32px;
     /* background-color: aqua; */
 }
 
 /* Card */
-.fieldWorkMobile .allCards .card {
+.fieldWork .allCards .card {
     margin-bottom: 3em;
     display: flex;
     flex-direction: column;
@@ -30,16 +34,16 @@
 }
 
 /* Texts */
-.fieldWorkMobile .allCards .card .texts {
+.fieldWork .allCards .card .texts {
     padding-inline: 2em 1em;
     /* background-color: antiquewhite; */
     /* width: 80%; */
 }
-.fieldWorkMobile .allCards .card .texts h3 {
+.fieldWork .allCards .card .texts h3 {
     font-size: 28px;
     font-weight: 600;
 }
-.fieldWorkMobile .allCards .card .texts .divParagraph {
+.fieldWork .allCards .card .texts .divParagraph {
     display: flex;
     position: relative;
     /* justify-content: center; */
@@ -48,11 +52,11 @@
     padding: .5em 1.5em .5em 1.5em;
 
 }
-.fieldWorkMobile .allCards .card .texts .divParagraph p {
+.fieldWork .allCards .card .texts .divParagraph p {
     font-size: 16px;
     width: 100%;
 }
-.fieldWorkMobile .allCards .card .texts .divParagraph .lineParagraph {
+.fieldWork .allCards .card .texts .divParagraph .lineParagraph {
     position: absolute;
     width: .2em;
     height: 110%;
@@ -64,26 +68,26 @@
 
 
 /* Squares */
-.fieldWorkMobile .allCards .card .squares {
+.fieldWork .allCards .card .squares {
     position: relative;
     width: 100%;
     height: 45vh;
     
 }
-.fieldWorkMobile .allCards .card .squares .image {
+.fieldWork .allCards .card .squares .image {
     margin: 0 auto;
     width: 90%;
     transform: translateY(0);
     height: 85%;
     overflow: hidden;
 }
-.fieldWorkMobile .allCards .card .squares .image img {
+.fieldWork .allCards .card .squares .image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     scale: 1.1;
 }
-.fieldWorkMobile .allCards .card .squares .bgSquare {
+.fieldWork .allCards .card .squares .bgSquare {
     position: absolute;
     width: 75%;
     height: 75%;
@@ -92,36 +96,70 @@
 }
 
 /* Lines */
-.fieldWorkMobile .allCards .card .lines {
+.fieldWork .allCards .card .lines {
     display: flex;
     justify-content: end;
     height: 5vh;
     width: 100%;
 }
-.fieldWorkMobile .allCards .card .lines .bottomLine {
+.fieldWork .allCards .card .lines .bottomLine {
     border-bottom: 2px solid #fff;
     height: 100%;
     width: 100%;
 }
 
 @media (max-width: 321px) {
-    .fieldWorkMobile .allCards .card .texts h3 {
+    .fieldWork .allCards .card .texts h3 {
         font-size: 25px;
         font-weight: 600;
     }
-    .fieldWorkMobile .allCards .card .texts p {
+    .fieldWork .allCards .card .texts p {
         font-size: 15px;
     }
-    .fieldWorkMobile .allCards .card .texts .divParagraph p {
+    .fieldWork .allCards .card .texts .divParagraph p {
         width: 100%;
     }
-    .fieldWorkMobile .allCards .card .texts .divParagraph {
+    .fieldWork .allCards .card .texts .divParagraph {
         padding: .5em 1em .5em 1em;
     }
 }
 
+
+/* Desktop */
+/*
+.desktopVersion {
+    width: 100%;
+    height: 90vh;
+    background-color: #f00;
+}
+.desktopVersion .containerCards {
+    width: 95%;
+    height: 90%;
+    background-color: #0f0;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5em;
+    position: relative;
+}
+.desktopVersion .containerCards .card {
+    background-color: #00f;
+    width: 33%;
+    height: 80%;
+    position: absolute;
+}
+.cardPrev {
+    left: 0;
+}
+.cardNext {
+    right: 0;
+}
+*/
+
+/* Responsive */
 @media (min-width: 450px) {
-    .fieldWorkMobile .allCards .card .texts {
+    .fieldWork .allCards .card .texts {
         /* width: 95%; */
 
     }
@@ -129,42 +167,42 @@
 }
 
 @media (min-width: 550px) {
-    .fieldWorkMobile .allCards{
+    .fieldWork .allCards{
     }
-    .fieldWorkMobile .allCards .card .texts {
+    .fieldWork .allCards .card .texts {
         width: 80%;
     }
-    .fieldWorkMobile .allCards .card .lines .bottomLine {
+    .fieldWork .allCards .card .lines .bottomLine {
         width: 85%;
     }
-    .fieldWorkMobile .allCards .card .squares .bgSquare {
+    .fieldWork .allCards .card .squares .bgSquare {
         width: 70%;
     }
-    .fieldWorkMobile .allCards .card .squares .image {
+    .fieldWork .allCards .card .squares .image {
         width: 75%;
     }
-    .fieldWorkMobile .allCards .card .texts .divParagraph p {
+    .fieldWork .allCards .card .texts .divParagraph p {
         width: 80%;
     }
 }
 
 @media (min-width: 680px) {
-    .fieldWorkMobile .allCards{
+    .fieldWork .allCards{
     }
-    .fieldWorkMobile .allCards .card .texts {
+    .fieldWork .allCards .card .texts {
         width: 70%;
     }
-    .fieldWorkMobile .allCards .card .lines .bottomLine {
+    .fieldWork .allCards .card .lines .bottomLine {
         width: 75%;
     }
-    .fieldWorkMobile .allCards .card .squares .bgSquare {
+    .fieldWork .allCards .card .squares .bgSquare {
         width: 60%;
     }
-    .fieldWorkMobile .allCards .card .squares .image {
+    .fieldWork .allCards .card .squares .image {
         width: 70%;
         height: 90%;
     }
-    .fieldWorkMobile .allCards .card .texts .divParagraph p {
+    .fieldWork .allCards .card .texts .divParagraph p {
         width: 90%;
     }
 }

@@ -1,8 +1,7 @@
 .aggregateContent {
     position: relative;
     width: 100%;
-    height: 70vh;
-    /* border: 1px solid #0f0; */
+    height: 75vh;
     margin-bottom: 3em;
 }
 .aggregateContent .geometryFormBackground {
@@ -48,16 +47,20 @@
 }
 .professionalsPage .cardProfessionals .cardProfessional .content-text {
     position: relative;
-    width: 95%;
     margin: auto;
     padding: 0 0 1em 1em;
     width: 100%;
+    max-height: 44%;
+    overflow: auto;
+    z-index: 2;
+
 }
 .professionalsPage .cardProfessionals .cardProfessional .content-text h3 {
     margin-left: .5em;
 }
 .professionalsPage .cardProfessionals .cardProfessional .content-text p {
     margin-right: .35em;
+    
 }
 .professionalsPage .cardProfessionals .cardProfessional .borderComponent {
     position: absolute;
@@ -69,6 +72,8 @@
     background-color: transparent;
     border-right: 2px solid #fff;
     border-bottom: 2px solid #fff;
+    z-index: 1;
+
 }
 
 @media (min-width: 360px) {
@@ -105,3 +110,68 @@
         margin-bottom: .8em;
     }
 }
+
+/*
+@media (min-width: 800px) {
+    .professionalsPage .cardProfessionals .cardProfessional {
+        width: 100%;
+        background-color: aqua;
+        height: 85%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .professionalsPage .cardProfessionals .cardProfessional .divImage {
+        align-self: center;
+        justify-self: center;
+        width: 75%;
+        height: 90%;
+    }
+    .professionalsPage .cardProfessionals .cardProfessional .divImage img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+    .professionalsPage .cardProfessionals .cardProfessional .content-text {
+        height: 70%;
+        display: flex;
+        flex-direction: column;
+        max-height: 80%;
+        position: relative;
+        padding: 1em 1em 2em 3em;
+    }
+    .professionalsPage .cardProfessionals .cardProfessional .content-text h3 {
+        margin-left: 0;
+        font-size: 1.5em;
+        margin-bottom: 1em;
+    }
+    .professionalsPage .cardProfessionals .cardProfessional .content-text .borderComponent {
+        background-color: transparent;
+        position: absolute;
+        left: 2em;
+        height: 80%;
+        top: 0;
+        z-index: 1;
+        border: none;
+        border-left: 3px solid #fff;
+    }
+}
+@media (min-width: 1000px) {
+    .professionalsPage .cardProfessionals .cardProfessional {
+        width: 80%;
+        background-color: aqua;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .professionalsPage .cardProfessionals .cardProfessional .divImage {
+        background-color: antiquewhite;
+    }
+    .professionalsPage .cardProfessionals .cardProfessional .divImage img {
+        height: 100%;
+        width: auto;
+        object-fit: fill;
+    }
+}
+*/

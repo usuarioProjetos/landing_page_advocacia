@@ -26,7 +26,7 @@ export const FirstPage = () => {
 
             <div className="divImageBg">
                 <Image 
-                    src={ImagesFirstPage[activeImageIndex].src}
+                    src={ImagesFirstPage[activeImageIndex].path}
                     alt='Imagem de fundo'
                 />
             </div>

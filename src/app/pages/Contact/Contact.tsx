@@ -1,3 +1,4 @@
+"use client"
 import { Title } from '@/app/components/Title/Title'
 import Image from 'next/image'
 import { Logo } from '../../datas/Contact'
@@ -5,6 +6,9 @@ import './Contact.css'
 import { DatasInput, DatasSocialMedia } from '@/app/datas/Contact'
 
 export const Contact = () => {
+    const onSubmitForm = (e: any) => {
+        e.preventDefault()
+    }
     return (
         <section className="contact">
             <Title
@@ -14,7 +18,7 @@ export const Contact = () => {
 
             <div className="contentArea">
 
-                <form className="formArea">
+                <form className="formArea" onSubmit={onSubmitForm}>
                     {DatasInput.map(item => (
                         <>
                             {item.name !== 'mensagem' ? (

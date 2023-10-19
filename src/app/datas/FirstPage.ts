@@ -1,7 +1,6 @@
-import ImageHomeMobile from '../assets/image_home_mobile.png'
-import ImageHomeTest from '../assets/city.jpeg'
-import ImageTestTwo from '../assets/bruno-thethe-nxkinK7hhOk-unsplash.png'
-import ImageTestThree from '../assets/testsCarousel/img_5.jpg'
+import ImageHomeTwo from '../assets/home/bruno-thethe-nxkinK7hhOk-unsplash.png'
+import ImageHomeThree from '../assets/home/ottr-dan-ctEbk8AXXI8-unsplash.png'
+import ImageHomeOne from '../assets/home/ottr-dan-ef8zTtwqclk-unsplash.png'
 
 interface IButton {
     text: string;
@@ -14,13 +13,13 @@ interface IDatasFirstPage {
 }
 export const ImagesFirstPage = [
     {
-        src: ImageHomeTest
+        path: ImageHomeOne
     },
     {
-        src: ImageTestTwo
+        path: ImageHomeTwo
     },
     {
-        src: ImageTestThree
+        path: ImageHomeThree
     }
 ]
 

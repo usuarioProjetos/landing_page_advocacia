@@ -39,4 +39,3 @@ export const DatasSocialMedia: IDatasSocialMedia[] = [
         name: 'facebook'
     },
 ]
-
