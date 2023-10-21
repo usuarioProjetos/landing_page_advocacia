@@ -33,7 +33,7 @@ export const DatasFieldWorkMobile: IDatasFirstWorkMobile[] = [
     {
         title: 'What is Lorem.',
         text: 'What is Lorem Ipsum?  Lorem Ipsum is simply dummy text of the printing and typesetting industry.What is Lorem Ipsum',
-        image: ImageOne,
+        image: ImageTest,
         direction: 'left',
         nameClass: 'card1'
     },
@@ -48,7 +48,7 @@ export const DatasFieldWorkMobile: IDatasFirstWorkMobile[] = [
     {
         title: 'What is Lorem', 
         text: 'What is Lorem Ipsum?  Lorem Ipsum is simply dummy text of the printing and typesetting industry.What is Lorem Ipsum',
-        image: ImageTest,
+        image: ImageOne,
         direction: 'left',
         nameClass: 'card3'
     },

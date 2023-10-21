@@ -7,6 +7,7 @@ import { Menu } from './pages/Menu/Menu'
 import { ProfessionalsPage } from './pages/ProfessionalsPage/ProfessionalsPage'
 
 import './Page.css'
+import { CarouselDesktop } from './components/Carousel/CarouselDesktop'
 
 export default function Home() {
   return (

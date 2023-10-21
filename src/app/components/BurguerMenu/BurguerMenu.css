@@ -15,15 +15,49 @@
     margin: 3px;
     background-color: #fff;
     border-radius: 10px;
-    transition: all .2s;
+    /* transition: all .2s; */
 }
 .burguerMenu .line3 {
-    width: 50%;
+    /* width: 50%; */
+    transition: .2s width;
 }
 
 .burguerMenu:hover .line3 {
-    width: 100%;
+    width: 100% !important;
 }
-.burguerMenu:hover .line1 {
+
+
+/* .burguerMenu.open {
+    background-color: #f00;
+}
+.burguerMenu.open .line1 {
+    animation: line1 1s forwards;
+}
+.burguerMenu.open .line2 {
+    animation: line2 1s forwards;
+}
+.burguerMenu.open .line3 {
+    animation: line3 1s forwards;
+}
+
+@keyframes line1 {
+    to {
+        transform: rotate(45deg) translate(10px, 5px);
+    }
+}
+
+@keyframes line2 {
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes line3 {
+    to {
+        width: 100%;
+        transform: rotate(-45deg) translate(6px, -5px);
+    }
+} */
+/* .burguerMenu:hover .line1 {
     width: 50%;
-}
+} */

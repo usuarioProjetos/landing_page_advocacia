@@ -3,6 +3,7 @@ import Image from 'next/image'
 import './Menu.css'
 import { DatasMenu } from '@/app/datas/Menu'
 import { useRef, useEffect, useLayoutEffect } from 'react'
+import { motion } from 'framer-motion'
 
 interface Props {
     showMenu: boolean
@@ -14,7 +15,24 @@ export const Menu = ({ showMenu }: Props) => {
     return (
         <>
             {showMenu && (
-                <section className='menu'>
+                <motion.section 
+                    className='menu'
+                    // initial={{ display: 'none', height: 0, opacity: 1, borderBottomLeftRadius: "30%", borderBottomRightRadius: "30%",  }}
+                    animate={{  display: 'block', height: "100vh", opacity: 1, borderBottomLeftRadius: 0, borderBottomRightRadius: 0 }}
+                    transition={{ duration: .5 }}
+                    exit={{
+                        height: 0,
+                        // width: 0,
+                        opacity: 0.2,
+                        borderBottomLeftRadius: "10%",
+                        borderBottomRightRadius: "10%",
+                        transition: {
+                            ease: "easeInOut",
+                            duration: .5,
+                            delay: .5
+                        }
+                    }}
+                >
                     <article className="contentMenu">
                         <ul className="listMenu">
                             {DatasMenu.items.map((itemMenu, i) => (
@@ -33,7 +51,7 @@ export const Menu = ({ showMenu }: Props) => {
                         />
                         <p className='companyName'>chevitereza paiva <br /> advocacia</p>
                     </div>
-                </section>
+                </motion.section>
             )}
         </>
     )

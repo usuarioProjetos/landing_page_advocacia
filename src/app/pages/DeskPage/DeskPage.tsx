@@ -1,16 +1,15 @@
 "use client"
 // CSS
 // React
-import { useState, useRef, useEffect, useLayoutEffect } from 'react'
+import { useState, useEffect } from 'react'
 import Image from 'next/image'
 // Swiper
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
-import 'swiper/css/navigation';
 import './DeskPage.css'
-import { EffectCoverflow, Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+import { EffectCoverflow, Pagination } from 'swiper/modules';
 // Components
 import { Title } from '@/app/components/Title/Title'
 // Datas
@@ -19,9 +18,8 @@ import { DatasDeskPage } from '../../datas/DeskPage'
 export const DeskPage = () => {
     const [isSwiperReady, setIsSwiperReady] = useState(false);
 
-    useLayoutEffect(() => {
-            setIsSwiperReady(true);
-
+    useEffect(() => {
+        setIsSwiperReady(true);
     }, []);
     
 
@@ -31,7 +29,7 @@ export const DeskPage = () => {
                 text='escritório'
                 widthSquare='80%'
             />
-
+            
             <Swiper
                 effect={'coverflow'}
                 grabCursor={true}

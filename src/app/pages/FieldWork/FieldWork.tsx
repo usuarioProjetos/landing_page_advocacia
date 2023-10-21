@@ -11,6 +11,7 @@ import { motion, AnimatePresence  } from 'framer-motion'
 
 import './FieldWork.css'
 import { useEffect, useState } from 'react'
+import { CarouselDesktop } from '@/app/components/Carousel/CarouselDesktop'
 
 export const FieldWork = () => {  
     const [currentItem, setCurrentItem] = useState<number>(0);
@@ -129,7 +130,7 @@ export const FieldWork = () => {
                 />
 
                 <article className="containerCards">
-                    
+                    <CarouselDesktop />
                 </article>
                 
             </div>
