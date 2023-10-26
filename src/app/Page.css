@@ -8,9 +8,9 @@
 }
 
 body {
-    background-color: #01120F;
+    /* background-color: #eeeeee; */
     overflow-x: hidden;
-    color: #fff;
+    color: #022521;
 }
 body::-webkit-scrollbar {
     width: 6px;           
@@ -28,8 +28,8 @@ border-radius: 20px;
 
 
 
-.testDiv {
+/* .testDiv {
     height: 100vh;
     width: 100vw;
     background-color: aliceblue;
-}
+} */

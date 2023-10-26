@@ -10,63 +10,64 @@ export const Contact = () => {
         e.preventDefault()
     }
     return (
-        <section className="contact">
+        <footer className="contact">
             <Title
-                text='contato'
+                text='Contato'
                 widthSquare='80%'
             />
 
-            <div className="contentArea">
-
-                <form className="formArea" onSubmit={onSubmitForm}>
-                    {DatasInput.map(item => (
-                        <>
-                            {item.name !== 'mensagem' ? (
-                                <label className='labelItemForm'>
-                                    <p className='textLabel'>
-                                        {item.name}
-                                    </p>
-                                    <input className='inputText' type="text" />
-                                </label>
-                            ) : (
-                                <label className='labelItemForm'>
-                                    <p className='textLabel'>
-                                        {item.name}
-                                    </p>
-                                    <textarea className='inputText' rows={4} />
-                                </label>
-                            )}
-                        </>
-                    ))}
-                    <div className="buttonSubmit">
-                        <button type='submit'>Enviar</button>
-                        <div className="squareButton"></div>
-                    </div>
-                    
-                </form>
-
-                <div className="followArea">
-                    <div className="socialMedias">
-                        {DatasSocialMedia.map(item => (
-                            <a href="#">
-                                <div className="socialNetwork">
-                                    <div className="icon">
-                                        <item.Icon />
-                                    </div>
-
-                                    <p>{item.name}</p>
-                                </div>
-                            </a>
+            <div className="formContent">
+                <form className="form">
+                    <div className="contextInputs">
+                        {DatasInput.map(item => (
+                            <label className={`labelInput ${item.name === 'mensagem' ? 'labelTextarea' : ''}`}>
+                                <p>{item.name}</p>
+                                {item.name === 'mensagem' ? (
+                                    <textarea className='elementForm textarea' rows={4}></textarea>
+                                ) : (
+                                    <input className='elementForm input' type={item.type} />
+                                )}
+                            </label>
                         ))}
                     </div>
 
+                    <div className="contentSubmit">
+                        <label className="labelInput labelInputSubmit">
+                            <button type='submit'>
+                                Enviar
+                            </button>
+                        </label>
 
-                    <div className="logo">
-                        <Image alt='Logo Chevitereza Paica' src={Logo.src} />
                     </div>
+                </form>
+            </div>
+
+            <div className="infosContact">
+                <div className="abstractDiv" />
+                <div className="abstractDivBg" />
+
+                <div className="logoDiv">
+                    <Image
+                        src={Logo.src}
+                        alt='Logo Chevitereza'
+                    />
                 </div>
 
+                <div className="infosSocialMedias">
+                    {DatasSocialMedia.map(socialMedia => (
+                        <div className="socialMedia">
+                            <div className="contentSocialMedia">
+                                <socialMedia.Icon />
+                                <p>{socialMedia.name}</p>
+                            </div>
+                        </div>
+                    ))}
+                </div>
             </div>
-        </section>
+        </footer>
     )
 }
+
+<form className="form">
+
+</form>

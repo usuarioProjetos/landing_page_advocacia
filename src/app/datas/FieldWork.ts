@@ -1,12 +1,13 @@
-import ImageOne from '../assets/imageFieldWorkMobileOne.png'
-import ImageTwo from '../assets/imageFieldWorkMobileTwo.png'
-import ImageThree from '../assets/imageFieldWorkMobileThree.png'
-import ImageTest from '../assets/bruno-thethe-nxkinK7hhOk-unsplash 2.png'
 import { StaticImageData } from 'next/image'
+
+import ImageTest from '../assets/bruno-thethe-nxkinK7hhOk-unsplash 2.png'
+import BlackHammer from '../assets/desk/blackHammer.png'
 import BgImage from '../assets/desk/imageBooks.png'
 import ImageCardExample from '../assets/desk/imageCardExample.png'
-import BlackHammer from '../assets/desk/blackHammer.png'
 import WhiteHammer from '../assets/desk/whiteHammer.png'
+import ImageOne from '../assets/imageFieldWorkMobileOne.png'
+import ImageThree from '../assets/imageFieldWorkMobileThree.png'
+import ImageTwo from '../assets/imageFieldWorkMobileTwo.png'
 
 interface IDatasFirstWorkMobile {
     title: string
@@ -16,17 +17,20 @@ interface IDatasFirstWorkMobile {
     nameClass: string
 }
 
-interface IDatasFirstWorkDesktop {
+export interface ICardFieldWork {
+    title: string
+    text: string
+    image: StaticImageData
+    id: number
+    showContent: boolean
+}
+
+export interface IDatasFirstWorkDesktop {
     bgImage: StaticImageData
     icon: StaticImageData
     iconActualItem: StaticImageData
 
-    cards: {
-        title: string
-        text: string
-        image: StaticImageData
-        id: number
-    }[]
+    cards: ICardFieldWork[]
 }
 
 export const DatasFieldWorkMobile: IDatasFirstWorkMobile[] = [
@@ -63,25 +67,36 @@ export const DatasFieldPageDesktop: IDatasFirstWorkDesktop = {
             id: 0,
             image: ImageCardExample,
             title: 'Title 1',
-            text: 'What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever.'
+            text: 'What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever.',
+            showContent: false
         },
         {
             id: 1,
             image: ImageCardExample,
             title: 'Title 2',
-            text: 'What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever.'
+            text: 'What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever.',
+            showContent: false
         },
         {
             id: 2,
             image: ImageCardExample,
             title: 'Title 3',
-            text: 'What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever.'
+            text: 'What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever.',
+            showContent: true
         },
         {
             id: 3,
             image: ImageCardExample,
             title: 'Title 4',
-            text: 'What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever.'
-        }
+            text: 'What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever.',
+            showContent: false
+        },
+        {
+            id: 4,
+            image: ImageCardExample,
+            title: 'Title 5',
+            text: 'What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever.',
+            showContent: false
+        },
     ]
 }

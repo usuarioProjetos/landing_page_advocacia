@@ -1,6 +1,7 @@
 "use client"
 import { Title } from '@/app/components/Title/Title'
 import { DatasFieldWorkMobile, DatasFieldPageDesktop } from '@/app/datas/FieldWork'
+import Vector from '../../assets/svg/Vector 20 (1).svg'
 import Image from 'next/image'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'

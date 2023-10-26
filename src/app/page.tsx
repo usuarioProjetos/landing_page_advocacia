@@ -1,3 +1,4 @@
+import { CarouselDesktop } from './components/Carousel/CarouselDesktop'
 import { Navbar } from './components/Navbar/Navbar'
 import { Contact } from './pages/Contact/Contact'
 import { DeskPage } from './pages/DeskPage/DeskPage'
@@ -7,7 +8,6 @@ import { Menu } from './pages/Menu/Menu'
 import { ProfessionalsPage } from './pages/ProfessionalsPage/ProfessionalsPage'
 
 import './Page.css'
-import { CarouselDesktop } from './components/Carousel/CarouselDesktop'
 
 export default function Home() {
   return (
@@ -16,11 +16,11 @@ export default function Home() {
       <FirstPage />
       <FieldWork />
       <DeskPage />
-      <ProfessionalsPage />
+      {/* <ProfessionalsPage /> */}
       <Contact />
     </main>
   )
 }
 
 
-// "use client"
+// "use client"285d4d
