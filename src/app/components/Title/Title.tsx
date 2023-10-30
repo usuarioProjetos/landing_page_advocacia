@@ -2,10 +2,11 @@ import './Title.css'
 
 interface IProps {
     text: string
+    square?: boolean
     widthSquare: string
 }
 
-export const Title = ({ text, widthSquare }: IProps) => {
+export const Title = ({ text, widthSquare, square = true }: IProps) => {
     return (
         <section className="title">
             <div className="content">
@@ -13,11 +14,13 @@ export const Title = ({ text, widthSquare }: IProps) => {
                     <span>
                         {text}
                     </span>
-                    <div className='square-detail'
-                        style={{
-                            width: widthSquare
-                        }}
-                    ></div>
+                    {square && (
+                        <div className='square-detail'
+                            style={{
+                                width: widthSquare
+                            }}
+                        ></div>
+                    )}
                 </h2>
             </div>
         </section>

@@ -64,10 +64,11 @@ export const FieldWork = () => {
                 <Title
                     text='Área de atuação'
                     widthSquare='80%'
+                    square={false}
                 />
                 
                 <article className="allCards">
-                    {DatasFieldWorkMobile.map(card => (
+                    {DatasFieldWorkMobile.map((card, i) => (
                         <div className={`card ${card.nameClass}`}>
                             <div 
                                 className="texts"
@@ -93,10 +94,29 @@ export const FieldWork = () => {
                                 </div>
                             </div>
                             <div className="squares">
-                                <div className="bgSquare"
+                                <div 
+                                    className={`bgSquare bgSquare${i}`}
                                     style={ card.direction === 'left' ? 
-                                    { borderBottomRightRadius: '2em', left: '0' } : 
-                                    { borderBottomLeftRadius: '2em', right: '0' } }
+                                    { 
+                                        clipPath: 'polygon(22% 2%, 50% 6%, 100% 6%, 100% 91%, 24% 91%, 0 94%, 0 8%)',
+                                        WebkitClipPath: 'polygon(22% 2%, 50% 6%, 100% 6%, 100% 91%, 24% 91%, 0 94%, 0 8%)'
+                                    } : 
+                                    {  
+                                        clipPath: 'polygon(46% 6%, 78% 2%, 100% 13%, 100% 91%, 24% 91%, 0 94%, 0 6%)',
+                                        WebkitClipPath: 'polygon(46% 6%, 78% 2%, 100% 13%, 100% 91%, 24% 91%, 0 94%, 0 6%)'
+                                    }}
+                                />
+                                <div 
+                                    className={`bgSquare bgSquareShadow bgSquareShadow${i}`}
+                                    style={ card.direction === 'left' ? 
+                                    { 
+                                        clipPath: 'polygon(22% 2%, 50% 6%, 100% 6%, 100% 91%, 24% 91%, 0 94%, 0 8%)',
+                                        WebkitClipPath: 'polygon(22% 2%, 50% 6%, 100% 6%, 100% 91%, 24% 91%, 0 94%, 0 8%)'
+                                    } : 
+                                    {  
+                                        clipPath: 'polygon(46% 6%, 78% 2%, 100% 13%, 100% 91%, 24% 91%, 0 94%, 0 6%)',
+                                        WebkitClipPath: 'polygon(46% 6%, 78% 2%, 100% 13%, 100% 91%, 24% 91%, 0 94%, 0 6%)'
+                                    }}
                                 />
 
                                 <div className="image"
@@ -115,8 +135,8 @@ export const FieldWork = () => {
                             >
                                 <div className="bottomLine"
                                     style={ card.direction === 'left' ? 
-                                    { marginLeft: '2em', borderLeft: '2px solid #fff', borderBottomLeftRadius: '2em' } : 
-                                    { marginRight: '2em', borderRight: '2px solid #fff', borderBottomRightRadius: '2em' } }
+                                    { marginLeft: '3rem', borderLeft: '2px solid #022521', borderBottomLeftRadius: '2em' } : 
+                                    { marginRight: '3rem', borderRight: '2px solid #022521', borderBottomRightRadius: '2em' } }
                                 />
                             </div>
                         </div>

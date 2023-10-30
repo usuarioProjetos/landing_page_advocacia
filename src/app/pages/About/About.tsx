@@ -1,14 +1,15 @@
 import { Title } from '@/app/components/Title/Title'
-import './ProfessionalsPage.css'
-import { DatasProfessionals } from '@/app/datas/Professionals'
+import './About.css'
+import { DatasProfessionals } from '@/app/datas/About'
 import Image from 'next/image'
 
-export const ProfessionalsPage = () => {
+export const About = () => {
     return (
         <section className="professionalsPage">
             <Title 
-                text='Nosso time'
+                text='Sobre'
                 widthSquare='80%'
+                
             />
 
             <article className="cardProfessionals">

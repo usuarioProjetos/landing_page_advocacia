@@ -5,7 +5,7 @@ import { DeskPage } from './pages/DeskPage/DeskPage'
 import { FieldWork } from './pages/FieldWork/FieldWork'
 import { FirstPage } from './pages/FirstPage/FirstPage'
 import { Menu } from './pages/Menu/Menu'
-import { ProfessionalsPage } from './pages/ProfessionalsPage/ProfessionalsPage'
+import { About } from './pages/About/About'
 
 import './Page.css'
 
@@ -15,8 +15,8 @@ export default function Home() {
       <Navbar />
       <FirstPage />
       <FieldWork />
+      <About />
       <DeskPage />
-      {/* <ProfessionalsPage /> */}
       <Contact />
     </main>
   )

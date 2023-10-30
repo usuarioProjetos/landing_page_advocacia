@@ -4,6 +4,9 @@ interface IDatasProfessionals {
     img: string | any
     name: string
     text: string
+    socialMedias?: {
+        icon: any
+    }[]
 }
 
 export const DatasProfessionals: IDatasProfessionals[] = [
@@ -11,6 +14,11 @@ export const DatasProfessionals: IDatasProfessionals[] = [
         img: ImageFirstProfessionals,
         name: 'Lorem Ipsum Sit Amet',
         text: 'is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s.is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s.',
+        socialMedias: [
+            {
+                icon: 'Icon'
+            }
+        ]
     },
     {
         img: ImageFirstProfessionals,

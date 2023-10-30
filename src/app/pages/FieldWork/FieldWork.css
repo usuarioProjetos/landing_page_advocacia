@@ -4,32 +4,34 @@
     contain: layout inline-size;
     padding: 68px 0 0 0;
     resize: both;
-    background: linear-gradient(to bottom,
+    /* background: linear-gradient(to bottom,
         #000E0C 0%,
         #001814 25%,
         #001815 40%,
         #001412 60%,
         #001411 80%,
         #001D19 100%
-    );
-
+    ); */
+    background-color: #fff;
 }
 .mobileVersion {
     display: block;
 }
 /* All cards */
 .fieldWork .allCards {
-    margin-top: 32px;
+    /* margin-top: 10px; */
     /* background-color: aqua; */
 }
 
 /* Card */
 .fieldWork .allCards .card {
-    margin-bottom: 3em;
+    min-height: 600px;
+    margin-bottom: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 /* Texts */
@@ -57,9 +59,9 @@
 }
 .fieldWork .allCards .card .texts .divParagraph .lineParagraph {
     position: absolute;
-    width: .2em;
+    width: .1rem;
     height: 110%;
-    background-color: #fff;
+    background-color: #022521;
     border-top-right-radius: 2em;
     border-top-left-radius: 2em;
     top: 0;
@@ -68,16 +70,21 @@
 
 /* Squares */
 .fieldWork .allCards .card .squares {
-    position: relative;
+    /* position: relative; */
     width: 100%;
-    height: 45vh;
+    height: 40vh;
+    
     
 }
+.fieldWork .allCards .card .squares:nth-child(1) {
+    background-color: #0f0;
+}
 .fieldWork .allCards .card .squares .image {
+    background-color: #022521;
     margin: 0 auto;
     width: 90%;
-    transform: translateY(0);
-    height: 85%;
+    /* transform: translateY(0); */
+    height: 100%;
     overflow: hidden;
 }
 .fieldWork .allCards .card .squares .image img {
@@ -88,10 +95,31 @@
 }
 .fieldWork .allCards .card .squares .bgSquare {
     position: absolute;
-    width: 75%;
-    height: 75%;
+    display: block;
+    z-index: -1;
+    width: 100%;
+    height: 98%;
+    bottom: 7px;
+    background-color: #D2EEEA;
+
+    box-shadow: 10px 10px #0f0;
+}
+.fieldWork .allCards .card .squares .bgSquare.bgSquareShadow {
     bottom: 0;
-    background-color: #000F0D;
+    height: 100%;
+    background-color: rgb(57, 204, 185, 0.1);
+    z-index: -2;
+}
+.fieldWork .allCards .card .squares .bgSquare.bgSquare0 {
+    height: 105%;
+    -webkit-clip-path: polygon(82% 0, 100% 17%, 100% 91%, 24% 91%, 0 94%, 0 8%) !important;
+    clip-path: polygon(82% 0, 100% 17%, 100% 91%, 24% 91%, 0 94%, 0 8%) !important;
+}
+.fieldWork .allCards .card .squares .bgSquare.bgSquareShadow.bgSquareShadow0 {
+    height: 107%;
+    -webkit-clip-path: polygon(82% 0, 100% 17%, 100% 91%, 24% 91%, 0 94%, 0 8%) !important;
+    clip-path: polygon(82% 0, 100% 17%, 100% 91%, 24% 91%, 0 94%, 0 8%) !important;
+
 }
 
 /* Lines */
@@ -102,7 +130,8 @@
     width: 100%;
 }
 .fieldWork .allCards .card .lines .bottomLine {
-    border-bottom: 2px solid #fff;
+    border-bottom: 2px solid #022521;
+    /* border-bottom: 2px solid #022521; */
     height: 100%;
     width: 100%;
 }
@@ -193,11 +222,11 @@
     .fieldWork .allCards .card .lines .bottomLine {
         width: 85%;
     }
-    .fieldWork .allCards .card .squares .bgSquare {
+    /* .fieldWork .allCards .card .squares .bgSquare {
         width: 70%;
         height: 85%;
         bottom: -20px;
-    }
+    } */
     .fieldWork .allCards .card .squares .image {
         width: 75%;
     }
@@ -216,11 +245,15 @@
         height: 70vh;
     }
     .fieldWork .allCards .card .lines .bottomLine {
-        width: 75%;
+        width: 80%;
     }
     .fieldWork .allCards .card .squares .bgSquare {
-        width: 60%;
-        
+        height: 97%;
+        bottom: 1rem;
+    }
+    .fieldWork .allCards .card .squares .bgSquare.bgSquareShadow {
+        /* height: 97%; */
+        bottom: .3rem;
     }
     .fieldWork .allCards .card .squares .image {
         width: 70%;

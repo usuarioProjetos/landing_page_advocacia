@@ -23,18 +23,46 @@ import Vector from '../../assets/svg/Vector 20 (1).svg'
 
 export const CarouselDesktop = () => {
         const [cards, setCards] = useState(DatasFieldPageDesktop.cards)
+        const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+        useEffect(() => {
+            if (typeof window !== 'undefined') {
+                setWindowWidth(window.innerWidth);
+                const handleResize = () => {
+                    setWindowWidth(window.innerWidth);
+                };
+    
+                window.addEventListener('resize', handleResize);
+    
+                return () => {
+                    window.removeEventListener('resize', handleResize);
+                };
+            }
+        }, []);
         const variantsContentTexts: Variants = {
             initial: { opacity: 1, y: -400 },
             animate: {  opacity: 1, y: 0 },
             exit : {
                 opacity: 0,
-                y: -400
+                y: -400,
             }
         }
         const variantsTitleItem: Variants = {
             initial: { opacity: 0 },
             animate: { opacity: 1 },
             exit: { opacity: 0 },
+        }
+
+        const variantsTitleContentText: Variants = {
+            initial: { opacity: 0, x: -200 },
+            animate: { opacity: 1, x: 0 },
+            exit: { opacity: 0, x: -200 },
+        }
+
+        const variantsParagraphContentText: Variants = {
+            initial: { opacity: 0, x: 100 },
+            animate: { opacity: 1, x: 0 },
+            exit: { opacity: 0, x: 100 },
         }
         
         const onMouseEnterCard = (card: ICardFieldWork) => {
@@ -63,10 +91,10 @@ export const CarouselDesktop = () => {
                 initialSlide={1}
                 centeredSlides={false}
             >
+                {windowWidth > 1200 && (
+                    <SwiperSlide className='swiperSliderItem spareElement' />
+                )}
                 <AnimatePresence>
-                    <SwiperSlide
-                        className='swiperSliderItem'
-                    />
                     {cards && cards.map(item => (
                         <article className="card" key={item.id}>
                             <SwiperSlide
@@ -122,16 +150,33 @@ export const CarouselDesktop = () => {
                                         type:' tween'
                                     }}
                                 >
-
+                                    <motion.h3
+                                        variants={variantsTitleContentText}
+                                        initial={"initial"}
+                                        animate={item.showContent ? "animate" : "exit"}
+                                        transition={{
+                                            type:' tween',
+                                            duration: .7
+                                        }}
+                                    >{item.title}</motion.h3>
+                                    <motion.p
+                                        variants={variantsParagraphContentText}
+                                        initial={"initial"}
+                                        animate={item.showContent ? "animate" : "exit"}
+                                        transition={{
+                                            type:' tween',
+                                            duration: .7
+                                        }}
+                                    >{item.text}</motion.p>
                                 </motion.div>
                                 
                             </SwiperSlide>
                         </article>
                     ))}
-                    <SwiperSlide
-                        className='swiperSliderItem'
-                    />
                 </AnimatePresence>
+                {windowWidth > 1200 && (
+                    <SwiperSlide className='swiperSliderItem spareElement' />
+                )}
             </Swiper>
         </section>
     )
