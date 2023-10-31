@@ -1,11 +1,12 @@
 .container {
     width: 100vw;
-    height: 90vh;
+    height: 85vh;
     overflow: hidden;
     position: relative;
-    background: linear-gradient(to bottom, #001C18, #00110F);
-    padding: 3em 0 0 0;
-    background-color: aqua;
+    background: linear-gradient(to bottom, #CECECE, #969696);
+    padding: 3em 0 4em 0;
+    -webkit-clip-path: polygon(50% 3%, 100% 0, 100% 97%, 50% 100%, 0 97%, 0 0);
+    clip-path: polygon(50% 3%, 100% 0, 100% 97%, 50% 100%, 0 97%, 0 0);
 }
 .container .swiper_container {
     margin-top: 2em;
@@ -69,9 +70,9 @@
     height: 2em;
     background-color: transparent;
     height: 30%;
-    bottom: 4em;
-    border-bottom: 1px solid #fff;
-    border-right: 1px solid #fff;
+    bottom: 15%;
+    border-bottom: 1px solid #3e645f;
+    border-right: 1px solid #3e645f;
     border-bottom-right-radius: 1em;
 }
 .container .line .secondLine {
@@ -80,8 +81,8 @@
     height: 2em;
     background-color: transparent;
     height: 30%;
-    bottom: 0;
-    border-bottom: 1px solid #fff;
-    border-right: 1px solid #fff;
+    bottom: 4.5em;
+    border-bottom: 1px solid #3e645f;
+    border-right: 1px solid #3e645f;
     border-bottom-right-radius: 1em;
 }

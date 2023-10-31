@@ -8,6 +8,7 @@ import { Menu } from './pages/Menu/Menu'
 import { About } from './pages/About/About'
 
 import './Page.css'
+import { BecauseWe } from './pages/BecauseWe/BecauseWe'
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <FirstPage />
       <FieldWork />
       <About />
+      <BecauseWe />
       <DeskPage />
       <Contact />
     </main>

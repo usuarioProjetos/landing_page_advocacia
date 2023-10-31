@@ -1,0 +1,94 @@
+:root{
+    --widthLineParagraph: 25%;
+}
+.becauseWe {
+    width: 100%;
+}
+
+/* Global Texts Section */
+.becauseWe .contentTexts {
+    margin: 1em 0 2em 0;
+    width: 100%;
+    text-align: center;
+    font-size: 1.3rem;
+}
+.becauseWe .contentTexts .componentTexts {
+    width: 90%;
+    margin: auto;
+    padding: 1em 0 1em 0;
+    position: relative;
+}
+.becauseWe .contentTexts .componentTexts .paragraphSection {
+
+}
+.becauseWe .contentTexts .componentTexts .topSquare,
+.becauseWe .contentTexts .componentTexts .bottomSquare {
+    width: var(--widthLineParagraph);
+    height: calc(var(--widthLineParagraph) * 2);
+    background-color: transparent;
+    position: absolute;
+}
+.becauseWe .contentTexts .componentTexts .topSquare {
+    border-top: 2px solid #00594E;
+    border-left: 2px solid #00594E;
+    top: 0;
+    left: 0;
+}
+.becauseWe .contentTexts .componentTexts .bottomSquare {
+    border-bottom: 2px solid #00594E;
+    border-right: 2px solid #00594E;
+    bottom: 0;
+    right: 0;
+}
+
+/* Cards */
+.cards {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto;
+    place-items: center;
+}
+.cards .card {
+    background-color: #ddd;
+    width: 90%;
+    text-align: center;
+    margin-bottom: 1em;
+    padding: 1em .3em .8em .3em;
+    border-radius: 2rem;
+    min-height: 400px;
+}
+.cards .card .iconDiv {
+    width: 100%;
+    position: relative;
+    height: 30vh;
+    margin-bottom: 1.3em;
+}
+.cards .card .iconDiv img {
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+}
+.cards .card .iconDiv2 img {
+    /* width: 95%;
+    max-height: 100%;
+    position: absolute;
+    left: 0;
+    bottom: .5em; */
+    width: 95%;
+    object-fit: contain;
+    margin-top: 2%;
+}
+.cards .card .iconDiv3 img {
+    width: 95%;
+    object-fit: contain;
+    margin-top: 2%;
+}
+
+.cards .card .titleCard {
+    font-size: 1.3em;
+    margin-bottom: .5em;
+}
+.cards .card .paragraphCard {
+    font-size: 1.1em;
+    color: #000;
+}

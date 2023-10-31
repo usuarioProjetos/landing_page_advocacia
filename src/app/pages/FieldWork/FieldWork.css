@@ -107,7 +107,7 @@
 .fieldWork .allCards .card .squares .bgSquare.bgSquareShadow {
     bottom: 0;
     height: 100%;
-    background-color: rgb(57, 204, 185, 0.1);
+    background-color: rgba(57, 204, 185, 0.1);
     z-index: -2;
 }
 .fieldWork .allCards .card .squares .bgSquare.bgSquare0 {

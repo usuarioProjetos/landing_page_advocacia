@@ -13,11 +13,11 @@ export const About = () => {
             />
 
             <article className="cardProfessionals">
-                {DatasProfessionals.map(professional => (
-                    <div className='aggregateContent'>
+                {DatasProfessionals.map((professional, i) => (
+                    <div className={`aggregateContent aggregateContent${i}`}>
                         <div className="cardProfessional">
                             
-                                <div className="divImage">
+                                <div className={`divImage divImage${i}`}>
                                     <Image
                                         src={professional.img}
                                         alt='Foto do profissional'
@@ -30,7 +30,10 @@ export const About = () => {
                                     <div className="borderComponent"></div>         
                                 </div>
                         </div>
-                        <div className="geometryFormBackground"></div>
+                        <div className={`geometryFormBackground ${i === 0 ? 'firstBgGeometry' : 'globalBgGeometry'} geometryFormBackground${i}`}></div>
+                        {i === 0 && (
+                            <div className="geometryFormBackground geometryFormBackgroundShadow firstBgGeometry"></div>
+                        )}
                     </div>
                 ))}
             </article>

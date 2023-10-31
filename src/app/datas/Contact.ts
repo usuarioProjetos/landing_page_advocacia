@@ -41,8 +41,8 @@ export const DatasSocialMedia: IDatasSocialMedia[] = [
         Icon: BsFacebook,
         name: 'facebook'
     },
-    {
-        Icon: BsEnvelope,
-        name: 'email'
-    },
+    // {
+    //     Icon: BsEnvelope,
+    //     name: 'email'
+    // },
 ]
