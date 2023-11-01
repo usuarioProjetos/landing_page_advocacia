@@ -1,5 +1,5 @@
 .firstPage {
-    background-color: rgba(0, 141, 141, .1);
+    background-color: rgba(0, 218, 199, 0.1);
     width: 100vw;
     height: 100vh;
     display: grid;
@@ -21,7 +21,7 @@
     /* scale: .8; */
     position: absolute;
     /* margin-left: -350px; */
-    opacity: .7;
+    opacity: .9;
 }
 
 .firstPage .content {

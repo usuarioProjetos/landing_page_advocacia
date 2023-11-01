@@ -24,8 +24,10 @@ export const BecauseWe = () => {
                         <div className={`iconDiv iconDiv${card.id}`}>
                             <img src={card.icon.src} alt="" />
                         </div>
-                        <h3 className='titleCard'>{card.title}</h3>
-                        <p className='paragraphCard'>{card.text}</p>
+                        <div className="textsCards">
+                            <h3 className='titleCard'>{card.title}</h3>
+                            <p className='paragraphCard'>{card.text}</p>
+                        </div>
                     </div>
                 ))}
             </article>
