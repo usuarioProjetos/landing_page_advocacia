@@ -40,11 +40,12 @@ export const CarouselDesktop = () => {
             }
         }, []);
         const variantsContentTexts: Variants = {
-            initial: { opacity: 1, y: -400 },
+            initial: { opacity: 0, y: -400 },
             animate: {  opacity: 1, y: 0 },
             exit : {
                 opacity: 0,
-                y: -400,
+                // display:'none',
+                y: -200,
             }
         }
         const variantsTitleItem: Variants = {
@@ -81,9 +82,8 @@ export const CarouselDesktop = () => {
 
         return (
         <section className="containerCarousel">
-            {/* <div className="bgSvg">
-                <Image src={Vector} style={{ width: '100%', maxHeight: '80%', objectFit: 'cover' }} alt='Fundo do carroussel' />
-            </div> */}
+            
+            
             <Swiper
                 className='swiperSlider'
                 slidesPerView={'auto'}

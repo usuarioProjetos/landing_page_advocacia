@@ -3,6 +3,7 @@
 }
 .becauseWe {
     width: 100%;
+    margin-bottom: 3em;
 }
 
 /* Global Texts Section */
@@ -200,7 +201,7 @@
         width: 85%;
     }
     .cards .card {
-        min-height: 350px;
+        min-height: 300px;
     }
     .becauseWe .contentTexts .componentTexts {
         width: 30%;
@@ -230,5 +231,10 @@
     }
     .becauseWe .contentTexts .componentTexts {
         width: 25%;
+    }
+}
+@media (min-width: 1900px) {
+    .cards {
+        width: 70%;
     }
 }

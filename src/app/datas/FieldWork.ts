@@ -2,7 +2,7 @@ import { StaticImageData } from 'next/image'
 
 import ImageTest from '../assets/bruno-thethe-nxkinK7hhOk-unsplash 2.png'
 import BlackHammer from '../assets/desk/blackHammer.png'
-import BgImage from '../assets/desk/imageBooks.png'
+import BgImage from '../assets/svg/bgFieldWork.svg'
 import ImageCardExample from '../assets/desk/imageCardExample.png'
 import WhiteHammer from '../assets/desk/whiteHammer.png'
 import ImageOne from '../assets/imageFieldWorkMobileOne.png'

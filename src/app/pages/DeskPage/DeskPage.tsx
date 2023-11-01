@@ -25,6 +25,10 @@ export const DeskPage = () => {
 
     return (
         <section className="container">
+            <div className="divsBg">
+                <div className="firstDivBg"/>
+                <div className="divBoxShadow" />
+            </div>
             <Title
                 text='escritório'
                 widthSquare='80%'
@@ -41,6 +45,7 @@ export const DeskPage = () => {
                   stretch: 0,
                   depth: 100,
                   modifier: 2.5,
+                  
                 }}
                 pagination={{ el: '.swiper-pagination', clickable: true }}
                 modules={[EffectCoverflow, Pagination]}

@@ -33,6 +33,16 @@ export const DatasDeskPage: IDatasDeskPage = {
             text: 'Item 3',
             id: 3
         },
+        {
+            src: Image4,
+            text: 'Item 4',
+            id: 4
+        },
+        {
+            src: Image1,
+            text: 'Item 4',
+            id: 5
+        },
         
     ]
 }

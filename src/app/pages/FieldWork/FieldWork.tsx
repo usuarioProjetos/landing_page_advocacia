@@ -145,6 +145,10 @@ export const FieldWork = () => {
             </div>
 
             <div className="desktopVersion">
+                <div className="bgSvg">
+                    <Image src={DatasFieldPageDesktop.bgImage} alt='Fundo do carroussel' />
+                </div>
+
                 <Title
                     text='Área de atuação'
                     widthSquare='80%'

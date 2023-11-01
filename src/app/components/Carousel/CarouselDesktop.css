@@ -1,13 +1,15 @@
 .containerCarousel {
     width: 100vw;
-    height: 90vh;
+    height: 85vh;
     display: flex;
     justify-content: center;
-    margin-top: 1em;
+    margin: 1em 0 1em 0;
     position: relative;
+    min-height: 750px;
     /* align-items: center; */
 
 }
+
 .containerCarousel .swiperSlider {
     height: 80%;
     width: 97%;
@@ -102,6 +104,9 @@
         height: 90%;
         /* width: 80%; */
     }
+    .containerCarousel .swiperSlider .swiperSliderItem .contentTexts {
+        flex-grow: .5;
+    }
     .containerCarousel .swiperSlider .swiperSliderItem {
         /* width: 30%; */
     }
@@ -109,12 +114,17 @@
 @media (min-width: 1900px) {
     .containerCarousel .swiperSlider {
         height: 95%;
-        /* width: 80%; */
+        width: 85%;
     }
 }
 @media (min-width: 2100px) {
     .containerCarousel .swiperSlider {
         height: 95%;
-        width: 85%;
+        width: 80%;
+    }
+}
+@media (min-width: 2200px) {
+    .containerCarousel .swiperSlider {
+        width: 70%;
     }
 }
