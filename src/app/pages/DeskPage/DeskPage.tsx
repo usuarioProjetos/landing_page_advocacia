@@ -26,6 +26,7 @@ export const DeskPage = () => {
     return (
         <section className="container">
             <div className="divsBg">
+                <div className="bgMobile" />
                 <div className="firstDivBg"/>
                 <div className="divBoxShadow" />
             </div>
@@ -80,22 +81,3 @@ export const DeskPage = () => {
     )
 }
 
-
-
-
-
-    // const [currentIndexPrev, setCurrentIndexPrev] = useState(0)
-    // const [currentIndex, setCurrentIndex] = useState(1)
-    // const [currentIndexNext, setCurrentIndexNext] = useState(2)
-
-    // const handleNext = () => {
-    //     setCurrentIndex((prevIndex) => (prevIndex < DatasDeskPage.items.length - 1 ? prevIndex + 1 : 0))
-    //     setCurrentIndexPrev((prevIndex) => (prevIndex < DatasDeskPage.items.length - 1 ? prevIndex + 1 : 0))
-    //     setCurrentIndexNext((prevIndex) => (prevIndex < DatasDeskPage.items.length - 1 ? prevIndex + 1 : 0))
-    // };
-    
-    //   const handlePrev = () => {
-    //     setCurrentIndex((prevIndex) => (prevIndex > 0 ? prevIndex - 1 : DatasDeskPage.items.length - 1))
-    //     setCurrentIndexPrev((prevIndex) => (prevIndex > 0 ? prevIndex - 1 : DatasDeskPage.items.length - 1))
-    //     setCurrentIndexNext((prevIndex) => (prevIndex > 0 ? prevIndex - 1 : DatasDeskPage.items.length - 1))
-    // };

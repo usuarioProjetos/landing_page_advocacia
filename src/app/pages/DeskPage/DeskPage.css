@@ -4,14 +4,21 @@
     min-height: 750px;
     overflow: hidden;
     position: relative;
-    background: linear-gradient(to bottom, #CECECE, #969696);
     padding: 3em 0 4em 0;
-    -webkit-clip-path: polygon(50% 3%, 100% 0, 100% 97%, 50% 100%, 0 97%, 0 0);
-    clip-path: polygon(50% 3%, 100% 0, 100% 97%, 50% 100%, 0 97%, 0 0);
     position: relative;
 }
-.container .divsBg {
+.container .divsBg .firstDivBg, .container .divsBg .divBoxShadow {
     display: none;
+}
+.container .divsBg .bgMobile {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    background: linear-gradient(to bottom, #CECECE, #969696);
+    z-index: 0;
+    -webkit-clip-path: polygon(50% 3%, 100% 0, 100% 97%, 50% 100%, 0 97%, 0 0);
+    clip-path: polygon(50% 3%, 100% 0, 100% 97%, 50% 100%, 0 97%, 0 0);
 }
 .container .swiper_container {
     z-index: 3;
@@ -115,7 +122,11 @@
         align-items: center;
         /* z-index: 10; */
     }
+    .container .divsBg .bgMobile {
+        display: none;
+    }
     .container .divsBg .firstDivBg, .container .divsBg .divBoxShadow {
+        display: block;
         position: absolute;
         width: 100%;
         height: 90%;
