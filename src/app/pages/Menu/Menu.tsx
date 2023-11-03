@@ -64,9 +64,12 @@ export const Menu = ({ showMenu = false }: Props) => {
                     className='menu'
                     variants={variantsAnimationMenu}
                     animate={showMenu ? "animate" : "exit"}
+                    style={showMenu ? { minHeight: '500px' } : {}}
                 >
                     <article className="contentMenu">
-                        <ul className="listMenu">
+                        <ul className="listMenu"
+                            style={showMenu ? { minHeight: '400px' } : {}}
+                        >
                             {DatasMenu.items.map((itemMenu, i) => (
                                 <motion.li 
                                     className={`itemMenu itemMenu${itemMenu.id}`} 
@@ -105,6 +108,7 @@ export const Menu = ({ showMenu = false }: Props) => {
                         variants={variantsAnimationLogoMenu}
                         initial={"initial"}
                         animate={showMenu ? "animate" : "exit"}
+                        style={showMenu ? { minHeight: '100px' } : {}}
                     >
                         <Image 
                             src={DatasMenu.logo}

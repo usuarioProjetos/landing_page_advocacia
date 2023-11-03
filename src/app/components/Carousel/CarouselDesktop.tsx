@@ -78,6 +78,8 @@ export const CarouselDesktop = () => {
                 })
                 return newValuesCards
             })
+            console.log('Hover')
+            
         }
 
         return (
