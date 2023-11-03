@@ -1,72 +1,119 @@
 "use client"
 import Image from 'next/image'
 import './Menu.css'
-import { DatasMenu } from '@/app/datas/Menu'
+import { DatasMenu, delayAnimationExit } from '@/app/datas/Menu'
 import { useRef, useEffect, useLayoutEffect } from 'react'
-import { motion } from 'framer-motion'
+import { Variants, motion } from 'framer-motion'
 
 interface Props {
     showMenu: boolean
 }
 
-export const Menu = ({ showMenu }: Props) => {
+export const Menu = ({ showMenu = false }: Props) => {
     console.log(showMenu);
+
+    const variantsAnimationMenu: Variants = {
+        animate: {
+            opacity: 1,
+            height: "100vh",
+            borderBottomLeftRadius: 0, 
+            borderBottomRightRadius: 0,
+            transition: {
+                duration: .5
+            }
+        },
+        exit: {
+            height: 0,
+            opacity: 0,
+            borderBottomLeftRadius: "10%",
+            borderBottomRightRadius: "10%",
+            transition: {
+                delay: parseFloat(`0.${DatasMenu.items.length}`) + .1,
+                duration: .5
+            }
+        }
+    }
+
+    const variantsAnimationLogoMenu: Variants = {
+        initial: {
+            y: 50, 
+            opacity: 0,
+        },
+        animate: {
+            y: 0, 
+            opacity: 1, 
+            type: 'tween',
+            transition: {
+                delay: 1
+            }
+        },
+        exit: {
+            y: 50, 
+            opacity: 0, 
+            type: 'tween',
+            transition: {
+                delay: 0
+            },
+        }
+    }
     
     return (
         <>
-            {showMenu && (
+            
                 <motion.section 
                     className='menu'
-                    // initial={{ display: 'none', height: 0, opacity: 1, borderBottomLeftRadius: "30%", borderBottomRightRadius: "30%",  }}
-                    animate={{  display: 'block', height: "100vh", opacity: 1, borderBottomLeftRadius: 0, borderBottomRightRadius: 0 }}
-                    transition={{ duration: .5 }}
-                    exit={{
-                        height: 0,
-                        // width: 0,
-                        opacity: 0.2,
-                        borderBottomLeftRadius: "10%",
-                        borderBottomRightRadius: "10%",
-                        transition: {
-                            ease: "easeInOut",
-                            duration: .5,
-                            delay: .5
-                        }
-                    }}
+                    variants={variantsAnimationMenu}
+                    animate={showMenu ? "animate" : "exit"}
                 >
                     <article className="contentMenu">
                         <ul className="listMenu">
                             {DatasMenu.items.map((itemMenu, i) => (
-                                <li className={`itemMenu itemMenu${itemMenu.id}`} key={i}>
+                                <motion.li 
+                                    className={`itemMenu itemMenu${itemMenu.id}`} 
+                                    key={i}
+                                    // variants={variantsAnimationTexts}
+                                    // initial={{
+                                    //     x: -50
+                                    // }}
+                                    animate={showMenu ? {
+                                        opacity: 1,
+                                        x: 0, 
+                                        type: 'tween',
+                                        transition: {
+                                            delay: itemMenu.delayEnter,
+                                            duration: .3
+                                        }
+                                    } : {
+                                        opacity: 0,
+                                        x: -50, 
+                                        type: 'tween',
+                                        transition: {
+                                            delay: itemMenu.delayExit,
+                                            duration: .3
+                                        }
+                                    }}
+                                >
                                     <a href="#">
                                         {itemMenu.itemList}
                                     </a>
-                                </li>
+                                </motion.li>
                             ))}
                         </ul>
                     </article>
-                    <div className="contentLogo">
+                    <motion.div 
+                        className="contentLogo"
+                        variants={variantsAnimationLogoMenu}
+                        initial={"initial"}
+                        animate={showMenu ? "animate" : "exit"}
+                    >
                         <Image 
                             src={DatasMenu.logo}
                             alt='Logo Chevitereza Paiva'
                         />
                         <p className='companyName'>chevitereza paiva <br /> advocacia</p>
-                    </div>
+                    </motion.div>
                 </motion.section>
-            )}
+            
         </>
     )
 }
-
-{/* <article className="contentMenu">
-    <div className="optionsNavigation">
-        <ul>
-            <li></li>
-            ...
-        </ul>
-    </div>
-
-    <div className="contentLogo">
-        <img src="" alt="" />
-        <p></p>
-    </div>
-</article> */}

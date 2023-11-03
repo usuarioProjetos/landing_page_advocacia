@@ -3,31 +3,55 @@ import Logo from '../assets/logo.png'
 
 interface IDatasMenu {
     logo: StaticImageData
-    items: { itemList: string, id: number }[]
+    items: { 
+        itemList: string, 
+        to: string
+        id: number, 
+        delayEnter: number, 
+        delayExit: number 
+    }[]
 }
+
+export const delayAnimationEnter = .3
+export const delayAnimationExit = .1
 
 export const DatasMenu: IDatasMenu = {
     logo: Logo,
     items: [
         {
             itemList: 'home',
-            id: 1
+            to: 'home',
+            id: 1,
+            delayEnter: delayAnimationEnter,
+            delayExit: (delayAnimationExit + .4)
         },
         {
             itemList: 'atuação',
-            id: 2
+            to: 'home',
+            id: 2,
+            delayEnter: (delayAnimationEnter + .1),
+            delayExit: (delayAnimationExit + .3)
         },
         {
             itemList: 'escritório',
-            id: 3
+            to: 'home',
+            id: 3,
+            delayEnter: (delayAnimationEnter + .2),
+            delayExit: (delayAnimationExit + .2)
         },
         {
             itemList: 'profissionais',
-            id: 4
+            to: 'home',
+            id: 4,
+            delayEnter: (delayAnimationEnter + .3),
+            delayExit: (delayAnimationExit + .1)
         },
         {
             itemList: 'contato',
-            id: 5
+            to: 'home',
+            id: 5,
+            delayEnter: (delayAnimationEnter + .4),
+            delayExit: delayAnimationExit
         }
     ]
 }

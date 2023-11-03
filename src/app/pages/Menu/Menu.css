@@ -3,19 +3,21 @@ section.menu {
     position: fixed;
     width: 100vw;
     height: 100vh;
+    min-height: 500px;
+    opacity: 0;
     display: flex;
     flex-direction: column;
     top: 0;
     left: 0;
     z-index: 0;
     overflow: hidden;
-    display: none;
 }
 section.menu .contentMenu {
-    height: 70%;
+    height: 70vh;
 }
 section.menu .contentMenu .listMenu {
     height: 100%;
+    min-height: 400px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -23,16 +25,23 @@ section.menu .contentMenu .listMenu {
     gap: 1.7em;
     text-transform: capitalize;
     padding: 3em 1em 0 0;
-    font-size: 2em;
+    font-size: 2rem;
     text-align: end;
     list-style: none;
 }
-
-section.menu .contentMenu .listMenu .itemMenu a {
-    text-decoration: none;
+section.menu .contentMenu .listMenu .itemMenu {
+    transition: scale .2s;
+}
+section.menu .contentMenu .listMenu .itemMenu:hover {
+    scale: 1.3;
     color: #fff;
 }
+section.menu .contentMenu .listMenu .itemMenu a {
+    text-decoration: none;
+    color: #dbdbdb;
+}
 section.menu .contentLogo {
+    min-height: 100px;
     height: 30vh;
     display: flex;
     flex-direction: column;
@@ -47,4 +56,41 @@ section.menu .contentLogo .companyName {
 section.menu .contentLogo img {
     height: 6em;
     width: auto;
+}
+section.menu .contentLogo p {
+    color: #fff;
+}
+
+@media (max-height: 700px) {
+    section.menu .contentMenu .listMenu {
+        font-size: 1.8rem;
+        gap: 1em;
+    }
+    section.menu .contentLogo .companyName {
+        font-size: 1.2em;
+    }
+    section.menu .contentLogo img {
+        height: 4em;
+        width: auto;
+    }
+}
+@media (max-height: 550px) {
+    section.menu .contentMenu .listMenu {
+        padding-top: 4em;
+        gap: 1em;
+        height: 80vh;
+    }
+    section.menu .contentLogo {
+        height: 20vh;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        padding-bottom: .3em;
+    }
+    section.menu .contentLogo img {
+        height: 3.5em;
+    }
+    section.menu .contentLogo p {
+        font-size: 11rem;
+    }
 }
