@@ -29,8 +29,8 @@ export const Menu = ({ showMenu = false }: Props) => {
             borderBottomRightRadius: "10%",
             transition: {
                 delay: parseFloat(`0.${DatasMenu.items.length}`) + .1,
-                duration: .5
-            }
+                duration: .5,
+            },
         }
     }
 
@@ -64,11 +64,11 @@ export const Menu = ({ showMenu = false }: Props) => {
                     className='menu'
                     variants={variantsAnimationMenu}
                     animate={showMenu ? "animate" : "exit"}
-                    style={showMenu ? { minHeight: '500px' } : {}}
+                    // style={showMenu ? { minHeight: '500px' } : {}}
                 >
                     <article className="contentMenu">
                         <ul className="listMenu"
-                            style={showMenu ? { minHeight: '400px' } : {}}
+                            // style={showMenu ? { minHeight: '400px' } : {}}
                         >
                             {DatasMenu.items.map((itemMenu, i) => (
                                 <motion.li 
@@ -108,7 +108,7 @@ export const Menu = ({ showMenu = false }: Props) => {
                         variants={variantsAnimationLogoMenu}
                         initial={"initial"}
                         animate={showMenu ? "animate" : "exit"}
-                        style={showMenu ? { minHeight: '100px' } : {}}
+                        // style={showMenu ? { minHeight: '100px' } : {}}
                     >
                         <Image 
                             src={DatasMenu.logo}
