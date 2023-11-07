@@ -1,0 +1,164 @@
+/* Card */
+.allCards .card {
+    min-height: 600px;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Texts */
+.allCards .card .texts {
+    padding-inline: 2em 1em;
+}
+.allCards .card .texts h3 {
+    font-size: 28px;
+    font-weight: 600;
+}
+.allCards .card .texts .divParagraph {
+    display: flex;
+    position: relative;
+    align-items: center;
+    gap: 1em;
+    padding: .5em 1.5em .5em 1.5em;
+
+}
+.allCards .card .texts .divParagraph p {
+    font-size: 16px;
+    width: 100%;
+}
+.allCards .card .texts .divParagraph .lineParagraph {
+    position: absolute;
+    width: .1rem;
+    height: 110%;
+    background-color: #022521;
+    border-top-right-radius: 2em;
+    border-top-left-radius: 2em;
+    top: 0;
+}
+
+
+/* Squares */
+.allCards .card .squares {
+    width: 100%;
+    height: 40vh;
+    min-height: 350px;
+    
+}
+.allCards .card .squares:nth-child(1) {
+    background-color: #0f0;
+}
+.allCards .card .squares .image {
+    background-color: #022521;
+    margin: 0 auto;
+    width: 90%;
+    height: 100%;
+    overflow: hidden;
+}
+.allCards .card .squares .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    scale: 1.1;
+}
+.allCards .card .squares .bgSquare {
+    position: absolute;
+    display: block;
+    z-index: -1;
+    width: 100%;
+    height: 98%;
+    bottom: 7px;
+    background-color: #D2EEEA;
+
+    box-shadow: 10px 10px #0f0;
+}
+.allCards .card .squares .bgSquare.bgSquareShadow {
+    bottom: 0;
+    height: 100%;
+    background-color: rgba(57, 204, 185, 0.1);
+    z-index: -2;
+}
+.allCards .card .squares .bgSquare.bgSquare0 {
+    height: 105%;
+    -webkit-clip-path: polygon(82% 0, 100% 17%, 100% 91%, 24% 91%, 0 94%, 0 8%) !important;
+    clip-path: polygon(82% 0, 100% 17%, 100% 91%, 24% 91%, 0 94%, 0 8%) !important;
+}
+.allCards .card .squares .bgSquare.bgSquareShadow.bgSquareShadow0 {
+    height: 107%;
+    -webkit-clip-path: polygon(82% 0, 100% 17%, 100% 91%, 24% 91%, 0 94%, 0 8%) !important;
+    clip-path: polygon(82% 0, 100% 17%, 100% 91%, 24% 91%, 0 94%, 0 8%) !important;
+
+}
+
+/* Lines */
+.allCards .card .lines {
+    display: flex;
+    justify-content: end;
+    height: 5vh;
+    width: 100%;
+}
+.allCards .card .lines .bottomLine {
+    border-bottom: 2px solid #022521;
+    height: 100%;
+    width: 100%;
+}
+
+@media (max-width: 321px) {
+    .allCards .card  {
+        height: 55vh;
+    }
+    .allCards .card .texts h3 {
+        font-size: 25px;
+        font-weight: 600;
+    }
+    .allCards .card .texts p {
+        font-size: 15px;
+    }
+    .allCards .card .texts .divParagraph p {
+        width: 110%;
+    }
+    .allCards .card .texts .divParagraph {
+        padding: .5em 1em .5em 1em;
+    }
+}
+@media (min-width: 550px) {
+    .allCards .card .texts {
+        width: 80%;
+    }
+    .allCards .card .lines .bottomLine {
+        width: 85%;
+    }
+    .allCards .card .squares .image {
+        width: 75%;
+    }
+    .allCards .card .texts .divParagraph p {
+        width: 80%;
+    }
+}
+
+@media (min-width: 680px) {
+    .allCards .card .texts {
+        width: 70%;
+    }
+    .allCards .card {
+        height: 70vh;
+    }
+    .allCards .card .lines .bottomLine {
+        width: 80%;
+    }
+    .allCards .card .squares .bgSquare {
+        height: 97%;
+        bottom: 1rem;
+    }
+    .allCards .card .squares .bgSquare.bgSquareShadow {
+        bottom: .3rem;
+    }
+    .allCards .card .squares .image {
+        width: 70%;
+    }
+    .allCards .card .texts .divParagraph p {
+        width: 90%;
+    }
+}

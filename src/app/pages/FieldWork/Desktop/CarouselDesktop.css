@@ -6,14 +6,12 @@
     margin: 1em 0 1em 0;
     position: relative;
     min-height: 750px;
-    /* align-items: center; */
-
 }
 
 .containerCarousel .swiperSlider {
     height: 80%;
     width: 97%;
-    display: flex; /* Tornando o .swiperSlider um contêiner flexível */
+    display: flex;
     justify-content: space-between;
 }
 .containerCarousel .swiperSlider .swiperSliderItem {
@@ -120,9 +118,6 @@
     }
     .containerCarousel .swiperSlider .swiperSliderItem .contentTexts {
         flex-grow: .5;
-    }
-    .containerCarousel .swiperSlider .swiperSliderItem {
-        /* width: 30%; */
     }
 }
 @media (min-width: 1900px) {

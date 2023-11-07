@@ -1,25 +1,24 @@
 "use client"
-import { Title } from '../Title/Title'
-import { useEffect, useRef, useState } from 'react'
-import { TiArrowLeftThick, TiArrowRightThick } from 'react-icons/ti'
+// Style
 import './CarouselDesktop.css'
-import { motion, AnimatePresence, Variants } from 'framer-motion'
-import { SliderCard } from './SliderCard/SliderCard'
-import { register } from 'swiper/element/bundle'
-register()
-import ImageExample from '../../assets/imageExampleFieldWork.png'
-import BlackHammer from '../../assets/desk/blackHammer.png'
-import WhiteHammer from '../../assets/desk/whiteHammer.png'
-import 'swiper/css'
-import 'swiper/css/navigation'
-import 'swiper/css/pagination'
-import 'swiper/css/scrollbar'
-import 'swiper/css/effect-fade'
-import { EffectFade, EffectCoverflow } from 'swiper/modules'
-import { Swiper, SwiperSlide } from 'swiper/react'
+// Next/React
 import Image from 'next/image'
-import { DatasFieldPageDesktop, ICardFieldWork } from '@/app/datas/FieldWork'
-import Vector from '../../assets/svg/Vector 20 (1).svg'
+import { useEffect, useState } from 'react'
+// Datas
+import { DatasFieldPageDesktop } from '@/app/datas/FieldWork'
+// Interfaces
+import { ICardFieldWork } from '@/app/interfaces/FieldWork/FieldWork'
+// Swiper
+import { Swiper, SwiperSlide } from 'swiper/react'
+// Framer-motion
+import { motion, AnimatePresence } from 'framer-motion'
+// Animations
+import { 
+    variantsTitleItem, 
+    variantsContentTexts,
+    variantsParagraphContentText,
+    variantsTitleContentText
+} from '@/app/animations/FieldWork'
 
 export const CarouselDesktop = () => {
         const [cards, setCards] = useState(DatasFieldPageDesktop.cards)
@@ -39,32 +38,7 @@ export const CarouselDesktop = () => {
                 };
             }
         }, []);
-        const variantsContentTexts: Variants = {
-            initial: { opacity: 0, y: -400 },
-            animate: {  opacity: 1, y: 0 },
-            exit : {
-                opacity: 0,
-                // display:'none',
-                y: -200,
-            }
-        }
-        const variantsTitleItem: Variants = {
-            initial: { opacity: 0 },
-            animate: { opacity: 1 },
-            exit: { opacity: 0 },
-        }
-
-        const variantsTitleContentText: Variants = {
-            initial: { opacity: 0, y: -200 },
-            animate: { opacity: 1, y: 0 },
-            exit: { opacity: 0, y: -200 },
-        }
-
-        const variantsParagraphContentText: Variants = {
-            initial: { opacity: 0 },
-            animate: { opacity: 1, scale: 1 },
-            exit: { opacity: 0, scale: 0.8 },
-        }
+        
         
         const onMouseEnterCard = (card: ICardFieldWork) => {
             setCards(() => {
@@ -84,8 +58,6 @@ export const CarouselDesktop = () => {
 
         return (
         <section className="containerCarousel">
-            
-            
             <Swiper
                 className='swiperSlider'
                 slidesPerView={'auto'}
@@ -127,17 +99,6 @@ export const CarouselDesktop = () => {
                                         backgroundColor: item.showContent ? '#fff' : '#007163'
                                     }}
                                 >
-                                    {/* {item.showContent ? (
-                                        <Image 
-                                            src={DatasFieldPageDesktop.iconActualItem}
-                                            alt='Ícone de Martelo'
-                                        />
-                                    ) : (
-                                        <Image 
-                                            src={DatasFieldPageDesktop.icon}
-                                            alt='Ícone de Martelo'
-                                        />
-                                    )} */}
                                     <Image 
                                         src={DatasFieldPageDesktop.icon}
                                         alt='Ícone de Martelo'
@@ -151,7 +112,6 @@ export const CarouselDesktop = () => {
                                     className="contentTexts" 
                                     initial={"initial"}
                                     animate={item.showContent ? "animate" : "exit"}
-                                    // exit={"exit"}
                                     transition={{
                                         type:' tween'
                                     }}

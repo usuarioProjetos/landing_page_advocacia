@@ -1,47 +1,19 @@
-import { StaticImageData } from 'next/image'
-
 import {
     DireitoCivilImg,
     DireitoConsumidorImg,
     DireitoFamiliaImg,
     DireitoTrabalhistaImg,
     FullServiceImg,
-    RecJudicialFalenciaImg
+    RecJudicialFalenciaImg,
+    BgImage,
+    BlackHammer,
+    WhiteHammer
 } from '../assets/fieldWork/imagesFieldWork'
 
-
-import ImageTest from '../assets/bruno-thethe-nxkinK7hhOk-unsplash 2.png'
-import BlackHammer from '../assets/desk/blackHammer.png'
-import BgImage from '../assets/svg/bgFieldWork.svg'
-import ImageCardExample from '../assets/desk/imageCardExample.png'
-import WhiteHammer from '../assets/desk/whiteHammer.png'
-import ImageOne from '../assets/imageFieldWorkMobileOne.png'
-import ImageThree from '../assets/imageFieldWorkMobileThree.png'
-import ImageTwo from '../assets/imageFieldWorkMobileTwo.png'
-
-interface IDatasFirstWorkMobile {
-    title: string
-    text: string
-    image: any
-    direction: 'left' | 'right' | null
-    nameClass: string
-}
-
-export interface ICardFieldWork {
-    title: string
-    text: string
-    image: StaticImageData
-    id: number
-    showContent: boolean
-}
-
-export interface IDatasFirstWorkDesktop {
-    bgImage: StaticImageData
-    icon: StaticImageData
-    iconActualItem: StaticImageData
-
-    cards: ICardFieldWork[]
-}
+import { 
+    IDatasFirstWorkDesktop, 
+    IDatasFirstWorkMobile 
+} from '../interfaces/FieldWork/FieldWork'
 
 export const DatasFieldWorkMobile: IDatasFirstWorkMobile[] = [
     {

@@ -1,177 +1,12 @@
 /* Section */
-
 .fieldWork {
-    contain: layout inline-size;
+    position: relative;
     padding: 68px 0 0 0;
-    resize: both;
-    /* background: linear-gradient(to bottom,
-        #000E0C 0%,
-        #001814 25%,
-        #001815 40%,
-        #001412 60%,
-        #001411 80%,
-        #001D19 100%
-    ); */
-
 }
 .mobileVersion {
     display: block;
 }
 /* All cards */
-.fieldWork .allCards {
-    /* margin-top: 10px; */
-    /* background-color: aqua; */
-}
-
-/* Card */
-.fieldWork .allCards .card {
-    min-height: 600px;
-    margin-bottom: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-}
-
-/* Texts */
-.fieldWork .allCards .card .texts {
-    padding-inline: 2em 1em;
-    /* background-color: antiquewhite; */
-    /* width: 80%; */
-}
-.fieldWork .allCards .card .texts h3 {
-    font-size: 28px;
-    font-weight: 600;
-}
-.fieldWork .allCards .card .texts .divParagraph {
-    display: flex;
-    position: relative;
-    /* justify-content: center; */
-    align-items: center;
-    gap: 1em;
-    padding: .5em 1.5em .5em 1.5em;
-
-}
-.fieldWork .allCards .card .texts .divParagraph p {
-    font-size: 16px;
-    width: 100%;
-}
-.fieldWork .allCards .card .texts .divParagraph .lineParagraph {
-    position: absolute;
-    width: .1rem;
-    height: 110%;
-    background-color: #022521;
-    border-top-right-radius: 2em;
-    border-top-left-radius: 2em;
-    top: 0;
-}
-
-
-/* Squares */
-.fieldWork .allCards .card .squares {
-    /* position: relative; */
-    width: 100%;
-    height: 40vh;
-    min-height: 350px;
-    
-}
-.fieldWork .allCards .card .squares:nth-child(1) {
-    background-color: #0f0;
-}
-.fieldWork .allCards .card .squares .image {
-    background-color: #022521;
-    margin: 0 auto;
-    width: 90%;
-
-    /* transform: translateY(0); */
-    height: 100%;
-    overflow: hidden;
-}
-.fieldWork .allCards .card .squares .image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    scale: 1.1;
-}
-.fieldWork .allCards .card .squares .bgSquare {
-    position: absolute;
-    display: block;
-    z-index: -1;
-    width: 100%;
-    height: 98%;
-    bottom: 7px;
-    background-color: #D2EEEA;
-
-    box-shadow: 10px 10px #0f0;
-}
-.fieldWork .allCards .card .squares .bgSquare.bgSquareShadow {
-    bottom: 0;
-    height: 100%;
-    background-color: rgba(57, 204, 185, 0.1);
-    z-index: -2;
-}
-.fieldWork .allCards .card .squares .bgSquare.bgSquare0 {
-    height: 105%;
-    -webkit-clip-path: polygon(82% 0, 100% 17%, 100% 91%, 24% 91%, 0 94%, 0 8%) !important;
-    clip-path: polygon(82% 0, 100% 17%, 100% 91%, 24% 91%, 0 94%, 0 8%) !important;
-}
-.fieldWork .allCards .card .squares .bgSquare.bgSquareShadow.bgSquareShadow0 {
-    height: 107%;
-    -webkit-clip-path: polygon(82% 0, 100% 17%, 100% 91%, 24% 91%, 0 94%, 0 8%) !important;
-    clip-path: polygon(82% 0, 100% 17%, 100% 91%, 24% 91%, 0 94%, 0 8%) !important;
-
-}
-
-/* Lines */
-.fieldWork .allCards .card .lines {
-    display: flex;
-    justify-content: end;
-    height: 5vh;
-    width: 100%;
-}
-.fieldWork .allCards .card .lines .bottomLine {
-    border-bottom: 2px solid #022521;
-    /* border-bottom: 2px solid #022521; */
-    height: 100%;
-    width: 100%;
-}
-
-@media (max-width: 321px) {
-    .fieldWork .allCards .card  {
-        height: 55vh;
-    }
-    .fieldWork .allCards .card .texts h3 {
-        font-size: 25px;
-        font-weight: 600;
-    }
-    .fieldWork .allCards .card .texts p {
-        font-size: 15px;
-    }
-    .fieldWork .allCards .card .texts .divParagraph p {
-        width: 110%;
-    }
-    .fieldWork .allCards .card .texts .divParagraph {
-        padding: .5em 1em .5em 1em;
-    }
-}
-
-@media (max-width: 850px) {
-    .mobileVersion {
-        display: block;
-    }
-    .desktopVersion {
-        display: none;
-    }
-}
-@media (min-width: 850px) {
-    .mobileVersion {
-        display: none;
-    }
-    .desktopVersion {
-        display: block;
-    }
-}
 .desktopVersion {
 
     overflow: hidden;
@@ -192,95 +27,22 @@
     object-position: 0 30%;
     
 }
-/* Desktop */
-/*
-.desktopVersion {
-    width: 100%;
-    height: 90vh;
-    background-color: #f00;
-}
-.desktopVersion .containerCards {
-    width: 95%;
-    height: 90%;
-    background-color: #0f0;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: .5em;
-    position: relative;
-}
-.desktopVersion .containerCards .card {
-    background-color: #00f;
-    width: 33%;
-    height: 80%;
-    position: absolute;
-}
-.cardPrev {
-    left: 0;
-}
-.cardNext {
-    right: 0;
-}
-*/
 
 /* Responsive */
-@media (min-width: 450px) {
-    .fieldWork .allCards .card .texts {
-        /* width: 95%; */
-
+@media (max-width: 850px) {
+    .mobileVersion {
+        display: block;
     }
-    
-}
-
-@media (min-width: 550px) {
-    .fieldWork .allCards{
-    }
-    .fieldWork .allCards .card .texts {
-        width: 80%;
-    }
-    .fieldWork .allCards .card .lines .bottomLine {
-        width: 85%;
-    }
-    /* .fieldWork .allCards .card .squares .bgSquare {
-        width: 70%;
-        height: 85%;
-        bottom: -20px;
-    } */
-    .fieldWork .allCards .card .squares .image {
-        width: 75%;
-    }
-    .fieldWork .allCards .card .texts .divParagraph p {
-        width: 80%;
+    .desktopVersion {
+        display: none;
     }
 }
-
-@media (min-width: 680px) {
-    .fieldWork .allCards{
+@media (min-width: 850px) {
+    .mobileVersion {
+        display: none;
     }
-    .fieldWork .allCards .card .texts {
-        width: 70%;
-    }
-    .fieldWork .allCards .card {
-        height: 70vh;
-    }
-    .fieldWork .allCards .card .lines .bottomLine {
-        width: 80%;
-    }
-    .fieldWork .allCards .card .squares .bgSquare {
-        height: 97%;
-        bottom: 1rem;
-    }
-    .fieldWork .allCards .card .squares .bgSquare.bgSquareShadow {
-        /* height: 97%; */
-        bottom: .3rem;
-    }
-    .fieldWork .allCards .card .squares .image {
-        width: 70%;
-        /* height: 90%; */
-    }
-    .fieldWork .allCards .card .texts .divParagraph p {
-        width: 90%;
+    .desktopVersion {
+        display: block;
     }
 }
 
