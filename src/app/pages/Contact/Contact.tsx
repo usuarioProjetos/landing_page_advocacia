@@ -20,7 +20,7 @@ export const Contact = () => {
                 <form className="form">
                     <div className="contextInputs">
                         {DatasInput.map(item => (
-                            <label className={`labelInput ${item.name === 'mensagem' ? 'labelTextarea' : ''}`}>
+                            <label key={item.name} className={`labelInput ${item.name === 'mensagem' ? 'labelTextarea' : ''}`}>
                                 <p>{item.name}</p>
                                 {item.name === 'mensagem' ? (
                                     <textarea className='elementForm textarea' rows={4}></textarea>
@@ -55,7 +55,7 @@ export const Contact = () => {
 
                 <div className="infosSocialMedias">
                     {DatasSocialMedia.map(socialMedia => (
-                        <div className="socialMedia">
+                        <div className="socialMedia" key={socialMedia.name}>
                             <div className="contentSocialMedia">
                                 <socialMedia.Icon />
                                 <p>{socialMedia.name}</p>

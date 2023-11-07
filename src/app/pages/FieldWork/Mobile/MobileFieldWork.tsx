@@ -18,7 +18,7 @@ export const MobileFieldWork = () => {
             
             <article className="allCards">
                 {datas.map((card, i) => (
-                    <div className={`card ${card.nameClass}`}>
+                    <div key={card.title} className={`card ${card.nameClass}`}>
                         <div 
                             className="texts"
                             style={{ 

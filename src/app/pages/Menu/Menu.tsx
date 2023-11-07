@@ -70,10 +70,10 @@ export const Menu = ({ showMenu = false }: Props) => {
                         <ul className="listMenu"
                             // style={showMenu ? { minHeight: '400px' } : {}}
                         >
-                            {DatasMenu.items.map((itemMenu, i) => (
+                            {DatasMenu.items.map(itemMenu => (
                                 <motion.li 
                                     className={`itemMenu itemMenu${itemMenu.id}`} 
-                                    key={i}
+                                    key={itemMenu.id}
                                     // variants={variantsAnimationTexts}
                                     // initial={{
                                     //     x: -50

@@ -22,23 +22,6 @@ import {
 
 export const CarouselDesktop = () => {
         const [cards, setCards] = useState(DatasFieldPageDesktop.cards)
-        const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
-        useEffect(() => {
-            if (typeof window !== 'undefined') {
-                setWindowWidth(window.innerWidth);
-                const handleResize = () => {
-                    setWindowWidth(window.innerWidth);
-                };
-    
-                window.addEventListener('resize', handleResize);
-    
-                return () => {
-                    window.removeEventListener('resize', handleResize);
-                };
-            }
-        }, []);
-        
         
         const onMouseEnterCard = (card: ICardFieldWork) => {
             setCards(() => {
@@ -65,9 +48,9 @@ export const CarouselDesktop = () => {
                 initialSlide={1}
                 centeredSlides={false}
             >
-                {windowWidth > 1200 && (
-                    <SwiperSlide className='swiperSliderItem spareElement' />
-                )}
+                
+                <SwiperSlide style={{ display: 'none' }} className='swiperSliderItem spareElement' />
+                
                 <AnimatePresence>
                     {cards && cards.map(item => (
                         <article className="card" key={item.id}>
@@ -75,7 +58,7 @@ export const CarouselDesktop = () => {
                                 className='swiperSliderItem'
                                 onMouseEnter={() => onMouseEnterCard(item)}
                             >
-                                <div className="imageDiv">
+                                <div className={`imageDiv ${item.showContent === false ? 'opacityImage' : ''}`}>
                                     <Image
                                         src={item.image}
                                         alt=''
@@ -140,9 +123,7 @@ export const CarouselDesktop = () => {
                         </article>
                     ))}
                 </AnimatePresence>
-                {windowWidth > 1200 && (
-                    <SwiperSlide className='swiperSliderItem spareElement' />
-                )}
+                <SwiperSlide style={{ display: 'none' }} className='swiperSliderItem spareElement' />
             </Swiper>
         </section>
     )

@@ -34,6 +34,10 @@
     position: relative;
     overflow: hidden;
 }
+.containerCarousel .swiperSlider .swiperSliderItem .imageDiv.opacityImage img {
+    filter: blur(3px);
+}
+
 .containerCarousel .swiperSlider .swiperSliderItem .imageDiv img {
     position: absolute;
     width: 100%;
@@ -99,8 +103,14 @@
 }
 
 @media (min-width: 1200px) {
+    .containerCarousel .swiperSlider .spareElement {
+        display: block !important;
+    }
     .containerCarousel .swiperSlider .swiperSliderItem {
         width: 33%;
+    }
+    .containerCarousel .swiperSlider .swiperSliderItem .contentTexts h3 {
+        font-size: 1.8em;
     }
 }
 
@@ -108,6 +118,9 @@
     .containerCarousel .swiperSlider {
         width: 90%;
         height: 90%;
+    }
+    .containerCarousel .swiperSlider .swiperSliderItem .contentTexts h3 {
+        font-size: 2em;
     }
 }
 

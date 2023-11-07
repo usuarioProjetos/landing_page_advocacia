@@ -35,8 +35,8 @@ export const FirstPage = () => {
 
                 <h1>{DatasFirstPage.title}</h1>
                 <div className="btns">
-                    {DatasFirstPage.btns.map(btn => (
-                        <div className={`btn ${btn.nameClass}`}>
+                    {DatasFirstPage.btns.map((btn, i) => (
+                        <div key={i} className={`btn ${btn.nameClass}`}>
                             <button>
                                 {btn.text}
                             </button>
