@@ -9,6 +9,7 @@ import { About } from './pages/About/About'
 
 import './Page.css'
 import { BecauseWe } from './pages/BecauseWe/BecauseWe'
+import { NewAbout } from './pages/About/NewAbout'
 
 export default function Home() {
   return (
@@ -16,7 +17,7 @@ export default function Home() {
       <Navbar />
       <FirstPage />
       <FieldWork />
-      <About />
+      {/* <About /> */}
       <BecauseWe />
       <DeskPage />
       <Contact />

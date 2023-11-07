@@ -55,15 +55,15 @@ export const CarouselDesktop = () => {
         }
 
         const variantsTitleContentText: Variants = {
-            initial: { opacity: 0, x: -200 },
-            animate: { opacity: 1, x: 0 },
-            exit: { opacity: 0, x: -200 },
+            initial: { opacity: 0, y: -200 },
+            animate: { opacity: 1, y: 0 },
+            exit: { opacity: 0, y: -200 },
         }
 
         const variantsParagraphContentText: Variants = {
-            initial: { opacity: 0, x: 100 },
-            animate: { opacity: 1, x: 0 },
-            exit: { opacity: 0, x: 100 },
+            initial: { opacity: 0 },
+            animate: { opacity: 1, scale: 1 },
+            exit: { opacity: 0, scale: 0.8 },
         }
         
         const onMouseEnterCard = (card: ICardFieldWork) => {
@@ -104,6 +104,10 @@ export const CarouselDesktop = () => {
                                 onMouseEnter={() => onMouseEnterCard(item)}
                             >
                                 <div className="imageDiv">
+                                    <Image
+                                        src={item.image}
+                                        alt=''
+                                    />
                                     {item.showContent === false && (
                                         <motion.h4
                                             variants={variantsTitleItem}
@@ -163,7 +167,7 @@ export const CarouselDesktop = () => {
                                     >{item.title}</motion.h3>
                                     <motion.p
                                         variants={variantsParagraphContentText}
-                                        initial={"initial"}
+                                        // initial={"initial"}
                                         animate={item.showContent ? "animate" : "exit"}
                                         transition={{
                                             type:' tween',

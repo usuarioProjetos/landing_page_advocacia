@@ -314,3 +314,8 @@
         object-position: 0 -30em;        
     }    
 }
+@media (min-width: 2500px) {
+    .desktopVersion .bgSvg img {
+        object-position: 0 -35em;        
+    }    
+}

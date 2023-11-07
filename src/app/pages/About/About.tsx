@@ -13,21 +13,30 @@ export const About = () => {
             />
 
             <article className="cardProfessionals">
-                {DatasProfessionals.map((professional, i) => (
+                {DatasProfessionals.map((card, i) => (
                     <div className={`aggregateContent aggregateContent${i}`}>
-                        <div className="cardProfessional">
+                        <div className={`cardProfessional cardProfessional${i} ${ i % 2 === 0 ? 'even' : 'odd' }`}>
                             
-                                <div className={`spanDivImage spanDivImage${i}`}>
+                                {/* <div className={`spanDivImage spanDivImage${i}`}> */}
                                     <div className={`divImage divImage${i}`}>
-                                        {/* <Image
-                                            src={professional.img}
+                                        <Image
+                                            src={card.img}
                                             alt='Foto do profissional'
-                                        /> */}
+                                        />
                                     </div>
-                                </div>
+                                {/* </div> */}
                                 <div className="content-text">
-                                    <h3>{professional.name}</h3>
-                                    <p>{professional.text}</p>
+                                    <h3>{card.name}</h3>
+                                    <p>{card.text}</p>
+                                    <div className="socialMedias">
+                                        {card.socialMedias && card.socialMedias.map((media, i) => (
+                                            <div className="socialMedia">
+                                                <div className="divIconMedia">
+                                                    <media.Icon />
+                                                </div>
+                                            </div>
+                                        ))}
+                                    </div>
                                     <div className="borderComponent"></div>         
                                 </div>
                         </div>
