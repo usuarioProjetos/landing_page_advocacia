@@ -20,7 +20,8 @@ export const BecauseWe = () => {
 
             <article className="cards">
                 {datas.cards.map(card => (
-                    <div className={`card card${card.id}`} key={card.id}>
+                    <div className={`card card${card.id} ${card.id % 2 === 0 ? 'even' : 'odd'}`} key={card.id}>
+                        
                         <div className={`iconDiv iconDiv${card.id}`}>
                             <img src={card.icon.src} alt="" />
                         </div>
@@ -28,6 +29,7 @@ export const BecauseWe = () => {
                             <h3 className='titleCard'>{card.title}</h3>
                             <p className='paragraphCard'>{card.text}</p>
                         </div>
+                       
                     </div>
                 ))}
             </article>
