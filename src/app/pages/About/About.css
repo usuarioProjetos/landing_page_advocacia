@@ -1,599 +1,321 @@
-.professionalsPage {
-    margin-bottom: 5em;
-}
-.aggregateContent {
-    position: relative;
+/* All Components */
+.allInfosAbout {
     width: 100%;
-    /* height: 85vh; */
-    min-height: 650px;
-    max-width: 900px;
-    margin-bottom: 5em;
-    /* outline: 1px solid #f00; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* padding: 5rem 0 5rem 0; */
-}
-/* 400px */
-.aggregateContent:last-child {
-    margin-bottom: 0;
-}
-.aggregateContent .geometryFormBackground {
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: 98.7%;
-    background-color: #D2EEEA;
-    bottom: 0;
-    z-index: 1;
+    padding: 3em 0 0 0;
 }
 
-.aggregateContent .geometryFormBackground.firstBgGeometry{
-    -webkit-clip-path: polygon(50% 0, 100% 5%, 100% 100%, 70% 95%, 0 100%, 0 7%);
-    clip-path: polygon(50% 0, 100% 5%, 100% 100%, 70% 95%, 0 100%, 0 7%);
-}
-.aggregateContent .geometryFormBackground.geometryFormBackgroundShadow {
-    height: 100%;
-    background-color: #BBE5DF;
-    z-index: 0;
-}
-
-.aggregateContent .geometryFormBackground.globalBgGeometry{
-    height: 110%;
-    top: 0;
-    -webkit-clip-path: polygon(30% 0, 100% 5%, 100% 95%, 50% 100%, 0 95%, 0 8%);
-    clip-path: polygon(30% 0, 100% 5%, 100% 95%, 50% 100%, 0 95%, 0 8%);
-}
-.professionalsPage {
-    padding: 2em 0 0 0;
-    width: 100%;
-    background: #fff;
-}
-.professionalsPage .cardProfessionals {
-    margin-top: 2.5em;
-    width: 100%;
-}
-.professionalsPage .cardProfessionals .cardProfessional {
-    position: relative;
-    padding-top: 4em;
-    z-index: 3;
-    width: 85%;
-    /* height: 85%; */
-    margin: auto;
+/* Card */
+.allInfosAbout .infoAboutCard {
     display: flex;
     flex-direction: column;
-}
-.professionalsPage .cardProfessionals .cardProfessional.cardProfessional1 {
-    padding-top: 0;
-}
-.professionalsPage .cardProfessionals .cardProfessional.cardProfessional0 {
-    padding-bottom: 4em;
-
-}
-.professionalsPage .cardProfessionals .cardProfessional .divImage {
-    display: grid;
-    place-items: center;
+    padding: 4em 0 4em 0;
+    width: 100%;
     margin: auto;
-    width: 100%;
-    height: 100%;
-    min-height: 350px;
-    border-top-right-radius: 2em;
-    border-bottom-left-radius: 2em;
-    margin-bottom: 2em;
-    overflow: hidden;
-}
-.professionalsPage .cardProfessionals .cardProfessional .divImage img {
-    height: 100%;
-    width: auto;
-    object-fit: contain;
-}
-.professionalsPage .cardProfessionals .cardProfessional .divImage0 {
-    height: 60%;
-}
-.professionalsPage .cardProfessionals .cardProfessional .divImage1 {
-    /* background-color: #f00; */
-    max-height: 400px;
-    margin-bottom: 0;
-}
-.professionalsPage .cardProfessionals .cardProfessional .divImage1 img {
-    height: 100%;
-    width: 100%;
-    object-fit: contain;
-}
-.professionalsPage .cardProfessionals .cardProfessional .content-text {
+    margin-bottom: 5em;
     position: relative;
-    margin: auto;
-    padding: 0 0 1em 1em;
-    width: 100%;
-    height: auto;
-    /* max-height: 50%; */
-    overflow: auto;
-    z-index: 2;
 }
-.professionalsPage .cardProfessionals .cardProfessional .content-text .socialMedias {
-    display: flex;
-    justify-content: end;
-    margin-right: 1em;
-    gap: 1em;
-}
-.professionalsPage .cardProfessionals .cardProfessional .content-text .socialMedias .socialMedia {
-    transition: scale .2s;
-}
-.professionalsPage .cardProfessionals .cardProfessional .content-text .socialMedias .socialMedia:hover {
-    cursor: pointer;
-    scale: 1.2;
-}
-.professionalsPage .cardProfessionals .cardProfessional .content-text .socialMedias svg {
-    color: #fff;
-    font-size: 1.5em;
-}
-.professionalsPage .cardProfessionals .cardProfessional .content-text h3 {
-    margin-left: .5em;
-}
-.professionalsPage .cardProfessionals .cardProfessional .content-text p {
-    margin-right: .35em;
-    padding: 0 .5rem .3rem 0;
-    
-}
-.professionalsPage .cardProfessionals .cardProfessional .borderComponent {
+
+/* Background */
+.infoAboutCard .bgItemAbout {
     position: absolute;
-    width: 100px;
-    height: 30%;
-    width: 60%;
-    bottom: 0;
-    right: 0;
-    background-color: transparent;
-    border-right: 2px solid #022521;
-    border-bottom: 2px solid #022521;
-    z-index: 1;
-
-}
-
-@media (min-width: 360px) {
-    /* .professionalsPage .cardProfessionals .cardProfessional .divImage img {
-        height: 100%;
-        width: auto;
-        object-fit: cover;
-    } */
-    .professionalsPage .cardProfessionals .cardProfessional .divImage.divImage0 {
-        height: 60%;
-    }
-    
-}
-@media (min-width: 450px) {
-    .professionalsPage .cardProfessionals .cardProfessional .content-text {
-       width: 85%;
-    }
-    .professionalsPage .cardProfessionals .cardProfessional .divImage.divImage0 {
-        width: 80%;
-    }
-    .professionalsPage .cardProfessionals .cardProfessional .divImage1 img {
-        height: 100%;
-        width: auto;
-        object-fit: cover;
-    }
-}
-@media (min-width: 550px) {
-    .professionalsPage .cardProfessionals .cardProfessional .content-text {
-       width: 72%;
-    }
-    .professionalsPage .cardProfessionals .cardProfessional .divImage.divImage0 {
-        width: 75%;
-    }
-}
-@media (min-width: 650px) {
-    .professionalsPage .cardProfessionals .cardProfessional .content-text {
-       width: 65%;
-    }
-    .professionalsPage .cardProfessionals .cardProfessional .divImage.divImage0 {
-        width: 65%;
-    }
-}
-@media (min-width: 750px) {
-    .professionalsPage .cardProfessionals .cardProfessional .content-text {
-       width: 60%;
-    }
-    .professionalsPage .cardProfessionals .cardProfessional .divImage {
-        margin: auto;
-        /* height: 60%; */
-        /* width: 50%; */
-        object-fit: cover;
-        margin-bottom: .8em;
-    }
-    .professionalsPage .cardProfessionals .cardProfessional .divImage.divImage0 {
-        width: 55%;
-        height: 58%;
-    }
-
-}
-/* @media (max-height: 850px) {
-    .aggregateContent .geometryFormBackground.globalBgGeometry{
-        height: 100%;
-    }
-} */
-@media (min-width: 850px) {
-    .professionalsPage .cardProfessionals .cardProfessional {
-        flex-direction: row;
-        width: 90%;
-        background-color: rgba(27, 153, 138, 0.14);
-        overflow: hidden;
-        position: relative;
-        gap: 1em;
-    }
-    .professionalsPage .cardProfessionals .cardProfessional.even {
-        margin-left: 0;
-        border-top-right-radius: 5em;
-        border-bottom-right-radius: 5em;
-        box-shadow: 10px 10px 6px rgba(0, 88, 78, 0.37);
-    }
-    .professionalsPage .cardProfessionals .cardProfessional.odd {
-        flex-direction: row-reverse;
-        margin-right: 0;
-        border-top-left-radius: 5em;
-        border-bottom-left-radius: 5em;
-        box-shadow: -10px 10px 6px rgba(0, 88, 78, 0.37);
-    }
-    .professionalsPage .cardProfessionals .cardProfessional .divImage {
-        background-color: transparent;
-        border-radius: 0;
-        height: 100% !important;
-        width: 50% !important;
-        background-color: rgb(0, 255, 21);
-        flex: 1;
-    }
-    .professionalsPage .cardProfessionals .cardProfessional .divImage img {
-        width: 90%;
-        height: auto;
-        object-fit: cover;
-    }
-    .professionalsPage .cardProfessionals .cardProfessional .divImage.divImage0 img {
-        box-shadow: 15px 15px rgba(0, 88, 78, 0.37);
-    }
-    .aggregateContent .geometryFormBackground {
-        display: none;
-    }
-    .professionalsPage .cardProfessionals .cardProfessional .borderComponent {
-        display: none;
-    }
-    .professionalsPage .cardProfessionals .cardProfessional .content-text {
-        background-color: aqua;
-        padding-inline: 1em;
-        max-height: 100%;
-        height: 100%;
-        width: 50%;
-        display: flex;
-        flex-direction: column;
-        /* justify-content: center; */
-        position: relative;
-        top: 18%;
-    }
-    .professionalsPage .cardProfessionals .cardProfessional .content-text h3 {
-        margin: 0;
-        font-size: 2em;
-        font-weight: 500;
-    }
-    .professionalsPage .cardProfessionals .cardProfessional .content-text p {
-        letter-spacing: 3px;
-        font-size: 1.2em;
-        margin-top: 1em;
-    }
-    .professionalsPage .cardProfessionals .cardProfessional .content-text .socialMedias {
-        justify-content: start;
-        margin-top: 1em;
-    }
-}
-
-/* @media (min-width: 850px) {
-    .professionalsPage .cardProfessionals .cardProfessional {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas: "col1 col2";
-        outline: 1px solid #00f;
-        background-color: #0f0;
-        justify-content: center;
-        align-items: center; 
-    }
-    
-    .professionalsPage .cardProfessionals .cardProfessional .divImage {
-        margin: none;
-    }
-    .professionalsPage .cardProfessionals .cardProfessional .spanDivImage {
-        padding: 0;
-        background-color: #ff0;
-        height: 100%;
-        display: flex;
-    }
-    .professionalsPage .cardProfessionals .cardProfessional .divImage.divImage0 {
-        background-color: #f00;
-        align-self: center;
-        width: 100%;
-    
-    }
-    .aggregateContent {
-        background-color: #f00;
-        height: 60vh;
-    }
-    .aggregateContent .geometryFormBackground {
-        display: none;
-    }
-    .borderComponent {
-        display: none;
-    }
-    
-    .professionalsPage .cardProfessionals .cardProfessional .content-text {
-        background-color: #00f;
-        max-height: 100%;
-        width: 100%;
-        height: 100%;
-    }
-} */
-/*
-@media (min-width: 800px) {
-    .professionalsPage .cardProfessionals .cardProfessional {
-        width: 100%;
-        background-color: aqua;
-        height: 85%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .professionalsPage .cardProfessionals .cardProfessional .divImage {
-        align-self: center;
-        justify-self: center;
-        width: 75%;
-        height: 90%;
-    }
-    .professionalsPage .cardProfessionals .cardProfessional .divImage img {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-    }
-    .professionalsPage .cardProfessionals .cardProfessional .content-text {
-        height: 70%;
-        display: flex;
-        flex-direction: column;
-        max-height: 80%;
-        position: relative;
-        padding: 1em 1em 2em 3em;
-    }
-    .professionalsPage .cardProfessionals .cardProfessional .content-text h3 {
-        margin-left: 0;
-        font-size: 1.5em;
-        margin-bottom: 1em;
-    }
-    .professionalsPage .cardProfessionals .cardProfessional .content-text .borderComponent {
-        background-color: transparent;
-        position: absolute;
-        left: 2em;
-        height: 80%;
-        top: 0;
-        z-index: 1;
-        border: none;
-        border-left: 3px solid #fff;
-    }
-}
-@media (min-width: 1000px) {
-    .professionalsPage .cardProfessionals .cardProfessional {
-        width: 80%;
-        background-color: aqua;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .professionalsPage .cardProfessionals .cardProfessional .divImage {
-        background-color: antiquewhite;
-    }
-    .professionalsPage .cardProfessionals .cardProfessional .divImage img {
-        height: 100%;
-        width: auto;
-        object-fit: fill;
-    }
-}
-*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Backup */
-
-/* 
-    .aggregateContent {
-    position: relative;
     width: 100%;
-    height: 85vh;
-    min-height: 550px;
-    margin-bottom: 3em;
+    height: 100%;
+    outline: 1px solid #fff;
+    z-index: 1;
+}
+.infoAboutCard .bgItemAbout.firstElementAbout {
+    background-color: #D0ECE8;
+    z-index: 1;
+    height: 99%;
+    bottom: 0;
+    -webkit-clip-path: polygon(50% 0%, 100% 5%, 100% 100%, 70% 95%, 0 100%, 0 7%);
+    clip-path: polygon(50% 0%, 100% 5%, 100% 100%, 70% 95%, 0 100%, 0 7%);
+}
+.infoAboutCard .bgItemAbout.firstElementAboutShadow {
+    background-color: #BBE5DF;
+    top: 0;
+    z-index: 0;
+    height: 95%;
+    -webkit-clip-path: polygon(50% 0%, 100% 5%, 100% 100%, 70% 95%, 0 100%, 0 7%);
+    clip-path: polygon(50% 0%, 100% 5%, 100% 100%, 70% 95%, 0 100%, 0 7%);
+}
+.infoAboutCard .bgItemAbout.globalElements {
+    top: 0;
+    background-color: #D0ECE8;
+    -webkit-clip-path: polygon(35% 0, 100% 8%, 100% 95%, 50% 100%, 0 95%, 0 8%);
+    clip-path: polygon(35% 0, 100% 8%, 100% 95%, 50% 100%, 0 95%, 0 8%);
+}
+
+/* Images */
+.allInfosAbout .infoAboutCard .divContentImage {
+    z-index: 2;
+    width: 100%;
+    height: 300px;
+    margin-bottom: 1.5em;
+}
+.allInfosAbout .infoAboutCard .divContentImage .divImage {
+    width: 90%;
+    height: 100%;
+    margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
-.aggregateContent:last-child {
-    margin-bottom: 0;
-}
-.aggregateContent .geometryFormBackground {
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: 98.7%;
-    background-color: #D2EEEA;
-    bottom: 0;
-    z-index: 1;
-}
-
-.aggregateContent .geometryFormBackground.firstBgGeometry{
-    -webkit-clip-path: polygon(50% 0, 100% 5%, 100% 100%, 70% 95%, 0 100%, 0 7%);
-    clip-path: polygon(50% 0, 100% 5%, 100% 100%, 70% 95%, 0 100%, 0 7%);
-}
-.aggregateContent .geometryFormBackground.geometryFormBackgroundShadow {
+.allInfosAbout .infoAboutCard .divContentImage .divImage img {
+    width: auto;
     height: 100%;
-    background-color: #BBE5DF;
-    z-index: 0;
+    object-fit: cover;
+    overflow: auto;
+    border-radius: 4em;
 }
-.aggregateContent .geometryFormBackground.globalBgGeometry{
-    height: 87%;
-    top: 0;
-    -webkit-clip-path: polygon(30% 0, 100% 5%, 100% 95%, 50% 100%, 0 95%, 0 8%);
-    clip-path: polygon(30% 0, 100% 5%, 100% 95%, 50% 100%, 0 95%, 0 8%);
-}
-.professionalsPage {
-    padding: 2em 0 0 0;
-    width: 100%;
-    background: #fff;
-}
-.professionalsPage .cardProfessionals {
-    margin-top: 2.5em;
-    width: 100%;
-}
-.professionalsPage .cardProfessionals .cardProfessional {
-    position: relative;
-    z-index: 3;
-    width: 85%;
-    height: 85%;
-    margin: auto;
-
-}
-.professionalsPage .cardProfessionals .cardProfessional .divImage {
-    background-color: aliceblue;
-    display: grid;
-    place-items: center;
-    margin: auto;
-    width: 100%;
-    height: 50%;
+.allInfosAbout .infoAboutCard .divContentImage.divContentImage0 .divImage img {
+    border-radius: 0;
     border-top-right-radius: 2em;
     border-bottom-left-radius: 2em;
-    margin-bottom: 2em;
-    overflow: hidden;
 }
-.professionalsPage .cardProfessionals .cardProfessional .divImage img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-}
-.professionalsPage .cardProfessionals .cardProfessional .divImage1 {
-    height: 40%;
-}
-.professionalsPage .cardProfessionals .cardProfessional .divImage1 img {
-    height: 100%;
-    width: auto;
-}
-.professionalsPage .cardProfessionals .cardProfessional .content-text {
-    position: relative;
-    margin: auto;
-    padding: 0 0 1em 1em;
-    width: 100%;
-    max-height: 45%;
-    overflow: auto;
+
+/* Texts */
+.allInfosAbout .infoAboutCard .contentTexts {
+    display: flex;
     z-index: 2;
+    flex-direction: column;
+    position: relative;
+    gap: 10px;
+    width: 85%;
+    margin: auto;
+    padding: .3em 1em .3em .3em;
+    color: #022521;
+    font-size: 1.1em;
 }
-.professionalsPage .cardProfessionals .cardProfessional .content-text h3 {
+.allInfosAbout .infoAboutCard .contentTexts h3 {
+    font-weight: 600;
+    font-size: 1.05em;
     margin-left: .5em;
 }
-.professionalsPage .cardProfessionals .cardProfessional .content-text p {
-    margin-right: .35em;
-    padding: 0 .5rem .3rem 0;
-    
+.allInfosAbout .infoAboutCard .contentTexts .textDesktop {
+    display: none;
 }
-.professionalsPage .cardProfessionals .cardProfessional .borderComponent {
+.allInfosAbout .infoAboutCard .contentTexts .textMobile {
+    display: block;
+}
+.allInfosAbout .infoAboutCard .contentTexts .textMobile a,
+.allInfosAbout .infoAboutCard .contentTexts .textDesktop a {
+    color: #008877;
+}
+.allInfosAbout .infoAboutCard .contentTexts p {
+    margin-bottom: 1em;
+}
+.allInfosAbout .infoAboutCard .contentTexts .socialMedias {
+    display: flex;
+    justify-content: end;
+    color: rgba(0, 88, 78, 0.37);
+    gap: 1em;
+    margin-bottom: .5em;
+    font-size: 1.5em;
+    z-index: 2;
+}
+.allInfosAbout .infoAboutCard .contentTexts .socialMedias .media {
+    transition: all .2s;
+}
+.allInfosAbout .infoAboutCard .contentTexts .socialMedias .media:hover {
+    color: rgba(0, 88, 78, 1);
+    scale: 1.5;
+}
+
+/* Border Component */
+.allInfosAbout .infoAboutCard .borderComponent {
+    width: 10em;
+    height: 4em;
+    background-color: transparent;
     position: absolute;
-    width: 100px;
-    height: 30%;
-    width: 60%;
     bottom: 0;
     right: 0;
-    background-color: transparent;
-    border-right: 2px solid #022521;
-    border-bottom: 2px solid #022521;
     z-index: 1;
-
+    border-bottom: 1px solid #022521;
+    border-right: 1px solid #022521;
 }
 
-@media (min-width: 360px) {
-    .professionalsPage .cardProfessionals .cardProfessional .divImage.divImage0 {
-        height: 60%;
-    }
-    .professionalsPage .cardProfessionals .cardProfessional .divImage.divImage1 {
-        height: 40%;
-    }
-}
-@media (min-width: 450px) {
-    .professionalsPage .cardProfessionals .cardProfessional .content-text {
-       width: 85%;
-    }
-    .professionalsPage .cardProfessionals .cardProfessional .divImage.divImage0 {
-        width: 90%;
-    }
-    .professionalsPage .cardProfessionals .cardProfessional .divImage.divImage1 {
-        height: 45%;
-    }
-}
-@media (min-width: 550px) {
-    .professionalsPage .cardProfessionals .cardProfessional .content-text {
-       width: 72%;
-    }
-    .professionalsPage .cardProfessionals .cardProfessional .divImage.divImage0 {
+/* Responsive */
+@media (min-width: 500px) {
+    .allInfosAbout .infoAboutCard .contentTexts {
         width: 75%;
     }
 }
-@media (min-width: 650px) {
-    .professionalsPage .cardProfessionals .cardProfessional .content-text {
-       width: 65%;
+@media (min-width: 600px) {
+    .allInfosAbout .infoAboutCard .contentTexts {
+        width: 60%;
     }
-    .professionalsPage .cardProfessionals .cardProfessional .divImage.divImage0 {
-        width: 65%;
+    .allInfosAbout .infoAboutCard .divContentImage {
+        height: 350px;
     }
 }
-@media (min-width: 750px) {
-    .professionalsPage .cardProfessionals .cardProfessional .content-text {
-       width: 60%;
+@media (min-width: 700px) {
+    .allInfosAbout .infoAboutCard .contentTexts {
+        width: 55%;
     }
-    .professionalsPage .cardProfessionals .cardProfessional .divImage {
-        margin: auto;
-
-        object-fit: cover;
-        margin-bottom: .8em;
-    }
-    .professionalsPage .cardProfessionals .cardProfessional .divImage.divImage0 {
-        width: 63%;
-        height: 65%;
+    .allInfosAbout .infoAboutCard .divContentImage {
+        height: 370px;
     }
 }
 
+/* Desktop */
 @media (min-width: 850px) {
-    .professionalsPage .cardProfessionals .cardProfessional {
-        display: flex;
-        outline: 1px solid #00f;
-        background-color: #0f0;
-        justify-content: center;
-        align-items: center; 
-
+    .allInfosAbout .infoAboutCard {
+        flex-direction: row;
+        background-color: rgba(27, 153, 138, 0.14);
+        height: 70vh;
+        min-height: 600px;
+        padding: 0;
+        width: 95%;
+        overflow: hidden;
     }
-    .professionalsPage .cardProfessionals .cardProfessional .divImage {
+    .allInfosAbout .infoAboutCard .bgItemAbout {
+        display: none;
+    }
+    .allInfosAbout .infoAboutCard .borderComponent {
+        display: none;
+    }
+    .allInfosAbout .infoAboutCard.even {
+        margin-left: 0;
+        border-top-right-radius: 4em;
+        border-bottom-right-radius: 4em;
+        box-shadow: 10px 10px 2px rgba(0, 88, 78, 0.37);
+    }
+    .allInfosAbout .infoAboutCard.odd {
+        margin-right: 0;
+        border-top-left-radius: 4em;
+        border-bottom-left-radius: 4em;
+        flex-direction: row-reverse;
+        box-shadow: -10px 10px 2px rgba(0, 88, 78, 0.37);
+    }
+    .allInfosAbout .infoAboutCard .divContentImage {
+        width: 50%;
+        height: 100%;
+        display: grid;
+        place-items: center;
+    }
+    .allInfosAbout .infoAboutCard .divContentImage .divImage {
+        width: 95%;
+    }
+    .allInfosAbout .infoAboutCard .divContentImage .divImage img {
+        width: auto;
+        max-width: 100%;
+        max-height: 400px;
         
-        display: flex; 
-        align-items: center; 
-    
     }
-    .aggregateContent {
-        background-color: #f00;
+    .allInfosAbout .infoAboutCard.even .divContentImage .divImage img {
+        box-shadow: 10px 10px rgba(0, 88, 78, .5);
     }
-    .aggregateContent .geometryFormBackground {
+    .allInfosAbout .infoAboutCard.odd .divContentImage .divImage img {
+        box-shadow: -10px 10px rgba(0, 88, 78, .5);
+    }
+    .allInfosAbout .infoAboutCard .divContentImage .divImage img {
+        border-radius: 0 !important;
+        object-fit: cover;
+    }
+    .allInfosAbout .infoAboutCard .contentTexts {
+        min-height: 100%;
+        display: flex;
+        justify-content: center;
+        width: 50%;
+        gap: 2em;
+        padding: 0 1em 0 1em;
+    }
+    .allInfosAbout .infoAboutCard .contentTexts h3 {
+        font-size: 1.5em;
+        margin-left: 0;
+    }
+    .allInfosAbout .infoAboutCard .contentTexts .textDesktop {
+        display: block;
+    }
+    .allInfosAbout .infoAboutCard .contentTexts .textMobile {
         display: none;
     }
-    .borderComponent {
-        display: none;
+    .allInfosAbout .infoAboutCard .contentTexts p {
+        font-size: 1.08em;
+        letter-spacing: 3px;
+        max-width: 100%;
     }
-} */
+    .allInfosAbout .infoAboutCard .contentTexts .socialMedias {
+        justify-content: start;
+        font-size: 1.8em;
+    }
+}
+
+@media (min-width: 900px) {
+    .allInfosAbout .infoAboutCard .contentTexts p {
+        font-size: 1.15em;
+    }
+    .allInfosAbout .infoAboutCard .divContentImage .divImage img {
+        width: auto;
+        max-height: 450px;
+        
+    }
+}
+
+@media (min-width: 950px) {
+    .allInfosAbout .infoAboutCard .contentTexts p {
+        font-size: 1.2em;
+    }
+}
+
+@media (min-width: 1050px) {
+    .allInfosAbout .infoAboutCard .divContentImage {
+        width: 45%;
+    }
+    .allInfosAbout .infoAboutCard .contentTexts {
+        width: 55%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .allInfosAbout .infoAboutCard {
+        width: 85%;
+    }
+    .allInfosAbout .infoAboutCard .contentTexts p {
+        font-size: 1.4em;
+    }
+}
+@media (min-width: 1400px) {
+    .allInfosAbout .infoAboutCard .divContentImage {
+        width: 40%;
+    }
+    .allInfosAbout .infoAboutCard .contentTexts {
+        width: 60%;
+    }
+    .allInfosAbout .infoAboutCard .contentTexts h3 {
+        font-size: 1.7em;
+    }
+    .allInfosAbout .infoAboutCard .contentTexts p {
+        font-size: 1.7em;
+    }
+}
+
+@media (min-width: 1600px) {
+    .allInfosAbout .infoAboutCard { 
+        min-height: 600px;
+    }
+    .allInfosAbout .infoAboutCard .divContentImage .divImage img {
+        width: auto;
+        max-height: 500px;
+        
+    }
+    .allInfosAbout .infoAboutCard .contentTexts {
+        padding-inline: 3em;
+    }
+}
+@media (min-width: 1900px) {
+    .allInfosAbout .infoAboutCard .divContentImage .divImage img {
+        width: auto;
+        max-height: 550px;
+    }
+    .allInfosAbout .infoAboutCard .contentTexts {
+        padding-inline: 5em;
+    }
+    .allInfosAbout .infoAboutCard .contentTexts h3 {
+        font-size: 2.1em;
+    }
+    .allInfosAbout .infoAboutCard .contentTexts p {
+        font-size: 2em;
+    }
+}

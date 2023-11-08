@@ -7,6 +7,7 @@ import { DeskPage } from './pages/DeskPage/DeskPage'
 import { FieldWork } from './pages/FieldWork/FieldWork'
 import { FirstPage } from './pages/FirstPage/FirstPage'
 import { BecauseWe } from './pages/BecauseWe/BecauseWe'
+import { About } from './pages/About/About'
 
 // Swiper
 import { register } from 'swiper/element/bundle'
@@ -25,7 +26,7 @@ export default function Home() {
       <Navbar />
       <FirstPage />
       <FieldWork />
-      {/* <About /> */}
+      <About />
       <BecauseWe />
       <DeskPage />
       <Contact />
