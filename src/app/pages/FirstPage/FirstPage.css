@@ -10,6 +10,7 @@
     position: absolute;
     width: 100vw;
     height: 100vh;
+    display: block;
     z-index: -1;
     overflow: hidden;
     background-position: cover;
@@ -20,6 +21,7 @@
     object-fit: cover;
     /* scale: .8; */
     position: absolute;
+    left: 0;
     /* margin-left: -350px; */
     opacity: .9;
 }
