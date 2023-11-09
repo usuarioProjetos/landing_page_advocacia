@@ -5,6 +5,7 @@ import { IoIosArrowDown } from 'react-icons/io'
 import './FirstPage.css'
 import Image from 'next/image'
 import { useState, useEffect } from 'react'
+import { AnimatePresence, motion } from 'framer-motion'
 
 export const FirstPage = () => {
     const [activeImageIndex, setActiveImageIndex] = useState(0);
@@ -24,12 +25,21 @@ export const FirstPage = () => {
     return (
         <section className="firstPage">
 
-            <div className="divImageBg">
-                <Image 
-                    src={ImagesFirstPage[activeImageIndex].path}
-                    alt='Imagem de fundo'
-                />
-            </div>
+            <AnimatePresence>
+                <motion.div 
+                    // key={activeImageIndex}
+                    // initial={{ opacity: 0, x: '-100%' }}
+                    // animate={{ opacity: 1, x: '0%' }}
+                    // exit={{ opacity: 0, x: '100%' }}
+                    // transition={{ duration: 1 }}
+                    className="divImageBg"
+                >
+                    <Image 
+                        src={ImagesFirstPage[activeImageIndex].path}
+                        alt='Imagem de fundo'
+                    />
+                </motion.div>
+            </AnimatePresence>
 
             <div className="content">
 

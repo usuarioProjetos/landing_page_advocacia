@@ -1,6 +1,8 @@
-import ImageHomeTwo from '../assets/home/bruno-thethe-nxkinK7hhOk-unsplash.png'
-import ImageHomeThree from '../assets/home/ottr-dan-ctEbk8AXXI8-unsplash.png'
-import ImageHomeOne from '../assets/home/ottr-dan-ef8zTtwqclk-unsplash.png'
+import {
+    PrimeiroSlide,
+    SegundoSlide,
+    TerceiroSlide
+} from '../assets/home/home'
 
 interface IButton {
     text: string;
@@ -13,13 +15,13 @@ interface IDatasFirstPage {
 }
 export const ImagesFirstPage = [
     {
-        path: ImageHomeOne
+        path: PrimeiroSlide
     },
     {
-        path: ImageHomeTwo
+        path: SegundoSlide
     },
     {
-        path: ImageHomeThree
+        path: TerceiroSlide
     }
 ]
 
