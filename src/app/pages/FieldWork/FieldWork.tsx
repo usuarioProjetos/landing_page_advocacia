@@ -10,6 +10,8 @@ import { CarouselDesktop } from './Desktop/CarouselDesktop'
 import { MobileFieldWork } from './Mobile/MobileFieldWork'
 // Datas
 import { DatasFieldPageDesktop } from '@/app/datas/FieldWork'
+// Framer-motion
+import { motion } from 'framer-motion'
 
 export const FieldWork = () => {  
     const [currentItem, setCurrentItem] = useState<number>(0);
@@ -22,7 +24,9 @@ export const FieldWork = () => {
     }, [currentItem, DatasFieldPageDesktop.cards]);
 
     return (
-        <section className='fieldWork'>
+        <section
+            className='fieldWork'
+        >
             <div className='mobileVersion'> 
                 <MobileFieldWork />
             </div>

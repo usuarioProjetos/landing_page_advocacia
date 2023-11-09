@@ -12,6 +12,7 @@ import { ICardFieldWork } from '@/app/interfaces/FieldWork/FieldWork'
 import { Swiper, SwiperSlide } from 'swiper/react'
 // Framer-motion
 import { motion, AnimatePresence } from 'framer-motion'
+import { useInView } from 'react-intersection-observer'
 // Animations
 import { 
     variantsTitleItem, 
@@ -22,6 +23,10 @@ import {
 
 export const CarouselDesktop = () => {
         const [cards, setCards] = useState(DatasFieldPageDesktop.cards)
+        const [ref, inView] = useInView({
+            triggerOnce: true,
+            threshold: 0.3,
+        });
         
         const onMouseEnterCard = (card: ICardFieldWork) => {
             setCards(() => {
@@ -40,13 +45,19 @@ export const CarouselDesktop = () => {
         }
 
         return (
-        <section className="containerCarousel">
+        <motion.section 
+            ref={ref}
+            className="containerCarousel"
+            initial={{ opacity: 0, scale: 0.75 }}
+            animate={inView ? { opacity: 1, scale: 1, transition: { duration: .6 } } : {}}
+        >
             <Swiper
                 className='swiperSlider'
                 slidesPerView={'auto'}
                 spaceBetween={10}
                 initialSlide={1}
                 centeredSlides={false}
+                grabCursor={true}
             >
                 
                 <SwiperSlide style={{ display: 'none' }} className='swiperSliderItem spareElement' />
@@ -125,6 +136,6 @@ export const CarouselDesktop = () => {
                 </AnimatePresence>
                 <SwiperSlide style={{ display: 'none' }} className='swiperSliderItem spareElement' />
             </Swiper>
-        </section>
+        </motion.section>
     )
 }

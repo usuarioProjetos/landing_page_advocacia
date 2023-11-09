@@ -1,3 +1,7 @@
+.allCards {
+    
+    /* overflow-x: hidden; */
+}
 /* Card */
 .allCards .card {
     min-height: 600px;

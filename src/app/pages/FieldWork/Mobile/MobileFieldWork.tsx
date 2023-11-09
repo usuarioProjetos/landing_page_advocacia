@@ -6,8 +6,18 @@ import './MobileFieldWork.css'
 import { Title } from "@/app/components/Title/Title"
 // Datas
 import { DatasFieldWorkMobile as datas } from "@/app/datas/FieldWork"
+import { motion } from 'framer-motion'
+import { useInView } from 'react-intersection-observer';
 
 export const MobileFieldWork = () => {
+    const cardRefs = datas.map(() => {
+        const [ref, inView] = useInView({
+            triggerOnce: false,
+            threshold: 0.4,
+        });
+        return { ref, inView };
+    });
+
     return (
         <>
             <Title
@@ -18,7 +28,19 @@ export const MobileFieldWork = () => {
             
             <article className="allCards">
                 {datas.map((card, i) => (
-                    <div key={card.title} className={`card ${card.nameClass}`}>
+                    <motion.div 
+                        ref={cardRefs[i].ref}
+                        key={card.title} 
+                        className={`card ${card.nameClass}`}
+                        initial={card.direction === 'left' ? 
+                            { x: 200, opacity: 0.05 } : 
+                            { x: -200, opacity: 0.05 }
+                        }
+                        animate={cardRefs[i].inView ? 
+                            { x: 0, opacity: 1, type: 'tween' } : 
+                            {}
+                        }
+                    >
                         <div 
                             className="texts"
                             style={{ 
@@ -88,7 +110,7 @@ export const MobileFieldWork = () => {
                                 { marginRight: '3rem', borderRight: '2px solid #022521', borderBottomRightRadius: '2em' } }
                             />
                         </div>
-                    </div>
+                    </motion.div>
                 ))}
             </article>
         </>

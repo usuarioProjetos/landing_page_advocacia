@@ -47,6 +47,7 @@ export const FirstPage = () => {
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         transition={{ duration: 1 }}
+                        
                         src={ImagesFirstPage[activeImageIndex].path.src}
                         alt='Imagem de fundo'
                     />

@@ -165,8 +165,10 @@
         align-items: center;
     }
     .cards .card .iconDiv img {
-        width: 95%;
-        max-height: 100%;
+        /* width: 95%;
+        max-height: 100%; */
+        width: auto;
+        height: 100%;
     }
     
     .cards .card.card1 .iconDiv,
