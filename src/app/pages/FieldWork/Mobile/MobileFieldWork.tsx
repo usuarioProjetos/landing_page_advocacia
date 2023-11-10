@@ -32,14 +32,7 @@ export const MobileFieldWork = () => {
                         ref={cardRefs[i].ref}
                         key={card.title} 
                         className={`card ${card.nameClass}`}
-                        initial={card.direction === 'left' ? 
-                            { x: 200, opacity: 0.05 } : 
-                            { x: -200, opacity: 0.05 }
-                        }
-                        animate={cardRefs[i].inView ? 
-                            { x: 0, opacity: 1, type: 'tween' } : 
-                            {}
-                        }
+                        
                     >
                         <div 
                             className="texts"
@@ -48,7 +41,15 @@ export const MobileFieldWork = () => {
                                 paddingInline: card.direction === 'left' ? '2em .4em' : '.4em 2em',
                             }}
                         >
-                            <h3>{card.title}</h3>
+                            <motion.h3
+                                initial={{ y: -40, opacity: 0 } }
+                                animate={cardRefs[i].inView ? 
+                                    { y: 0, opacity: 1, transition: { ease: 'easeOut' } } : 
+                                    {}
+                                }
+                            >
+                                {card.title}
+                            </motion.h3>
                             <div 
                                 className='divParagraph'
                                 style={{ flexDirection: card.direction === 'left' ? 'row' : 'row-reverse' }}
@@ -61,7 +62,18 @@ export const MobileFieldWork = () => {
                                         right: '8px'
                                     }} 
                                 ></div>
-                                <p>{card.text}</p>
+                                <motion.p
+                                    initial={card.direction === 'left' ? 
+                                        { x: 40, opacity: 0 } : 
+                                        { x: -40, opacity: 0 }
+                                    }
+                                    animate={cardRefs[i].inView ? 
+                                        { x: 0, opacity: 1, type: 'tween', transition: { ease: 'easeOut' } } : 
+                                        {}
+                                    }
+                                >
+                                    {card.text}
+                                </motion.p>
                             </div>
                         </div>
                         <div className="squares">
@@ -90,13 +102,19 @@ export const MobileFieldWork = () => {
                                 }}
                             />
 
-                            <div className="image"
+                            <motion.div
+                                initial={{ opacity: 0.1 }}
+                                animate={cardRefs[i].inView ? 
+                                    { opacity: 1, type: 'tween' } : 
+                                    {}
+                                }
+                                className="image"
                                 style={ card.direction === 'left' ? 
                                 { borderBottomRightRadius: '2em', borderTopLeftRadius: '1.5em' } : 
                                 { borderTopRightRadius: '1.5em', borderBottomLeftRadius: '2em' } }
                             >
                                 <Image src={card.image} alt='' />
-                            </div>
+                            </motion.div>
                         </div>
                         <div 
                             className="lines"

@@ -1,5 +1,5 @@
 import { StaticImageData } from 'next/image'
-import Logo from '../assets/logo.png'
+import Logo from '../assets/logo2.png'
 
 interface IDatasMenu {
     logo: StaticImageData

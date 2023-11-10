@@ -109,9 +109,9 @@
     width: 100%;
 }
 
-@media (max-width: 321px) {
+@media (max-width: 330px) {
     .allCards .card  {
-        height: 55vh;
+        height: 75vh;
     }
     .allCards .card .texts h3 {
         font-size: 25px;

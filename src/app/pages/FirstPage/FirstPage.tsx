@@ -9,6 +9,11 @@ import { AnimatePresence, motion } from 'framer-motion'
 
 export const FirstPage = () => {
     const [activeImageIndex, setActiveImageIndex] = useState(0);
+    const [loadingPage, setLoadingPage] = useState(true)
+
+    useEffect(() => {
+        setLoadingPage(false)
+    }, [])
 
     useEffect(() => {
 
@@ -23,7 +28,7 @@ export const FirstPage = () => {
       }, [activeImageIndex]);
 
     return (
-        <section className="firstPage">
+        <section className="firstPage" id='home'>
 
             <AnimatePresence>
                 <motion.div 
@@ -43,7 +48,7 @@ export const FirstPage = () => {
                         // animate={{ x: '0vw', opacity: 1, transition: { duration: 1.1 } }}
                         // exit={{ x: '100vh', opacity: .7, transition: { duration: 1.3 } }}
 
-                        initial={{ opacity: 0 }}
+                        initial={loadingPage ? { opacity: 1 } : { opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         transition={{ duration: 1 }}

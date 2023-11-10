@@ -2,14 +2,16 @@
 import Image from 'next/image'
 import './Menu.css'
 import { DatasMenu, delayAnimationExit } from '@/app/datas/Menu'
-import { useRef, useEffect, useLayoutEffect } from 'react'
+import { useRef, useEffect, useLayoutEffect, SetStateAction } from 'react'
 import { Variants, motion } from 'framer-motion'
+import Link from 'next/link'
 
 interface Props {
-    showMenu: boolean
+    showMenu: boolean,
+    setShowMenu: React.Dispatch<SetStateAction<boolean>>
 }
 
-export const Menu = ({ showMenu = false }: Props) => {
+export const Menu = ({ showMenu = false, setShowMenu }: Props) => {
     console.log(showMenu);
 
     const variantsAnimationMenu: Variants = {
@@ -56,6 +58,22 @@ export const Menu = ({ showMenu = false }: Props) => {
             },
         }
     }
+
+    const handleClick = (e: React.MouseEvent, targetId: string) => {
+        e.preventDefault();
+    
+        // Aguarda o tempo de delay antes de rolar para a seção desejada
+        setTimeout(() => {
+          const targetElement = document.getElementById(targetId);
+    
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop,
+              behavior: 'smooth',
+            });
+          }
+        }, 800);
+      };
     
     return (
         <>
@@ -96,9 +114,15 @@ export const Menu = ({ showMenu = false }: Props) => {
                                         }
                                     }}
                                 >
-                                    <a href="#">
+                                    <Link 
+                                        href={`#${itemMenu.to}`}
+                                        onClick={(e) => {
+                                            setShowMenu(false)
+                                           handleClick(e, itemMenu.to)
+                                        }}
+                                    >
                                         {itemMenu.itemList}
-                                    </a>
+                                    </Link>
                                 </motion.li>
                             ))}
                         </ul>

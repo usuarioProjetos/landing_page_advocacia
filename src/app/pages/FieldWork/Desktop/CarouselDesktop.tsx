@@ -69,7 +69,7 @@ export const CarouselDesktop = () => {
                                 className='swiperSliderItem'
                                 onMouseEnter={() => onMouseEnterCard(item)}
                             >
-                                <div className={`imageDiv ${item.showContent === false ? 'opacityImage' : ''}`}>
+                                <div className={`imageDiv imageDiv${item.id} ${item.showContent === false ? 'opacityImage' : ''}`}>
                                     <Image
                                         src={item.image}
                                         alt=''

@@ -25,6 +25,7 @@ export const Navbar = () => {
             
             <Menu 
                 showMenu={showMenu}
+                setShowMenu={setShowMenu}
             />
             
         </header>
