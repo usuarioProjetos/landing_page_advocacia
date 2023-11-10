@@ -9,7 +9,10 @@ import { Title } from "@/app/components/Title/Title"
 
 export const About = () => {
     return (
-        <section className="about">
+        <section 
+            className="about" 
+            id='about'
+        >
             <Title
                 text="Sobre"
                 widthSquare="80%"

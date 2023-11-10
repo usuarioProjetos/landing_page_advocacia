@@ -24,7 +24,10 @@ export const DeskPage = () => {
     
 
     return (
-        <section className="container">
+        <section 
+            className="container"
+            id='deskPage'
+        >
             <div className="divsBg">
                 <div className="bgMobile" />
                 <div className="firstDivBg"/>

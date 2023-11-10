@@ -2,20 +2,19 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth;
 }
 *::after, *::before {
     box-sizing: border-box;
 }
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 100px;
 }
 body {
     /* background-color: #eeeeee; */
     width: 100vw;
     overflow-x: hidden;
     color: #022521;
-    scroll-behavior: smooth !important;
 }
 body::-webkit-scrollbar {
     width: 6px;           

@@ -27,28 +27,28 @@ export const DatasMenu: IDatasMenu = {
         },
         {
             itemList: 'atuação',
-            to: 'home',
+            to: 'fieldWork',
             id: 2,
             delayEnter: (delayAnimationEnter + .1),
             delayExit: (delayAnimationExit + .3)
         },
         {
             itemList: 'escritório',
-            to: 'home',
+            to: 'deskPage',
             id: 3,
             delayEnter: (delayAnimationEnter + .2),
             delayExit: (delayAnimationExit + .2)
         },
         {
-            itemList: 'profissionais',
-            to: 'home',
+            itemList: 'Sobre',
+            to: 'about',
             id: 4,
             delayEnter: (delayAnimationEnter + .3),
             delayExit: (delayAnimationExit + .1)
         },
         {
             itemList: 'contato',
-            to: 'home',
+            to: 'contact',
             id: 5,
             delayEnter: (delayAnimationEnter + .4),
             delayExit: delayAnimationExit

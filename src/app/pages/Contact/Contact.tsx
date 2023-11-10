@@ -10,7 +10,10 @@ export const Contact = () => {
         e.preventDefault()
     }
     return (
-        <footer className="contact">
+        <footer 
+            className="contact"
+            id='contact'
+        >
             <Title
                 text='Contato'
                 widthSquare='80%'

@@ -26,6 +26,7 @@ export const FieldWork = () => {
     return (
         <section
             className='fieldWork'
+            id='fieldWork'
         >
             <div className='mobileVersion'> 
                 <MobileFieldWork />
