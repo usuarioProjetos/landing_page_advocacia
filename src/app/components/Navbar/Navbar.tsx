@@ -5,6 +5,7 @@ import Logo from '../../assets/logo.png'
 import { BurguerMenu } from '../BurguerMenu/BurguerMenu'
 import { useState, useEffect, useRef } from 'react'
 import { Menu } from '@/app/pages/Menu/Menu'
+import Link from 'next/link'
 
 export const Navbar = () => {
     const [showMenu, setShowMenu] = useState<boolean>(false)
@@ -14,10 +15,14 @@ export const Navbar = () => {
 
     return (
         <header>
-            <Image
-                src={Logo}
-                alt="Logo da empresa"
-            />
+            <a
+                href='#home'
+            >
+                <Image
+                    src={Logo}
+                    alt="Logo da empresa"
+                />
+            </a>
             <BurguerMenu 
                 showMenu={showMenu}
                 setShowMenu={setShowMenu}

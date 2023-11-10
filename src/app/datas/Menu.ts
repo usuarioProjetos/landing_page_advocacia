@@ -33,15 +33,15 @@ export const DatasMenu: IDatasMenu = {
             delayExit: (delayAnimationExit + .3)
         },
         {
-            itemList: 'escritório',
-            to: 'deskPage',
+            itemList: 'sobre',
+            to: 'about',
             id: 3,
             delayEnter: (delayAnimationEnter + .2),
             delayExit: (delayAnimationExit + .2)
         },
         {
-            itemList: 'Sobre',
-            to: 'about',
+            itemList: 'escritório',
+            to: 'deskPage',
             id: 4,
             delayEnter: (delayAnimationEnter + .3),
             delayExit: (delayAnimationExit + .1)

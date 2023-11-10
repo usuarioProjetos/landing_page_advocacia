@@ -6,6 +6,7 @@ import './FirstPage.css'
 import Image from 'next/image'
 import { useState, useEffect } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
+import Link from 'next/link'
 
 export const FirstPage = () => {
     const [activeImageIndex, setActiveImageIndex] = useState(0);
@@ -77,12 +78,12 @@ export const FirstPage = () => {
             </div>
 
             <div className="scroll-arrow">
-                <a href="#">
+                <Link href="#fieldWork">
                     <Image 
                         src={Arrow}
                         alt='Seta de scroll'
                     />
-                </a>
+                </Link>
             </div>
 
         </section>

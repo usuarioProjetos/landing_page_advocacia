@@ -37,6 +37,12 @@ export const DatasBecauseWe: IDatasBecauseWe = {
             title: 'Compromisso Ético',
             text: 'Nossa firma jurídica valoriza ética, integridade e confidencialidade na relação cliente-advogado',
         },
+        // {
+        //     id: 0,
+        //     icon: Icon1,
+        //     title: 'Experiência e Expertise',
+        //     text: 'Nossa experiente equipe é especializada em resolver questões legais complexas, comprovando nosso histórico de sucesso.',
+        // },
         {
             id: 3,
             icon: Icon4,
