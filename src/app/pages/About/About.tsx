@@ -1,3 +1,4 @@
+"use client"
 // Style
 import './About.css'
 // Next / React
@@ -6,8 +7,19 @@ import Image from "next/image"
 import { DatasAbout as datas } from "@/app/datas/About"
 // Components
 import { Title } from "@/app/components/Title/Title"
+// 
+import { useInView } from 'react-intersection-observer'
+import { motion } from 'framer-motion'
 
 export const About = () => {
+    const cardRefs = datas.map(() => {
+        const [ref, inView] = useInView({
+            triggerOnce: false,
+            threshold: 0.6,
+        });
+        return { ref, inView };
+    });
+
     return (
         <section 
             className="about" 
@@ -20,7 +32,11 @@ export const About = () => {
 
             <article className="allInfosAbout">
                 {datas.map(item => (
-                    <div className={`infoAboutCard ${item.id % 2 === 0 ? 'even' : 'odd'}`} key={item.id}>
+                    <div
+                        ref={cardRefs[item.id].ref} 
+                        className={`infoAboutCard ${item.id % 2 === 0 ? 'even' : 'odd'}`} 
+                        key={item.id}
+                    >
                         {item.firstElement ? (
                             <>
                                 <div className="bgItemAbout firstElementAbout" />
@@ -32,16 +48,33 @@ export const About = () => {
                             </>
                         )}
 
-                        <div className={`divContentImage divContentImage${item.id}`}>
+                        <motion.div 
+                            className={`divContentImage divContentImage${item.id}`}
+                            initial={item.id % 2 === 0 ? 
+                                { x: -40, opacity: 0 } : 
+                                { x: 40, opacity: 0 }
+                            }
+                            animate={cardRefs[item.id].inView ? 
+                                { x: 0, opacity: 1, transition: { ease: 'easeOut' } } : 
+                                {}
+                            }
+                        >
                             <div className="divImage">
                                 <Image 
                                     src={item.image}
                                     alt=""
                                 />
                             </div>
-                        </div>
+                        </motion.div>
 
-                        <div className="contentTexts">
+                        <motion.div 
+                            className="contentTexts"
+                            initial={{ opacity: 0, scale: 0.8 }}
+                            animate={cardRefs[item.id].inView ? 
+                                { scale: 1, opacity: 1, transition: { ease: 'easeOut' } } : 
+                                {}
+                            }
+                        >
                             <h3>{item.title}</h3>
                             {item.id === 3 ? (
                                 <> 
@@ -74,7 +107,7 @@ export const About = () => {
                                 </div>
                             )}
                             <div className="borderComponent" />
-                        </div>
+                        </motion.div>
 
                     </div>
                 ))}

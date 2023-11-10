@@ -29,7 +29,7 @@ export const DatasBecauseWe: IDatasBecauseWe = {
             id: 1,
             icon: Icon2,
             title: 'Atendimento Personalizado',
-            text: ' Fornecemos atendimento personalizado, compreendendo suas necessidades específicas e assegurando que você se sinta bem assistido ao longo de todo o processo legal.',
+            text: 'Fornecemos atendimento personalizado, compreendendo suas necessidades específicas e assegurando que você se sinta bem assistido ao longo de todo o processo legal.',
         },
         {
             id: 2,

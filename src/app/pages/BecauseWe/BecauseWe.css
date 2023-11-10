@@ -193,6 +193,11 @@
         grid-row: 1;
     }
 
+    .cards .card.card2 .iconDiv img {
+        width: 100%;
+        height: auto;
+    }
+
 }
 @media (min-width: 1300px) {
     .cards .card .iconDiv img {

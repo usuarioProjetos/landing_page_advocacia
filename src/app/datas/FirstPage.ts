@@ -5,8 +5,9 @@ import {
 } from '../assets/home/home'
 
 interface IButton {
-    text: string;
+    text: string
     nameClass: string
+    to: string
 }
 
 interface IDatasFirstPage {
@@ -30,11 +31,13 @@ export const DatasFirstPage: IDatasFirstPage = {
     btns: [
         {
             text: 'atuação',
-            nameClass: 'bgDark'
+            nameClass: 'bgDark',
+            to: 'fieldWork'
         },
         {
             text: 'contato',
-            nameClass: 'bgLight'
+            nameClass: 'bgLight',
+            to: 'contact'
         }
     ]
 }

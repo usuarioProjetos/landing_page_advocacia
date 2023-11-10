@@ -14,6 +14,7 @@ import { EffectCoverflow, Pagination } from 'swiper/modules';
 import { Title } from '@/app/components/Title/Title'
 // Datas
 import { DatasDeskPage } from '../../datas/DeskPage'
+import { motion } from 'framer-motion'
 
 export const DeskPage = () => {
     const [isSwiperReady, setIsSwiperReady] = useState(false);
@@ -30,8 +31,24 @@ export const DeskPage = () => {
         >
             <div className="divsBg">
                 <div className="bgMobile" />
-                <div className="firstDivBg"/>
-                <div className="divBoxShadow" />
+                <motion.div className="firstDivBg"
+                    initial={{x: -100}}
+                    whileInView={{x: 0, transition: {ease: 'easeOut'}}}
+                    viewport={{
+                        once: true,
+                        margin: '-40%'
+                    }}
+
+                />
+                <motion.div 
+                    className="divBoxShadow" 
+                    initial={{opacity: 0}}
+                    whileInView={{opacity: 1, transition: {ease: 'easeOut'}}}
+                    viewport={{
+                        once: true,
+                        margin: '-50%'
+                    }}   
+                />
             </div>
             <Title
                 text='escritório'

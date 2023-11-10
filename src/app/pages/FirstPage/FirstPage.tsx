@@ -65,9 +65,11 @@ export const FirstPage = () => {
                 <div className="btns">
                     {DatasFirstPage.btns.map((btn, i) => (
                         <div key={i} className={`btn ${btn.nameClass}`}>
-                            <button>
-                                {btn.text}
-                            </button>
+                            <a href={`#${btn.to}`}>
+                                <button>
+                                    {btn.text}
+                                </button>
+                            </a>
                         </div>
                     ))}
                 </div>

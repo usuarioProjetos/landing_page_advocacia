@@ -1,8 +1,19 @@
+"use client"
 import { Title } from '@/app/components/Title/Title'
 import './BecauseWe.css'
 import { DatasBecauseWe as datas } from '@/app/datas/BecauseWe'
+import { motion } from 'framer-motion'
+import { useInView } from 'react-intersection-observer'
 
 export const BecauseWe = () => {
+    const cardRefs = datas.cards.map(() => {
+        const [ref, inView] = useInView({
+            triggerOnce: false,
+            threshold: 0.6,
+        });
+        return { ref, inView };
+    });
+
     return (
         <section className="becauseWe">
             <Title 
@@ -20,17 +31,28 @@ export const BecauseWe = () => {
 
             <article className="cards">
                 {datas.cards.map(card => (
-                    <div className={`card card${card.id} ${card.id % 2 === 0 ? 'even' : 'odd'}`} key={card.id}>
+                    <motion.div 
+                        ref={cardRefs[card.id].ref}
+                        className={`card card${card.id} ${card.id % 2 === 0 ? 'even' : 'odd'}`} key={card.id}
+                    >
                         
-                        <div className={`iconDiv iconDiv${card.id}`}>
+                        <motion.div 
+                            className={`iconDiv iconDiv${card.id}`}
+                            initial={{ y: -30, opacity: 0 }}
+                            animate={cardRefs[card.id].inView ? { y: 0, opacity: 1 } : {}}
+                        >
                             <img src={card.icon.src} alt="" />
-                        </div>
-                        <div className="textsCards">
+                        </motion.div>
+                        <motion.div 
+                            className="textsCards"
+                            initial={{ y: 30, opacity: 0 }}
+                            animate={cardRefs[card.id].inView ? { y: 0, opacity: 1 } : {}}
+                        >
                             <h3 className='titleCard'>{card.title}</h3>
                             <p className='paragraphCard'>{card.text}</p>
-                        </div>
+                        </motion.div>
                        
-                    </div>
+                    </motion.div>
                 ))}
             </article>
 

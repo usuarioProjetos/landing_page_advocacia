@@ -56,18 +56,20 @@
     height: 2.5em;
     text-transform: uppercase;
     border-radius: .4em;
-    font-size: 16px;
+    font-size: 18px;
     transition: all .2s;
+    box-shadow: 2px 2px rgb(143, 214, 205, .4);
     /* border: 1px solid; */
 }
 .bgDark button {
-    background-color: #001D19;
-    color: #fff;
-    border: 1px solid #001D19;
+    background-color: #004A41;
+    color: #8ED6CC;
+    border: 1px solid #004A41;
 }
 .bgDark button:hover {
     background-color: transparent;
     border-color: #fff;
+    color: #fff;
 }
 .bgLight button {
     background-color: transparent;
@@ -76,8 +78,9 @@
 
 }
 .bgLight button:hover {
-    background-color: #001D19;
-    border-color: #001D19;
+    background-color: #004A41;
+    border-color: #004A41;
+    color: #8ED6CC;
 }
 
 .firstPage .scroll-arrow {
@@ -104,7 +107,19 @@
         bottom: 2em;
     }
 }
-
+@media (max-width: 320px) { 
+    .firstPage .content h1 {
+        font-size: 2.1em;
+        width: 98%;
+    }
+    .firstPage .btns {
+        gap: .2em;
+        width: 85%;
+    }
+    .firstPage .btns .btn button {
+        font-size: 1em;
+    }
+}
 @media (min-width: 900px) {
     .firstPage .content h1 {
         font-size: 2.5em;
