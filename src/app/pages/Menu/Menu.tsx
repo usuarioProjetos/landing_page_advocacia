@@ -68,7 +68,7 @@ export const Menu = ({ showMenu = false, setShowMenu }: Props) => {
     
           if (targetElement) {
             window.scrollTo({
-              top: targetElement.offsetTop,
+              top: targetElement.offsetTop - 100,
               behavior: 'smooth',
             });
           }
