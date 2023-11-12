@@ -8,6 +8,7 @@ import { FieldWork } from './pages/FieldWork/FieldWork'
 import { FirstPage } from './pages/FirstPage/FirstPage'
 import { BecauseWe } from './pages/BecauseWe/BecauseWe'
 import { About } from './pages/About/About'
+import { AttractivePhrase } from './components/AttractivePhrase/AttractivePhrase'
 
 // Swiper
 import { register } from 'swiper/element/bundle'
@@ -25,6 +26,7 @@ export default function Home() {
     <main>
       <Navbar />
       <FirstPage />
+      <AttractivePhrase />
       <FieldWork />
       <About />
       <BecauseWe />

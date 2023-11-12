@@ -1,0 +1,72 @@
+.attractivePhrase {
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(27, 153, 138, .2) 40%, rgba(255, 255, 255));
+    text-align: center;
+    padding: 1em 0 1em 0;
+    margin-bottom: -1px;
+}
+.attractivePhrase .phrase {
+    font-size: 1.1em;
+    width: 95%;
+    font-weight: 600;
+    letter-spacing: 0;
+    margin: auto;
+}
+
+/* Responsive */
+@media (min-width: 550px) {
+    .attractivePhrase .phrase {
+        width: 80%;
+        letter-spacing: 1px;
+    }
+}
+
+@media (min-width: 650px) {
+    .attractivePhrase .phrase {
+        font-size: 1.2em;
+        width: 70%;
+        font-weight: 600;
+    }
+}
+
+@media (min-width: 850px) {
+    .attractivePhrase {
+        background: linear-gradient(to bottom, rgba(27, 153, 138, .2) 40%, rgba(217, 217, 217));
+
+    }
+}
+
+@media (min-width: 1000px) {
+    .attractivePhrase .phrase {
+        font-size: 1.2em;
+        width: 60%;
+        font-weight: 600;
+    }
+}
+
+@media (min-width: 1300px) {
+    .attractivePhrase .phrase {
+        font-size: 1.2em;
+        width: 50%;
+        font-weight: 600;
+        letter-spacing: 2px;
+    }
+}
+
+@media (min-width: 1600px) {
+    .attractivePhrase .phrase {
+        font-size: 1.3em;
+        width: 40%;
+        font-weight: 600;
+        letter-spacing: 2px;
+    }
+}
+
+@media (min-width: 2100px) {
+    .attractivePhrase .phrase {
+        font-size: 1.4em;
+        width: 35%;
+        font-weight: 600;
+        letter-spacing: 3px;
+    }
+}
