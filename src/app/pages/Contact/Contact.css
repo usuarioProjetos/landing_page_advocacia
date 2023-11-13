@@ -45,7 +45,7 @@
 
 }
 .contact .formContent .form .contextInputs .labelInput .input:focus {
-    outline: none;
+    outline: 1px solid #00d1b5;
 }
 .contact .formContent .form .contextInputs .labelInput .textarea {
     font-size: 1.3rem;
@@ -53,9 +53,8 @@
     height: 5rem;
 }
 .contact .formContent .form .contextInputs .labelInput .textarea:focus {
-    outline: none;
+    outline: 1px solid #00d1b5;
 }
-        /* Textarea */
 
     /* Submit */
 .contact .formContent .form .contentSubmit {
@@ -75,8 +74,13 @@
     font-size: 1.2rem;
     font-weight: 600;
     box-shadow: #002B25 5px 5px;
+    transition: all .2s;
 }
-
+.contact .formContent .form .contentSubmit .labelInputSubmit button:hover { 
+    cursor: pointer;
+    box-shadow: #002B25 8px 8px;
+    font-size: 1.3rem;
+}
 /* Infos Contact */
 .contact .infosContact {
     background-color: #00695C;
