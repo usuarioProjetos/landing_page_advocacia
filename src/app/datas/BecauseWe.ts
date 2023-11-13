@@ -16,7 +16,7 @@ interface IDatasBecauseWe {
 }
 
 export const DatasBecauseWe: IDatasBecauseWe = {
-    titleSection: 'porque a cevithereza?',
+    titleSection: 'Porque a Cevithereza?',
     paragraphSection: 'Colaborar com nossa equipe de especialistas oferece inúmeras vantagens, incluindo:',
     cards: [
         {

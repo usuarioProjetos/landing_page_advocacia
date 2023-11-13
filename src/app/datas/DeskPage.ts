@@ -11,7 +11,7 @@ interface IDatasDeskPage {
 }
 
 export const DatasDeskPage: IDatasDeskPage = {
-    title: 'escritório',
+    title: 'Escritório',
     items: [ 
         {
             src: Image1,

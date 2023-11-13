@@ -9,12 +9,11 @@
     position: relative;
     display: inline-block;
     padding: 3px;
-    font-size: 24px;
+    font-size: 28px;
 }
 .title .content h2 span {
     position: relative;
     z-index: 1;
-    text-transform: capitalize;
 }
 .title .content h2 .square-detail {
     bottom: 0;
@@ -25,4 +24,10 @@
     position: absolute;
     z-index: 0;
     opacity: .8;
+}
+
+@media (min-width: 850px) {
+    .title .content h2 span {
+        font-size: 32px;
+    }
 }

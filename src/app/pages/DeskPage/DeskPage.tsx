@@ -51,7 +51,7 @@ export const DeskPage = () => {
                 />
             </div>
             <Title
-                text='escritório'
+                text={DatasDeskPage.title}
                 widthSquare='80%'
             />
             

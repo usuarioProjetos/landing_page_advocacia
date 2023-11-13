@@ -20,15 +20,29 @@ export const Contact = () => {
             />
 
             <div className="formContent">
-                <form className="form">
+                <form 
+                    className="form"
+                    action="https://formsubmit.co/diegosouzacruz464@gmail.com"
+                    method='POST'    
+                >
                     <div className="contextInputs">
                         {DatasInput.map(item => (
-                            <label key={item.name} className={`labelInput ${item.name === 'mensagem' ? 'labelTextarea' : ''}`}>
-                                <p>{item.name}</p>
-                                {item.name === 'mensagem' ? (
-                                    <textarea className='elementForm textarea' rows={4}></textarea>
-                                ) : (
-                                    <input className='elementForm input' type={item.type} />
+                            <label key={item.nameField} className={`labelInput ${item.nameField === 'mensagem' ? 'labelTextarea' : ''}`}>
+                                <p>{item.nameField}</p>
+                                {item.nameField === 'mensagem' ? (
+                                    <textarea 
+                                        className='elementForm textarea' 
+                                        rows={4}
+                                        name={item.name}
+                                    />
+                                        
+                                        ) : (
+                                    
+                                    <input 
+                                        className='elementForm input' 
+                                        type={item.type} 
+                                        name={item.name}
+                                    />
                                 )}
                             </label>
                         ))}

@@ -21,7 +21,7 @@ export const MobileFieldWork = () => {
     return (
         <>
             <Title
-                text='Área de atuação'
+                text='Áreas de atuação'
                 widthSquare='80%'
                 square={false}
             />

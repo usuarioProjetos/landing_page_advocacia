@@ -38,7 +38,7 @@ export const FieldWork = () => {
                 </div>
 
                 <Title
-                    text='Área de atuação'
+                    text='Áreas de atuação'
                     widthSquare='80%'
                 />
 
