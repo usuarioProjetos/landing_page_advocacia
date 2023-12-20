@@ -36,7 +36,7 @@
     width: 80%;
     /* opacity: .8; */
     backdrop-filter: blur(20px);
-    background-color: #00f;
+    background-color: rgb(0, 0, 172);
 }
 .container .swiper_container .item_container img {
     height: 100%;
@@ -45,7 +45,7 @@
 .container .swiper_container .item_container.swiper-slide-active { 
     border-radius: 1em;
     opacity: 1;
-    background: #f00;
+    background: rgb(0, 153, 94);
 }
 
 .swiper-pagination {

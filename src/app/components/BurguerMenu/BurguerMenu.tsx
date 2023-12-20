@@ -2,63 +2,12 @@
 import { motion, useAnimation } from 'framer-motion'
 import './BurguerMenu.css'
 import { useState, useRef } from 'react'
+import { animationLine1, animationLine2, animationLine3 } from '@/app/animations/BurguerMenu'
 
 interface Props {
     showMenu: boolean
     setShowMenu: React.Dispatch<React.SetStateAction<boolean>>
 }
-const durationAnimation = .2
-
-const animationLine1 = {
-    enter: {
-        rotate: 45,
-        y: 10,
-        transition: {
-            duration: durationAnimation
-        }
-    },
-    exit: {
-        rotate: 0,
-        y: 0,
-        transition: {
-            duration: durationAnimation
-        }
-    }
-}
-const animationLine2 = {
-    enter: {
-        opacity: 0,
-        transition: {
-            duration: durationAnimation
-        }
-    },
-    exit: {
-        opacity: 1,
-        transition: {
-            duration: durationAnimation
-        }
-    }
-}
-
-const animationLine3 = {
-    enter: {
-        rotate: -45,
-        y: -10,
-        width: '100%',
-        transition: {
-            duration: durationAnimation
-        }
-    },
-    exit: {
-        rotate: 0,
-        y: 0,
-        width: '50%',
-        transition: {
-            duration: durationAnimation
-        }
-    }
-}
-
 
 export const BurguerMenu = ({ showMenu, setShowMenu }: Props) => {
     

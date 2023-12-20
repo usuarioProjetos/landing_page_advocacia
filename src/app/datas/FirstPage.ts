@@ -1,19 +1,11 @@
+import { IDatasFirstPage } from '../interfaces/FirstPage/FirstPage'
+
 import {
     PrimeiroSlide,
     SegundoSlide,
     TerceiroSlide
 } from '../assets/home/home'
 
-interface IButton {
-    text: string
-    nameClass: string
-    to: string
-}
-
-interface IDatasFirstPage {
-    title: string;
-    btns: IButton[];
-}
 export const ImagesFirstPage = [
     {
         path: PrimeiroSlide

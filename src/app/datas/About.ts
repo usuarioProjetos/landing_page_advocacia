@@ -1,5 +1,3 @@
-import { StaticImageData } from "next/image"
-
 import { 
     ProfessionalExample,
     HistoriaCompetencias,
@@ -13,18 +11,7 @@ import {
     BsWhatsapp 
 } from 'react-icons/bs'
 
-export interface ICardAbout {
-    id: number
-    image: StaticImageData
-    title: string
-    textMobile: string
-    textDesktop: string
-    firstElement?: boolean
-    socialMedias?: {
-        Icon: any
-        to: string
-    }[]
-}
+import { ICardAbout } from "../interfaces/About/About"
 
 export const DatasAbout: ICardAbout[] = [
     {
@@ -55,7 +42,7 @@ export const DatasAbout: ICardAbout[] = [
         image: HistoriaCompetencias,
         title: 'História e Competências',
         textMobile: 'Em janeiro de 2022, o sócio inaugurou seu próprio escritório de advocacia (Cevithereza Paiva Advocacia), que oferece uma gama de serviços legais em parceria com escritórios especializados em várias áreas do direito. No primeiro ano de operação, o escritório alcançou sucesso significativo',
-        textDesktop: 'Em janeiro de 2022 o sócio colocou em prática um projeto profissional que precedia o seu ingresso à faculdade de direito, abrindo seu próprio escritório full service (Cevithereza Paiva Advocacia), contando com a parceria interdisciplinar de escritórios especializados em direito trabalhista, família, consumidor, LGPD, imobiliário e criminal. Já no primeiro ano de atuação o escritório',
+        textDesktop: 'Em janeiro de 2022 o sócio colocou em prática um projeto profissional que precedia o seu ingresso à faculdade de direito, abrindo seu próprio escritório full service (Cevithereza Paiva Advocacia), contando com a parceria interdisciplinar de escritórios especializados em direito trabalhista, família, consumidor, LGPD, imobiliário e criminal. Já no primeiro ano de atuação o escritório alcançou sucesso significativo',
     },
 
     {

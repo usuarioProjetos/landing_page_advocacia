@@ -1,23 +1,14 @@
 import { BsInstagram, BsFacebook, BsWhatsapp, BsEnvelope } from 'react-icons/bs'
-import LogoImage from '../assets/logo.png'
+import LogoImage from '../assets/logo.png' 
+import { IDatasInput, IDatasSocialMedia } from '../interfaces/Contact/Contact'
 
-interface IDatasInput {
-    nameField: string
-    type?: string
-    name: string
-}
-
-interface IDatasSocialMedia {
-    Icon: any
-    name: string
-}
 export const Logo = {
     src: LogoImage
 }
 
 export const DatasInput: IDatasInput[] = [
     {
-        nameField: 'name',
+        nameField: 'nome',
         type: 'text',
         name: 'Nome'
     },

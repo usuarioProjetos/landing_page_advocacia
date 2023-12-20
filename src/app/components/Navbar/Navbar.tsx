@@ -3,9 +3,8 @@ import Image from 'next/image'
 import './Navbar.css'
 import Logo from '../../assets/logo.png'
 import { BurguerMenu } from '../BurguerMenu/BurguerMenu'
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect } from 'react'
 import { Menu } from '@/app/pages/Menu/Menu'
-import Link from 'next/link'
 
 export const Navbar = () => {
     const [showMenu, setShowMenu] = useState<boolean>(false)

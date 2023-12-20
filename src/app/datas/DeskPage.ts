@@ -5,10 +5,7 @@ import Image4 from '../assets/testsCarousel/img_4.jpg'
 import Image5 from '../assets/testsCarousel/img_5.jpg'
 import Image6 from '../assets/testsCarousel/img_6.jpg'
 import Image7 from '../assets/testsCarousel/img_7.jpg'
-interface IDatasDeskPage {
-    title: string
-    items: { src: any, id: string | number, text: string }[]
-}
+import { IDatasDeskPage } from '../interfaces/DeskPage/DeskPage'
 
 export const DatasDeskPage: IDatasDeskPage = {
     title: 'Escritório',

@@ -5,6 +5,7 @@ import { DatasMenu, delayAnimationExit } from '@/app/datas/Menu'
 import { useRef, useEffect, useLayoutEffect, SetStateAction } from 'react'
 import { Variants, motion } from 'framer-motion'
 import Link from 'next/link'
+import { variantsAnimationLogoMenu, variantsAnimationMenu } from '@/app/animations/Menu'
 
 interface Props {
     showMenu: boolean,
@@ -12,52 +13,6 @@ interface Props {
 }
 
 export const Menu = ({ showMenu = false, setShowMenu }: Props) => {
-    console.log(showMenu);
-
-    const variantsAnimationMenu: Variants = {
-        animate: {
-            opacity: 1,
-            height: "100vh",
-            borderBottomLeftRadius: 0, 
-            borderBottomRightRadius: 0,
-            transition: {
-                duration: .5
-            }
-        },
-        exit: {
-            height: 0,
-            opacity: 0,
-            borderBottomLeftRadius: "10%",
-            borderBottomRightRadius: "10%",
-            transition: {
-                delay: parseFloat(`0.${DatasMenu.items.length}`) + .1,
-                duration: .5,
-            },
-        }
-    }
-
-    const variantsAnimationLogoMenu: Variants = {
-        initial: {
-            y: 50, 
-            opacity: 0,
-        },
-        animate: {
-            y: 0, 
-            opacity: 1, 
-            type: 'tween',
-            transition: {
-                delay: 1
-            }
-        },
-        exit: {
-            y: 50, 
-            opacity: 0, 
-            type: 'tween',
-            transition: {
-                delay: 0
-            },
-        }
-    }
 
     const handleClick = (e: React.MouseEvent, targetId: string) => {
         e.preventDefault();

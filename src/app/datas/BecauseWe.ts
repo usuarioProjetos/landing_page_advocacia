@@ -1,19 +1,9 @@
-import { StaticImageData } from "next/image"
+import { IDatasBecauseWe } from "../interfaces/BecauseWe/BecauseWe"
+
 import Icon1 from '../assets/svg/undraw_certificate.svg'
 import Icon2 from '../assets/svg/undraw_services.svg'
 import Icon3 from '../assets/svg/undraw_security.svg'
 import Icon4 from '../assets/svg/undraw_clock.svg'
-
-interface IDatasBecauseWe {
-    titleSection: string
-    paragraphSection: string
-    cards: {
-        id: number
-        icon: StaticImageData
-        title: string
-        text: string
-    }[]
-}
 
 export const DatasBecauseWe: IDatasBecauseWe = {
     titleSection: 'Porque a Cevithereza?',
