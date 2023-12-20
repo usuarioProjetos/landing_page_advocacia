@@ -1,10 +1,10 @@
 "use client"
 import Image from 'next/image'
 import './Navbar.css'
-import Logo from '../../assets/logo.png'
 import { BurguerMenu } from '../BurguerMenu/BurguerMenu'
 import { useState, useEffect } from 'react'
 import { Menu } from '@/app/pages/Menu/Menu'
+import { LogoImage } from '@/app/assets/logo/imagesLogo'
 
 export const Navbar = () => {
     const [showMenu, setShowMenu] = useState<boolean>(false)
@@ -18,7 +18,7 @@ export const Navbar = () => {
                 href='#home'
             >
                 <Image
-                    src={Logo}
+                    src={LogoImage}
                     alt="Logo da empresa"
                 />
             </a>

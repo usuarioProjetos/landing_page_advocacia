@@ -1,12 +1,14 @@
-import { StaticImageData } from 'next/image'
-import Logo from '../assets/logo2.png'
+// Interfaces
 import { IDatasMenu } from '../interfaces/Menu/Menu'
+
+// Logo / icons / images 
+import { LogoImageTwo } from '../assets/logo/imagesLogo'
 
 export const delayAnimationEnter = .3
 export const delayAnimationExit = .1
 
 export const DatasMenu: IDatasMenu = {
-    logo: Logo,
+    logo: LogoImageTwo,
     items: [
         {
             itemList: 'home',

@@ -1,42 +1,47 @@
-import Image1 from '../assets/image4.png'
-import Image2 from '../assets/testsCarousel/img_2.jpg'
-import Image3 from '../assets/testsCarousel/img_3.jpg'
-import Image4 from '../assets/testsCarousel/img_4.jpg'
-import Image5 from '../assets/testsCarousel/img_5.jpg'
-import Image6 from '../assets/testsCarousel/img_6.jpg'
-import Image7 from '../assets/testsCarousel/img_7.jpg'
+// Interfaces
 import { IDatasDeskPage } from '../interfaces/DeskPage/DeskPage'
+
+// Logo / icons / images 
+import { 
+    ImgOne,
+    ImgTwo,
+    ImgThree,
+    ImgFour,
+    ImgFive,
+    ImgSix,
+    ImgSeven
+} from '../assets/desk/deskImages'
 
 export const DatasDeskPage: IDatasDeskPage = {
     title: 'Escritório',
     items: [ 
         {
-            src: Image1,
+            src: ImgOne,
             text: 'Item 0',
             id: 0
         },
         {
-            src: Image3,
+            src: ImgTwo,
             text: 'Item 1',
             id: 1
         },
         {
-            src: Image4,
+            src: ImgThree,
             text: 'Item 2',
             id: 2
         },
         {
-            src: Image3,
+            src: ImgFour,
             text: 'Item 3',
             id: 3
         },
         {
-            src: Image4,
+            src: ImgFive,
             text: 'Item 4',
             id: 4
         },
         {
-            src: Image1,
+            src: ImgSix,
             text: 'Item 4',
             id: 5
         },

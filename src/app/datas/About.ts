@@ -1,3 +1,7 @@
+// Interfaces
+import { ICardAbout } from "../interfaces/About/About"
+
+// Logo / icons / images 
 import { 
     ProfessionalExample,
     HistoriaCompetencias,
@@ -11,7 +15,6 @@ import {
     BsWhatsapp 
 } from 'react-icons/bs'
 
-import { ICardAbout } from "../interfaces/About/About"
 
 export const DatasAbout: ICardAbout[] = [
     {

@@ -1,3 +1,4 @@
+import { StaticImageData } from "next/image";
 
 export interface IButton {
     text: string
@@ -7,5 +8,6 @@ export interface IButton {
 
 export interface IDatasFirstPage {
     title: string;
+    arrow: StaticImageData;
     btns: IButton[];
 }

@@ -1,6 +1,9 @@
-import { BsInstagram, BsFacebook, BsWhatsapp, BsEnvelope } from 'react-icons/bs'
-import LogoImage from '../assets/logo.png' 
+// Interfaces
 import { IDatasInput, IDatasSocialMedia } from '../interfaces/Contact/Contact'
+
+// Logo / icons / images 
+import { BsInstagram, BsFacebook, BsWhatsapp, BsEnvelope } from 'react-icons/bs'
+import { LogoImage } from '../assets/logo/imagesLogo'
 
 export const Logo = {
     src: LogoImage

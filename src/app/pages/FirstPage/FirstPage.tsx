@@ -1,12 +1,15 @@
 "use client"
-import { DatasFirstPage, ImagesFirstPage } from '@/app/datas/FirstPage'
-import Arrow from '../../assets/arrow.png'
-import { IoIosArrowDown } from 'react-icons/io'
+// CSS
 import './FirstPage.css'
+// Datas
+import { DatasFirstPage, ImagesFirstPage } from '@/app/datas/FirstPage'
+// Next / React
 import Image from 'next/image'
-import { useState, useEffect } from 'react'
-import { AnimatePresence, motion } from 'framer-motion'
 import Link from 'next/link'
+import { useState, useEffect } from 'react'
+
+// Framer-motion
+import { AnimatePresence, motion } from 'framer-motion'
 
 export const FirstPage = () => {
     const [activeImageIndex, setActiveImageIndex] = useState(0);
@@ -80,7 +83,7 @@ export const FirstPage = () => {
             <div className="scroll-arrow">
                 <Link href="#fieldWork">
                     <Image 
-                        src={Arrow}
+                        src={DatasFirstPage.arrow}
                         alt='Seta de scroll'
                     />
                 </Link>

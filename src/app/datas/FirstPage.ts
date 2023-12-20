@@ -1,9 +1,12 @@
+// Interfaces
 import { IDatasFirstPage } from '../interfaces/FirstPage/FirstPage'
 
+// Logo / icons / images 
 import {
     PrimeiroSlide,
     SegundoSlide,
-    TerceiroSlide
+    TerceiroSlide,
+    Arrow,
 } from '../assets/home/home'
 
 export const ImagesFirstPage = [
@@ -20,6 +23,7 @@ export const ImagesFirstPage = [
 
 export const DatasFirstPage: IDatasFirstPage = {
     title: 'Cevithereza Paiva Advocacia',
+    arrow: Arrow,
     btns: [
         {
             text: 'atuação',

@@ -1,3 +1,10 @@
+// Interfaces
+import { 
+    IDatasFirstWorkDesktop, 
+    IDatasFirstWorkMobile 
+} from '../interfaces/FieldWork/FieldWork'
+
+// Logo / icons / images 
 import {
     DireitoCivilImg,
     DireitoConsumidorImg,
@@ -10,10 +17,6 @@ import {
     WhiteHammer
 } from '../assets/fieldWork/imagesFieldWork'
 
-import { 
-    IDatasFirstWorkDesktop, 
-    IDatasFirstWorkMobile 
-} from '../interfaces/FieldWork/FieldWork'
 
 export const DatasFieldWorkMobile: IDatasFirstWorkMobile[] = [
     {

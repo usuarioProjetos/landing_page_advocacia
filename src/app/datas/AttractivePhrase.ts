@@ -1,3 +1,4 @@
+// Interfaces
 import { IDatasAttractivePhrase } from "../interfaces/AttractivePhrase/AttractivePhrase";
 
 export const DatasAttractivePhrase: IDatasAttractivePhrase = {
