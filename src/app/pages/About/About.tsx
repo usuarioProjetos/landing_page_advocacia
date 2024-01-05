@@ -26,10 +26,10 @@ export const About = () => {
             id='about'
         >
             <Title
-                text="Sobre"
+                text="Sócio Fundador do Escritório"
                 widthSquare="80%"
             />
-
+            
             <article className="allInfosAbout">
                 {datas.map(item => (
                     <div
@@ -115,3 +115,4 @@ export const About = () => {
         </section>
     )
 }
+

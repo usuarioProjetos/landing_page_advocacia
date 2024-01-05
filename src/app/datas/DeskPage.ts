@@ -7,9 +7,6 @@ import {
     ImgTwo,
     ImgThree,
     ImgFour,
-    ImgFive,
-    ImgSix,
-    ImgSeven
 } from '../assets/desk/deskImages'
 
 export const DatasDeskPage: IDatasDeskPage = {
@@ -34,16 +31,6 @@ export const DatasDeskPage: IDatasDeskPage = {
             src: ImgFour,
             text: 'Item 3',
             id: 3
-        },
-        {
-            src: ImgFive,
-            text: 'Item 4',
-            id: 4
-        },
-        {
-            src: ImgSix,
-            text: 'Item 4',
-            id: 5
         },
         
     ]

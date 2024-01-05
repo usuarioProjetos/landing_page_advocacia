@@ -34,6 +34,7 @@ export const Contact = () => {
                                         className='elementForm textarea' 
                                         rows={4}
                                         name={item.name}
+                                        required
                                     />
                                         
                                         ) : (
@@ -42,6 +43,7 @@ export const Contact = () => {
                                         className='elementForm input' 
                                         type={item.type} 
                                         name={item.name}
+                                        required
                                     />
                                 )}
                             </label>

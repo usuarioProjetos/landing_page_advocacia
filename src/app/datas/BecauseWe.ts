@@ -11,14 +11,14 @@ import {
 
 
 export const DatasBecauseWe: IDatasBecauseWe = {
-    titleSection: 'Porque a Cevithereza?',
-    paragraphSection: 'Colaborar com nossa equipe de especialistas oferece inúmeras vantagens, incluindo:',
+    titleSection: 'Formas de atuação',
+    paragraphSection: 'A atuação integrativa do nosso escritório oferece inúmeras vantagens em diferentes especialidades, incluindo:',
     cards: [
         {
             id: 0,
             icon: CertificateIcon,
             title: 'Experiência e Expertise',
-            text: 'Nossa experiente equipe é especializada em resolver questões legais complexas, comprovando nosso histórico de sucesso.',
+            text: 'Histórico na resolução eficaz de conflitos complexos em diversas áreas do direito, evidenciando sólida competência na abordagem de desafios jurídicos complexos.',
         },
         {
             id: 1,
@@ -30,19 +30,13 @@ export const DatasBecauseWe: IDatasBecauseWe = {
             id: 2,
             icon: SecurityIcon,
             title: 'Compromisso Ético',
-            text: 'Nossa firma jurídica valoriza ética, integridade e confidencialidade na relação cliente-advogado',
+            text: 'Valorização da ética e a confidencialidade na relação cliente-advogado, sublinhando a importância atribuída a princípios éticos e confidencialidade.',
         },
-        // {
-        //     id: 0,
-        //     icon: Icon1,
-        //     title: 'Experiência e Expertise',
-        //     text: 'Nossa experiente equipe é especializada em resolver questões legais complexas, comprovando nosso histórico de sucesso.',
-        // },
         {
             id: 3,
             icon: ClockIcon,
-            title: 'Suporte Pós-Resolução',
-            text: 'Nossa assistência não termina na resolução. Estamos aqui para apoiá-lo após o encerramento do caso, garantindo sua satisfação contínua. ',
+            title: 'Assessoria Jurídica Preventiva',
+            text: 'Nosso escritório fornece serviços de consultoria jurídica preventiva, visando a antecipação de potenciais problemas.',
         }
     ]
 }

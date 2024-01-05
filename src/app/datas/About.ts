@@ -21,7 +21,7 @@ export const DatasAbout: ICardAbout[] = [
         id: 0,
         image: ProfessionalExample,
         title: 'Frederico Chevithereza Paiva',
-        textMobile: 'Frederico Cevithereza Paiva, advogado formado pela Universidade Presbiteriana Mackenzie, com mais de 8 anos de experiência em processos cíveis, recuperação judicial, falência, contratos e pareceres na Cevithereza Paiva Advocacia.',
+        textMobile: 'Frederico Cevithereza Paiva, advogado formado pela Universidade Presbiteriana Mackenzie, com mais de 8 anos de experiência em processos cíveis, recuperação judicial, falência, revisão e elaboração de contratos e pareceres.',
         textDesktop: 'O sócio do Cevithereza Paiva Advocacia, Frederico Cevithereza Paiva, formou-se em Direito pela Universidade Presbiteriana Mackenzie, atuando em renomados escritórios de advocacia por mais de 8 anos, com experiência na condução de processos cíveis, recuperação judicial e falência, elaboração de contratos e pareceres.',
         firstElement: true,
         socialMedias: [

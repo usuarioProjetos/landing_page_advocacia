@@ -20,24 +20,23 @@ import {
 
 export const DatasFieldWorkMobile: IDatasFirstWorkMobile[] = [
     {
-        image: FullServiceImg,
-        title: 'Full Service',
-        text: 'Oferecemos uma variedade abrangente de serviços jurídicos para atender às diversas necessidades de nossos clientes em diversas áreas do direito',
+        image: DireitoCivilImg,
+        title: 'Processo Civil Contencioso, Preventivo e Extrajudicial',
+        text: 'No Direito Civil, oferecemos orientação especializada e soluções abrangentes para proteger os interesses de nossos clientes.',
         direction: 'left',
         nameClass: 'card1'
     },
     {
-        image: DireitoTrabalhistaImg,
-        title: 'Direito trabalhista',
-        text: 'Oferecemos serviços jurídicos abrangentes para empregadores e empregados, protegendo seus direitos e interesses por meio de soluções especializadas e eficazes.',
+        image: RecJudicialFalenciaImg,
+        title: 'Recuperação judicial e falência',
+        text: 'Fornecemos suporte a empresas em dificuldades financeiras, auxiliando na recuperação e buscando soluções práticas.',
         direction: 'right',
         nameClass: 'card2'
-
-    }, 
+    },
     {
         image: DireitoFamiliaImg,
-        title: 'Direito da família',
-        text: 'Fornecemos assistência jurídica em questões de direito da família, incluindo divórcio e custódia de filhos, para apoiar você em momentos delicados.', 
+        title: 'Direito de família e Sucessões',
+        text: 'Fornecemos assistência jurídica em questões de direito da família e sucessões, incluindo divórcio, partilhas, custódia de filhos e inventários judiciais e extrajudiciais, para apoiar você em momentos delicados.', 
         direction: 'left',
         nameClass: 'card3'
     },
@@ -49,19 +48,20 @@ export const DatasFieldWorkMobile: IDatasFirstWorkMobile[] = [
         nameClass: 'card4'
     },
     {
-        image: RecJudicialFalenciaImg,
-        title: 'Recuperação judicial e falência',
-        text: 'Fornecemos suporte a empresas em dificuldades financeiras, auxiliando na recuperação e buscando soluções práticas.',
+        image: DireitoTrabalhistaImg,
+        title: 'Direito trabalhista',
+        text: 'Oferecemos serviços jurídicos abrangentes para empregadores e empregados, protegendo seus direitos e interesses por meio de soluções especializadas e eficazes.',
         direction: 'left',
         nameClass: 'card5'
-    },
+
+    }, 
     {
-        image: DireitoCivilImg,
-        title: 'Direito civil',
-        text: 'No Direito Civil, oferecemos orientação especializada e soluções abrangentes para proteger os interesses de nossos clientes.',
+        image: FullServiceImg,
+        title: 'Full Service',
+        text: 'Oferecemos uma variedade abrangente de serviços jurídicos para atender às diversas necessidades de nossos clientes em diversas áreas do direito',
         direction: 'right',
         nameClass: 'card6'
-    },
+    }, 
 ]
 
 export const DatasFieldPageDesktop: IDatasFirstWorkDesktop = {
@@ -86,8 +86,8 @@ export const DatasFieldPageDesktop: IDatasFirstWorkDesktop = {
         {
             id: 2,
             image: DireitoFamiliaImg,
-            title: 'Direito da família',
-            text: 'Fornecemos assistência jurídica em questões de direito da família, incluindo divórcio e custódia de filhos, para apoiar você em momentos delicados.',
+            title: 'Direito de família e Sucessões',
+            text: 'Fornecemos suporte jurídico em questões familiares e sucessórias, como divórcio, partilhas, custódia e inventários, judicial e extrajudicial.', 
             showContent: false
         },
         {
@@ -102,13 +102,13 @@ export const DatasFieldPageDesktop: IDatasFirstWorkDesktop = {
             id: 4,
             image: RecJudicialFalenciaImg,
             title: 'Recuperação judicial e falência',
-            text: 'Fornecemos suporte a empresas em dificuldades financeiras, auxiliando na recuperação e buscando soluções práticas.',
+            text: 'Fornecemos suporte para pessoas físicas e jurídicas na recuperação de crédito.',
             showContent: false
         },
         {
             id: 5,
             image: DireitoCivilImg,
-            title: 'Direito civil',
+            title: 'Processo Civil Contencioso, Preventivo e Extrajudicial',
             text: 'No Direito Civil, oferecemos orientação especializada e soluções abrangentes para proteger os interesses de nossos clientes.',
             showContent: false
         },
