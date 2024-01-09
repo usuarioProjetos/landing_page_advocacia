@@ -12,3 +12,8 @@ export interface ICardAbout {
         to: string
     }[]
 }
+
+export interface IDatasAbout {
+    title: string,
+    cardsAbout: ICardAbout[]
+}

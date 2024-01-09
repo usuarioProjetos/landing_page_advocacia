@@ -1,10 +1,10 @@
-import ProfessionalExample from './professionalExample.png'
+import Professional from './tenImagecopy.png'
 import HistoriaCompetencias from './historiaCompetencias.svg'
 import FormacaoAcademica from './formacaoAcademica.svg'
 import CriptoMoedas from './criptoMoedas.svg'
 
 export {
-    ProfessionalExample,
+    Professional,
     HistoriaCompetencias,
     FormacaoAcademica,
     CriptoMoedas

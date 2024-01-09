@@ -1,6 +1,6 @@
 .container {
     width: 100vw;
-    height: 85vh;
+    height: 80vh;
     min-height: 700px;
     overflow: hidden;
     position: relative;
@@ -24,28 +24,44 @@
     z-index: 3;
     margin-top: 2em;
     width: 100%;
-    height: 75%;
+    height: 70%;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
+
 }
 .container .swiper_container .item_container {
     min-width: 300px;
     overflow: hidden;
     width: 80%;
-    /* opacity: .8; */
-    backdrop-filter: blur(20px);
-    background-color: rgb(0, 0, 172);
+    filter: blur(5px);
 }
-.container .swiper_container .item_container img {
+.container .swiper_container .item_container .content {
     height: 100%;
     width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
+
+/* Mudar imagens específicas */
+.container .swiper_container .item_container.item_container_7 .content {
+    background-position: 0;
+}
+.container .swiper_container .item_container.item_container_8 .content {
+    background-position: 0px;
+}
+.container .swiper_container .item_container.item_container_9 .content img {
+    scale: 1.1;
+}
+
 .container .swiper_container .item_container.swiper-slide-active { 
-    border-radius: 1em;
+    border-radius: 1em !important;
     opacity: 1;
-    background: rgb(0, 153, 94);
+    filter: blur(0);
+    /* padding: 1em; */
+    background-color: #fff;
 }
 
 .swiper-pagination {
@@ -101,15 +117,32 @@
     border-right: 1px solid #3e645f;
     border-bottom-right-radius: 1em;
 }
-.container .swiper_container .item_container {
-     /* ou outro valor mínimo adequado */
-}
 
+@media (min-width: 500px) {
+    .container .swiper_container .item_container img {
+        scale: 1;
+    }
+    .container .swiper_container {
+        height: 80%;
+    }
+}
+@media (min-width: 650px) {
+    .container .swiper_container {
+        height: 83%;
+    }
+    .container .swiper_container .item_container {
+        width: 65%;
+    }
+}
 @media (min-width: 850px) {
     .container {
         -webkit-clip-path: none;
         clip-path: none;
         background: transparent;
+        height: 95vh;
+    }
+    .container .swiper_container .item_container{
+        width: 60%;
     }
     .container .divsBg {
         display: block;
@@ -120,7 +153,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        /* z-index: 10; */
     }
     .container .divsBg .bgMobile {
         display: none;
@@ -164,7 +196,6 @@
         bottom: 8em;
         border-bottom-width: 2px;
         border-right-width: 2px;
-        /* background-color: #0f0; */
     }
     .swiper-pagination-bullet {
         border-color: #022521;
@@ -177,15 +208,15 @@
 
 @media (min-width: 1200px) {
     .container {
-        height: 90vh;
+        height: 95vh;
     }
     .container .swiper_container .item_container{
-        width: 70%;
+        width: 50%;
     }
 }
 @media (min-width: 1400px) {
     .container .swiper_container .item_container{
-        width: 65%;
+        width: 50%;
     }
     .container .swiper_container {
         height: 85%;
@@ -193,25 +224,25 @@
     .container .line .secondLine {
         bottom: 6em;
     }
+    
 }
-@media (min-width: 1900px) { 
+@media (min-width: 1800px) { 
     .container .swiper_container .item_container{
-        width: 60%;
+        width: 45%;
+
+    }
+    .container .swiper_container .item_container.swiper-slide-active { 
+        scale: 1;
     }
 }
 @media (min-width: 2000px) { 
-    /* .container .swiper_container {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-    } */
-    /* .container .swiper_container .item_container {
-        width: 30%;
+    .container .swiper_container .item_container{
+        width: 35%;
+        scale: .9;
+
     }
-    */
-    
-    /* .container .swiper_container .item_container.swiper-slide-active {
-        scale: 1.2;
-    } */
+    .container .swiper_container .item_container.swiper-slide-active { 
+        scale: 1;
+    }
 }
+

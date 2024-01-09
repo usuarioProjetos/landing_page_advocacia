@@ -9,6 +9,7 @@
 .contact .formContent {
     width: 100%;
     margin-top: 1em;
+    margin-bottom: 2.5em;
 }
 .contact .formContent .form {
     width: 100%;
@@ -26,16 +27,13 @@
 .contact .formContent .form .contextInputs .labelInput {
     width: 100%;
 }
-.contact .formContent .form .contextInputs .labelInput p {
-
-}
         /* Input and textarea */
 .contact .formContent .form .contextInputs .labelInput .elementForm {
     width: 100%;
     height: 3rem;
     border-radius: .6em;
     border: 1px solid #002B25;
-    background-color: #D0ECE8;
+    background-color: rgba(229, 243, 241, .7);
     margin-bottom: 1rem;
 }
         /* Input */
@@ -60,8 +58,6 @@
 .contact .formContent .form .contentSubmit {
     width: 100%;
     /* text-align: center; */
-}
-.contact .formContent .form .contentSubmit .labelInputSubmit {
 }
 .contact .formContent .form .contentSubmit .labelInputSubmit button {
     height: 2.5rem;
@@ -117,24 +113,28 @@
 }
 .contact .infosContact .infosSocialMedias .socialMedia {
     width: 100%;
+    text-decoration: none;
 }
 .contact .infosContact .infosSocialMedias .socialMedia .contentSocialMedia {
     display: flex;
     align-items: center;
-    justify-content: center;
+    position: relative;
+    justify-content: center; 
+    width: 85%;
     gap: 1.3rem;
     height: 3rem;
     text-transform: capitalize;
     font-size: 1.3rem;
     margin-bottom: .5rem;
     font-weight: bold;
-
     margin: 0 auto;
     color: #fff;
     cursor: pointer;
 }
 .contact .infosContact .infosSocialMedias .socialMedia .contentSocialMedia svg {
     scale: 1.2;
+    position: absolute;
+    left: 10px;
 }
 .contact .infosContact .infosSocialMedias .socialMedia svg {
     font-size: 32px;
@@ -143,11 +143,28 @@
     background-color: #002B25;
 }
 
+@media (min-width: 350px) {
+    .contact .infosContact .infosSocialMedias .socialMedia .contentSocialMedia {
+            width: 67%;
+        }
+}
+@media (min-width: 450px) {
+    .contact .infosContact .infosSocialMedias .socialMedia .contentSocialMedia {
+            width: 60%;
+        }
+}
+@media (min-width: 550px) {
+    .contact .infosContact .infosSocialMedias .socialMedia .contentSocialMedia {
+            width: 45%;
+        }
+}
 @media (min-width: 680px) {
     .contact .formContent .form .contentSubmit {
         text-align: center;
     }
-    
+    .contact .infosContact .infosSocialMedias .socialMedia .contentSocialMedia {
+        width: 40%;
+    }
 }
 
 @media (min-width: 850px) {
@@ -155,7 +172,7 @@
         background-color: transparent;
     }
     .contact .infosContact .logoDiv {
-        margin-top: 5rem;
+        margin-top: 2.5rem;
     }
     .abstractDiv {
         display: block;
@@ -164,9 +181,6 @@
         background-color: #00695C;
         position: absolute;
         z-index: -1;
-        -webkit-clip-path: polygon(40% 24%, 68% 11%, 81% 27%, 100% 19%, 100% 100%, 0 100%, 0 29%, 19% 0);
-        clip-path: polygon(40% 24%, 68% 11%, 81% 27%, 100% 19%, 100% 100%, 0 100%, 0 29%, 19% 0);
-        
     }
     .abstractDivBg {
         display: block;
@@ -176,8 +190,6 @@
         background-color: #00463D;
         position: absolute;
         z-index: -2;
-        -webkit-clip-path: polygon(40% 24%, 68% 11%, 81% 27%, 100% 19%, 100% 100%, 0 100%, 0 29%, 19% 0);
-        clip-path: polygon(40% 24%, 68% 11%, 81% 27%, 100% 19%, 100% 100%, 0 100%, 0 29%, 19% 0);
     }
     .contact .formContent .form .contextInputs .labelInput .input {
         width: 48%;
@@ -199,15 +211,20 @@
 
     .contact .infosContact .infosSocialMedias {
         flex-direction: row;
-        width: 80%;
+        width: 100%;
         margin-top: 1rem;
         margin-bottom: 1rem;
+        
     }
     .contact .infosContact .infosSocialMedias .socialMedia:nth-child(even) {
         background-color: transparent;
     }
     .contact .infosContact .infosSocialMedias .socialMedia .contentSocialMedia {
         gap: .3rem;
+        width: 98%;
+    }
+    .contact .infosContact .infosSocialMedias .socialMedia .contentSocialMedia svg {
+        position: static;
     }
 
 }

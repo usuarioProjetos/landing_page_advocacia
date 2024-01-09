@@ -12,7 +12,7 @@ import { useInView } from 'react-intersection-observer'
 import { motion } from 'framer-motion'
 
 export const About = () => {
-    const cardRefs = datas.map(() => {
+    const cardRefs = datas.cardsAbout.map(() => {
         const [ref, inView] = useInView({
             triggerOnce: false,
             threshold: 0.6,
@@ -25,13 +25,22 @@ export const About = () => {
             className="about" 
             id='about'
         >
-            <Title
-                text="Sócio Fundador do Escritório"
-                widthSquare="80%"
-            />
+            <div className="divTitleMobile">
+                <Title
+                    text={datas.title}
+                    square={false}
+                    widthSquare='0'
+                />
+            </div>
+            <div className="divTitleDesktop">
+                <Title
+                    text={datas.title}
+                    widthSquare="80%"
+                />
+            </div>
             
             <article className="allInfosAbout">
-                {datas.map(item => (
+                {datas.cardsAbout.map(item => (
                     <div
                         ref={cardRefs[item.id].ref} 
                         className={`infoAboutCard ${item.id % 2 === 0 ? 'even' : 'odd'}`} 
@@ -100,9 +109,9 @@ export const About = () => {
                             {item.socialMedias && (
                                 <div className="socialMedias">
                                     {item.socialMedias.map(media => (
-                                        <div className="media" key={media.to}>
+                                        <a href={media.to} className="media" key={media.to}>
                                             <media.Icon />
-                                        </div>
+                                        </a>
                                     ))}
                                 </div>
                             )}

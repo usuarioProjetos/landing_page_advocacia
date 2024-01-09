@@ -43,7 +43,7 @@ export const Contact = () => {
                                         className='elementForm input' 
                                         type={item.type} 
                                         name={item.name}
-                                        required
+                                        required 
                                     />
                                 )}
                             </label>
@@ -74,12 +74,12 @@ export const Contact = () => {
 
                 <div className="infosSocialMedias">
                     {DatasSocialMedia.map(socialMedia => (
-                        <div className="socialMedia" key={socialMedia.name}>
+                        <a href={socialMedia.to} target='_blank' className="socialMedia" key={socialMedia.name}>
                             <div className="contentSocialMedia">
                                 <socialMedia.Icon />
                                 <p>{socialMedia.name}</p>
                             </div>
-                        </div>
+                        </a>
                     ))}
                 </div>
             </div>

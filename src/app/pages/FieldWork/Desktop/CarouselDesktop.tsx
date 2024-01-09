@@ -66,7 +66,7 @@ export const CarouselDesktop = () => {
                     {cards && cards.map(item => (
                         <article className="card" key={item.id}>
                             <SwiperSlide
-                                className='swiperSliderItem'
+                                className={`swiperSliderItem swiperSliderItem${item.id}`}
                                 onMouseEnter={() => onMouseEnterCard(item)}
                             >
                                 <div className={`imageDiv imageDiv${item.id} ${item.showContent === false ? 'opacityImage' : ''}`}>

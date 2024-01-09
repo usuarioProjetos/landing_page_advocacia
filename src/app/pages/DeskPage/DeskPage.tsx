@@ -75,13 +75,17 @@ export const DeskPage = () => {
             >
                 {DatasDeskPage.items.map(item => (
                     <SwiperSlide
-                        className={`item_container`}
+                        className={`item_container item_container_${item.id}`}
                         key={item.id}
                     >
-                        <Image
+                        <div 
+                            style={{ backgroundImage: `url(${item.src.src})` }}    
+                            className="content"
+                        ></div>
+                        {/* <Image
                             src={item.src} 
                             alt='Imagem do escritório'
-                        />
+                        /> */}
                     </SwiperSlide>
                 ))}
             </Swiper>

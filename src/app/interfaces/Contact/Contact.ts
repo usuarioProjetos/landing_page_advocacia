@@ -9,6 +9,7 @@ export interface IDatasInput {
 export interface IDatasSocialMedia {
     Icon: any
     name: string
+    to: string
 }
 export const Logo = {
     src: LogoImage

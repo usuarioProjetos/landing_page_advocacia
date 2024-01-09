@@ -1,3 +1,10 @@
+.about .divTitleMobile h2 {
+    display: block;
+    text-shadow: 1px 1px #8ED6CC;
+}
+.about .divTitleDesktop {
+    display: none;
+}
 /* All Components */
 .allInfosAbout {
     width: 100%;
@@ -65,11 +72,12 @@
 .allInfosAbout .infoAboutCard .divContentImage .divImage img {
     width: auto;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     overflow: auto;
     border-radius: 4em;
 }
 .allInfosAbout .infoAboutCard .divContentImage.divContentImage0 .divImage img {
+    scale: 1.1;
     border-radius: 0;
     border-top-right-radius: 2em;
     border-bottom-left-radius: 2em;
@@ -118,6 +126,7 @@
 .allInfosAbout .infoAboutCard .contentTexts .socialMedias .media {
     transition: all .2s;
     cursor: pointer;
+    color: rgba(0, 88, 78, .6);
 }
 .allInfosAbout .infoAboutCard .contentTexts .socialMedias .media:hover {
     color: rgba(0, 88, 78, 1);
@@ -142,6 +151,12 @@
     .allInfosAbout .infoAboutCard .contentTexts {
         width: 75%;
     }
+    .about .divTitleMobile {
+        display: none;
+    }
+    .about .divTitleDesktop {
+        display: block;
+    }
 }
 @media (min-width: 600px) {
     .allInfosAbout .infoAboutCard .contentTexts {
@@ -157,6 +172,11 @@
     }
     .allInfosAbout .infoAboutCard .divContentImage {
         height: 370px;
+    }
+    .allInfosAbout .infoAboutCard .divContentImage.divContentImage0 .divImage img {
+        width: auto;
+        height: 100%;
+        scale: 1.1;
     }
 }
 
@@ -202,8 +222,7 @@
     .allInfosAbout .infoAboutCard .divContentImage .divImage img {
         width: auto;
         max-width: 100%;
-        max-height: 400px;
-        
+        max-height: 400px; 
     }
     .allInfosAbout .infoAboutCard.even .divContentImage .divImage img {
         box-shadow: 10px 10px rgba(0, 88, 78, .5);
@@ -214,6 +233,9 @@
     .allInfosAbout .infoAboutCard .divContentImage .divImage img {
         border-radius: 0 !important;
         object-fit: cover;
+    }
+    .allInfosAbout .infoAboutCard .divContentImage.divContentImage0 .divImage img {
+        min-width: 80%;
     }
     .allInfosAbout .infoAboutCard .contentTexts {
         min-height: 100%;
@@ -311,8 +333,11 @@
         width: auto;
         max-height: 550px;
     }
+    .allInfosAbout .infoAboutCard .divContentImage.divContentImage0 .divImage img {
+        scale: 1;
+    }
     .allInfosAbout .infoAboutCard .contentTexts {
-        padding-inline: 5em;
+        padding-inline: 4em;
     }
     .allInfosAbout .infoAboutCard .contentTexts h3 {
         font-size: 2.1em;
