@@ -14,7 +14,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 // Animations
-import { 
+import {
     variantsTitleItem, 
     variantsContentTexts,
     variantsParagraphContentText,
@@ -73,6 +73,7 @@ export const CarouselDesktop = () => {
                                     <Image
                                         src={item.image}
                                         alt=''
+                                        loading='eager'
                                     />
                                     {item.showContent === false && (
                                         <motion.h4
@@ -96,6 +97,7 @@ export const CarouselDesktop = () => {
                                     <Image 
                                         src={DatasFieldPageDesktop.icon}
                                         alt='Ícone de Martelo'
+                                        loading='eager'
                                     />
                                 </div>
                                 
