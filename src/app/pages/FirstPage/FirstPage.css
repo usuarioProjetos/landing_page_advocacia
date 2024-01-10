@@ -19,17 +19,14 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* scale: .8; */
     position: absolute;
     left: 0;
-    /* margin-left: -350px; */
     opacity: .9;
 }
 
 .firstPage .content {
     width: 100vw;
-    /* background-color: aqua; */
-    margin-bottom: 9em;
+    margin-bottom: 6em;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -39,13 +36,12 @@
 .firstPage .content h1 {
     font-size: 32px;
     width: 300px;
-    /* background-color: rgb(0, 53, 100); */
+    text-shadow: 2px 2px 3px rgba(0, 74, 65, .8);
     color: #fff;
     font-weight: 400;
     margin-bottom: 42px;
 }
 .firstPage .btns {
-    /* background-color: azure; */
     display: flex;
     justify-content: space-between;
     gap: 30px;
@@ -59,7 +55,6 @@
     font-size: 18px;
     transition: all .2s;
     box-shadow: 2px 2px rgb(143, 214, 205, .4);
-    /* border: 1px solid; */
 }
 .bgDark button {
     background-color: #004A41;
@@ -86,7 +81,6 @@
 .firstPage .scroll-arrow {
     width: 50px;
     height: 30px;
-    /* background-color: rgb(6, 79, 143); */
     position: absolute;
     bottom: 2em;
     margin: auto;
@@ -95,7 +89,6 @@
 .firstPage .scroll-arrow img {
     height: 100%;
     width: 100%;
-    /* background-color: aquamarine; */
 }
 
 @keyframes scrollArrow {

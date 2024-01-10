@@ -37,21 +37,9 @@ export const FirstPage = () => {
             <AnimatePresence>
                 <motion.div 
                     key={activeImageIndex}
-                    // initial={{ opacity: 0 }}
-                    // animate={{ opacity: 1 }}
-                    // exit={{ opacity: 0 }}
-                    // transition={{ duration: 1 }}
                     className="divImageBg"
                 >
                     <motion.img 
-                        // initial={{ scale: 0, opacity: 0, borderRadius: '30%' }}
-                        // animate={{ scale: 1, opacity: 1, borderRadius: 0 }}
-                        // exit={{ opacity: 0 }}
-
-                        // initial={{ x: '-100vw', opacity: 1 }}
-                        // animate={{ x: '0vw', opacity: 1, transition: { duration: 1.1 } }}
-                        // exit={{ x: '100vh', opacity: .7, transition: { duration: 1.3 } }}
-
                         initial={loadingPage ? { opacity: 1 } : { opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}

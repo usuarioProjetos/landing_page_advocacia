@@ -6,9 +6,6 @@ import './Contact.css'
 import { DatasInput, DatasSocialMedia } from '@/app/datas/Contact'
 
 export const Contact = () => {
-    const onSubmitForm = (e: any) => {
-        e.preventDefault()
-    }
     return (
         <footer 
             className="contact"
@@ -17,12 +14,13 @@ export const Contact = () => {
             <Title
                 text='Contato'
                 widthSquare='80%'
+                key={'contactPageKey'}
             />
 
             <div className="formContent">
                 <form 
                     className="form"
-                    action="https://formsubmit.co/diegosouzacruz464@gmail.com"
+                    action="https://formsubmit.co/frederico@cevitherezapaiva.com.br"
                     method='POST'    
                 >
                     <div className="contextInputs">

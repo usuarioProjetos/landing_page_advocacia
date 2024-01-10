@@ -10,8 +10,6 @@ import { CarouselDesktop } from './Desktop/CarouselDesktop'
 import { MobileFieldWork } from './Mobile/MobileFieldWork'
 // Datas
 import { DatasFieldPageDesktop } from '@/app/datas/FieldWork'
-// Framer-motion
-import { motion } from 'framer-motion'
 
 export const FieldWork = () => {  
     const [currentItem, setCurrentItem] = useState<number>(0);
@@ -40,6 +38,7 @@ export const FieldWork = () => {
                 <Title
                     text='Áreas de atuação'
                     widthSquare='80%'
+                    key={'fieldWorkPageTitleKey'}
                 />
 
                 <article className="containerCards">

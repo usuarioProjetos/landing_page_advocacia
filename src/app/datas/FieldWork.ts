@@ -94,7 +94,6 @@ export const DatasFieldPageDesktop: IDatasFirstWorkDesktop = {
             id: 3,
             image: DireitoConsumidorImg,
             title: 'Direito do consumidor',
-            // text: 'Priorizamos a proteção dos interesses dos consumidores em várias situações, assegurando que suas necessidades sejam atendidas.',
             text: 'Nosso foco é proteger os interesses dos consumidores em várias situações, garantindo atendimento eficaz.',
             showContent: false
         },

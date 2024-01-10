@@ -19,6 +19,7 @@ export const BecauseWe = () => {
             <Title 
                 text={datas.titleSection}
                 widthSquare='85%'
+                key={datas.titleSection}
             />
 
             <div className="contentTexts">
@@ -33,7 +34,8 @@ export const BecauseWe = () => {
                 {datas.cards.map(card => (
                     <motion.div 
                         ref={cardRefs[card.id].ref}
-                        className={`card card${card.id} ${card.id % 2 === 0 ? 'even' : 'odd'}`} key={card.id}
+                        className={`card card${card.id} ${card.id % 2 === 0 ? 'even' : 'odd'}`} 
+                        key={card.id}
                     >
                         
                         <motion.div 
@@ -59,24 +61,3 @@ export const BecauseWe = () => {
         </section>
     )
 }
-
-{/* <article className="becauseWe">
-    <Title>
-
-    </Title>
-
-    <div className="contentTexts">
-        <p></p>
-        <div></div>
-        <div></div>
-    </div>
-
-    <div className="cards">
-        <div className="card">
-            <Icon />
-            <h4></h4>
-            <p></p>
-        </div>
-    </div>
-
-</article> */}

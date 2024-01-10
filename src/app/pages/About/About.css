@@ -116,7 +116,7 @@
 }
 .allInfosAbout .infoAboutCard .contentTexts .socialMedias {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     color: rgba(0, 88, 78, 0.37);
     gap: 1em;
     margin-bottom: .5em;

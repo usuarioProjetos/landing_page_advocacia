@@ -1,7 +1,4 @@
-.allCards {
-    
-    /* overflow-x: hidden; */
-}
+
 /* Card */
 .allCards .card {
     min-height: 610px;
@@ -11,14 +8,8 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    /* background-color: rgba(0,0,0,.2); */
 }
-/* .allCards .card.card3, .allCards .card.card1 {
-    min-height: 680px;
-}
-.allCards .card.card2 {
-    min-height: 660px;
-} */
+
 /* Texts */
 .allCards .card .texts {
     padding-inline: 2em 1em;
@@ -80,8 +71,6 @@
     height: 98%;
     bottom: 0px;
     background-color: #D2EEEA;
-
-    /* box-shadow: 10px 10px #0f0; */
 }
 
 .allCards .card .squares .bgSquare.bgSquareShadow {
@@ -113,22 +102,11 @@
     clip-path: polygon(82% 0, 100% 17%, 100% 91%, 24% 91%, 0 94%, 0 8%) !important;
 
 }
-/* .allCards .card .squares .bgSquare.bgSquare0 {
-    height: 105%;
-    -webkit-clip-path: polygon(82% 0, 100% 17%, 100% 91%, 24% 91%, 0 94%, 0 8%) !important;
-    clip-path: polygon(82% 0, 100% 17%, 100% 91%, 24% 91%, 0 94%, 0 8%) !important;
-}
-.allCards .card .squares .bgSquare.bgSquareShadow.bgSquareShadow0 {
-    height: 107%;
-    -webkit-clip-path: polygon(82% 0, 100% 17%, 100% 91%, 24% 91%, 0 94%, 0 8%) !important;
-    clip-path: polygon(82% 0, 100% 17%, 100% 91%, 24% 91%, 0 94%, 0 8%) !important;
-
-} */
 
 /* Lines */
 .allCards .card .lines {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     height: 5vh;
     width: 100%;
 }
@@ -136,7 +114,6 @@
     border-bottom: 2px solid #000;
     height: 140%;
     width: 100%;
-    /* margin-top: 5px; */
 }
 
 @media (max-width: 330px) {

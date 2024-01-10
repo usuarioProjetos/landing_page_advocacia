@@ -5,14 +5,12 @@ import { IDatasDeskPage } from '../interfaces/DeskPage/DeskPage'
 import { 
     ImgOne,
     ImgTwo,
-    ImgThree,
     ImgFour,
     ImgFive,
     ImgSix,
     ImgSeven,
     ImgEight,
     ImgNine,
-    ImgTen
 } from '../assets/desk/deskImages'
 
 export const DatasDeskPage: IDatasDeskPage = {

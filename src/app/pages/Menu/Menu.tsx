@@ -1,9 +1,9 @@
 "use client"
 import Image from 'next/image'
 import './Menu.css'
-import { DatasMenu, delayAnimationExit } from '@/app/datas/Menu'
-import { useRef, useEffect, useLayoutEffect, SetStateAction } from 'react'
-import { Variants, motion } from 'framer-motion'
+import { DatasMenu } from '@/app/datas/Menu'
+import { SetStateAction } from 'react'
+import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { variantsAnimationLogoMenu, variantsAnimationMenu } from '@/app/animations/Menu'
 
@@ -17,7 +17,6 @@ export const Menu = ({ showMenu = false, setShowMenu }: Props) => {
     const handleClick = (e: React.MouseEvent, targetId: string) => {
         e.preventDefault();
     
-        // Aguarda o tempo de delay antes de rolar para a seção desejada
         setTimeout(() => {
           const targetElement = document.getElementById(targetId);
     
@@ -37,20 +36,13 @@ export const Menu = ({ showMenu = false, setShowMenu }: Props) => {
                     className='menu'
                     variants={variantsAnimationMenu}
                     animate={showMenu ? "animate" : "exit"}
-                    // style={showMenu ? { minHeight: '500px' } : {}}
                 >
                     <article className="contentMenu">
-                        <ul className="listMenu"
-                            // style={showMenu ? { minHeight: '400px' } : {}}
-                        >
+                        <ul className="listMenu">
                             {DatasMenu.items.map(itemMenu => (
                                 <motion.li 
                                     className={`itemMenu itemMenu${itemMenu.id}`} 
                                     key={itemMenu.id}
-                                    // variants={variantsAnimationTexts}
-                                    // initial={{
-                                    //     x: -50
-                                    // }}
                                     animate={showMenu ? {
                                         opacity: 1,
                                         x: 0, 
@@ -87,13 +79,12 @@ export const Menu = ({ showMenu = false, setShowMenu }: Props) => {
                         variants={variantsAnimationLogoMenu}
                         initial={"initial"}
                         animate={showMenu ? "animate" : "exit"}
-                        // style={showMenu ? { minHeight: '100px' } : {}}
                     >
                         <Image 
                             src={DatasMenu.logo}
-                            alt='Logo Chevitereza Paiva'
+                            alt='Logo Cevithereza Paiva'
                         />
-                        <p className='companyName'>chevitereza paiva <br /> advocacia</p>
+                        <p className='companyName'>cevithereza paiva <br /> advocacia</p>
                     </motion.div>
                 </motion.section>
             

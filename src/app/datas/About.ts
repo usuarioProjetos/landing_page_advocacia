@@ -1,5 +1,5 @@
 // Interfaces
-import { ICardAbout, IDatasAbout } from "../interfaces/About/About"
+import { IDatasAbout } from "../interfaces/About/About"
 
 // Logo / icons / images 
 import { 
@@ -20,7 +20,7 @@ export const DatasAbout: IDatasAbout = {
         {
             id: 0,
             image: Professional,
-            title: 'Frederico Chevithereza Paiva',
+            title: 'Frederico Cevithereza Paiva',
             textMobile: 'Frederico Cevithereza Paiva, advogado formado pela Universidade Presbiteriana Mackenzie, com mais de 8 anos de experiência em processos cíveis, recuperação judicial, falência, revisão e elaboração de contratos e pareceres.',
             textDesktop: 'O sócio do Cevithereza Paiva Advocacia, Frederico Cevithereza Paiva, formou-se em Direito pela Universidade Presbiteriana Mackenzie, atuando em renomados escritórios de advocacia por mais de 8 anos, com experiência na condução de processos cíveis, recuperação judicial e falência, elaboração de contratos e pareceres.',
             firstElement: true,

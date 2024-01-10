@@ -1,4 +1,4 @@
-import Professional from './tenImagecopy.png'
+import Professional from './professional.png'
 import HistoriaCompetencias from './historiaCompetencias.svg'
 import FormacaoAcademica from './formacaoAcademica.svg'
 import CriptoMoedas from './criptoMoedas.svg'

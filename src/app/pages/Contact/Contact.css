@@ -57,7 +57,6 @@
     /* Submit */
 .contact .formContent .form .contentSubmit {
     width: 100%;
-    /* text-align: center; */
 }
 .contact .formContent .form .contentSubmit .labelInputSubmit button {
     height: 2.5rem;
@@ -109,7 +108,6 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    /* margin-bottom: 1rem; */
 }
 .contact .infosContact .infosSocialMedias .socialMedia {
     width: 100%;

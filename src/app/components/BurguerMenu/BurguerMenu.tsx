@@ -1,7 +1,6 @@
 "use client"
-import { motion, useAnimation } from 'framer-motion'
+import { motion } from 'framer-motion'
 import './BurguerMenu.css'
-import { useState, useRef } from 'react'
 import { animationLine1, animationLine2, animationLine3 } from '@/app/animations/BurguerMenu'
 
 interface Props {

@@ -1,5 +1,4 @@
 header {
-    /* background-color: rgb(119, 119, 119); */
     width: 100vw;
     padding: 1.5em 1em 1em 1em;
     display: flex;
@@ -7,8 +6,6 @@ header {
     align-items: center;
     position: fixed;
     z-index: 5;
-    /* background-color: antiquewhite; */
-    /* opacity: .2; */
     backdrop-filter: blur(10px);
 }
 header img {

@@ -1,11 +1,11 @@
 import type { Metadata } from 'next'
-import { Inter, Raleway, Radley } from 'next/font/google'
+import { Raleway } from 'next/font/google'
 
 const raleway = Raleway({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Chevitereza Paiva',
-  description: 'Site de divulgação do serviço de advocacia, prestado pela empresa Chevitereza Paiva',
+  title: 'Cevithereza Paiva',
+  description: 'Site de divulgação do serviço de advocacia, prestado pela empresa Cevithereza Paiva',
   icons: {
     icon: [
       '/favicon/favicon.ico'

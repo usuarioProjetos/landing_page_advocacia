@@ -7,7 +7,7 @@ import Image from "next/image"
 import { DatasAbout as datas } from "@/app/datas/About"
 // Components
 import { Title } from "@/app/components/Title/Title"
-// 
+// Framer-motion
 import { useInView } from 'react-intersection-observer'
 import { motion } from 'framer-motion'
 
@@ -30,12 +30,14 @@ export const About = () => {
                     text={datas.title}
                     square={false}
                     widthSquare='0'
+                    key={datas.title}
                 />
             </div>
             <div className="divTitleDesktop">
                 <Title
                     text={datas.title}
                     widthSquare="80%"
+                    key={datas.title}
                 />
             </div>
             
@@ -109,7 +111,7 @@ export const About = () => {
                             {item.socialMedias && (
                                 <div className="socialMedias">
                                     {item.socialMedias.map(media => (
-                                        <a href={media.to} className="media" key={media.to}>
+                                        <a href={media.to} target='_blank' className="media" key={media.to}>
                                             <media.Icon />
                                         </a>
                                     ))}

@@ -1,8 +1,6 @@
 "use client"
-// CSS
 // React
 import { useState, useEffect } from 'react'
-import Image from 'next/image'
 // Swiper
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
@@ -53,6 +51,7 @@ export const DeskPage = () => {
             <Title
                 text={DatasDeskPage.title}
                 widthSquare='80%'
+                key={DatasDeskPage.title}
             />
             
             <Swiper
@@ -82,10 +81,6 @@ export const DeskPage = () => {
                             style={{ backgroundImage: `url(${item.src.src})` }}    
                             className="content"
                         ></div>
-                        {/* <Image
-                            src={item.src} 
-                            alt='Imagem do escritório'
-                        /> */}
                     </SwiperSlide>
                 ))}
             </Swiper>

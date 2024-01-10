@@ -3,7 +3,7 @@
 import './CarouselDesktop.css'
 // Next/React
 import Image from 'next/image'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 // Datas
 import { DatasFieldPageDesktop } from '@/app/datas/FieldWork'
 // Interfaces
@@ -121,7 +121,6 @@ export const CarouselDesktop = () => {
                                     >{item.title}</motion.h3>
                                     <motion.p
                                         variants={variantsParagraphContentText}
-                                        // initial={"initial"}
                                         animate={item.showContent ? "animate" : "exit"}
                                         transition={{
                                             type:' tween',

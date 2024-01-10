@@ -79,10 +79,6 @@
     width: 95%;
     object-fit: contain;
 }
-/* .cards .card .iconDiv3 img {
-    width: 95%;
-    object-fit: contain;
-} */
 
 .cards .card .titleCard {
     font-size: 1.3em;
@@ -117,8 +113,8 @@
     }
     .cards .card .iconDiv {
         height: 98%;
-        align-self: end;
-        justify-self: end;
+        align-self: flex-end;
+        justify-self: flex-end;
     }
     .cards .card.card1 .iconDiv,
     .cards .card.card3 .iconDiv {
@@ -165,8 +161,6 @@
         align-items: center;
     }
     .cards .card .iconDiv img {
-        /* width: 95%;
-        max-height: 100%; */
         width: auto;
         height: 100%;
     }

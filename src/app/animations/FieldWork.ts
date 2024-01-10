@@ -5,7 +5,6 @@ export const variantsContentTexts: Variants = {
     animate: {  opacity: 1, y: 0 },
     exit : {
         opacity: 0,
-        // display:'none',
         y: -200,
     }
 }
