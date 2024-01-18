@@ -25,7 +25,13 @@ export default function RootLayout({
           <meta charSet="UTF-8" />
           <title>Cevithereza Paiva Advocacia</title>
           <meta name="description" content="Site de divulgação do serviço de advocacia, prestado pela empresa Cevithereza Paiva." key="desc" />
-      </Head>
+        
+          <noscript>
+            <meta charSet="UTF-8" />
+            <title>Cevithereza Paiva Advocacia</title>
+            <meta name="description" content="Site de divulgação do serviço de advocacia, prestado pela empresa Cevithereza Paiva." key="desc" />
+          </noscript>
+        </Head>
       <body className={raleway.className}>{children}</body>
     </html>
   )
