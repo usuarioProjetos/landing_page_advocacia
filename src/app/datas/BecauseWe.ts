@@ -30,7 +30,7 @@ export const DatasBecauseWe: IDatasBecauseWe = {
             id: 2,
             icon: SecurityIcon,
             title: 'Compromisso Ético',
-            text: 'Valorização da ética e a confidencialidade na relação cliente-advogado, sublinhando a importância atribuída a princípios éticos e confidencialidade.',
+            text: 'Valorização da ética e a confidencialidade na relação cliente-advogado.',
         },
         {
             id: 3,

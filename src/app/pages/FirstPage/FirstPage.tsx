@@ -10,6 +10,7 @@ import { useState, useEffect } from 'react'
 
 // Framer-motion
 import { AnimatePresence, motion } from 'framer-motion'
+import Head from 'next/head'
 
 export const FirstPage = () => {
     const [activeImageIndex, setActiveImageIndex] = useState(0);
@@ -33,7 +34,6 @@ export const FirstPage = () => {
 
     return (
         <section className="firstPage" id='home'>
-
             <AnimatePresence>
                 <motion.div 
                     key={activeImageIndex}

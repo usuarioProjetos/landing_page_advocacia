@@ -40,8 +40,8 @@ export const DatasAbout: IDatasAbout = {
             id: 1,
             image: HistoriaCompetencias,
             title: 'História e Competências',
-            textMobile: 'Em janeiro de 2022, o sócio inaugurou seu próprio escritório de advocacia (Cevithereza Paiva Advocacia), que oferece uma gama de serviços legais em parceria com escritórios especializados em várias áreas do direito. No primeiro ano de operação, o escritório alcançou sucesso significativo',
-            textDesktop: 'Em janeiro de 2022 o sócio colocou em prática um projeto profissional que precedia o seu ingresso à faculdade de direito, abrindo seu próprio escritório full service (Cevithereza Paiva Advocacia), contando com a parceria interdisciplinar de escritórios especializados em direito trabalhista, família, consumidor, LGPD, imobiliário e criminal. Já no primeiro ano de atuação o escritório alcançou sucesso significativo',
+            textMobile: 'Em janeiro de 2022 o sócio colocou em prática um projeto profissional que precedia o seu ingresso à faculdade de direito, abrindo seu próprio escritório full service (Cevithereza Paiva Advocacia), contando com a parceria interdisciplinar de escritórios especializados em direito criminal e tributário. Já no primeiro ano de atuação o escritório alcançou sucesso significativo.',
+            textDesktop: 'Em janeiro de 2022 o sócio colocou em prática um projeto profissional que precedia o seu ingresso à faculdade de direito, abrindo seu próprio escritório full service (Cevithereza Paiva Advocacia), contando com a parceria interdisciplinar de escritórios especializados em direito criminal e tributário. Já no primeiro ano de atuação o escritório alcançou sucesso significativo.',
         },
     
         {
@@ -56,8 +56,8 @@ export const DatasAbout: IDatasAbout = {
             id: 3,
             image: CriptoMoedas,
             title: 'Explorando Criptoativos e a CPI das Pirâmides',
-            textMobile: 'O sócio Frederico, em colaboração com Hugo Maciel(criminalista) e Natanael Oliveira Cruz(tributalista), escreveu um artigo no CONJUR sobre a legalidade dos criptoativos e sua relação com a CPI das \'Pirâmides Financeiras\'. Leia o artigo completo em: __ https://www.conjur.com.br/2023-ago-01/opiniao-cpi-piramides-aspectos-legais-criptos',
-            textDesktop: 'O sócio Frederico, em colaboração com Hugo Maciel(criminalista) e Natanael Oliveira Cruz(tributalista), escreveu um artigo no CONJUR sobre a legalidade dos criptoativos e sua relação com a CPI das \'Pirâmides Financeiras\'. Leia o artigo completo em: __ https://www.conjur.com.br/2023-ago-01/opiniao-cpi-piramides-aspectos-legais-criptos',
+            textMobile: 'O sócio Frederico, em colaboração com Hugo Maciel(criminalista) e Natanael Oliveira Cruz(tributarista), escreveu um artigo no CONJUR sobre a legalidade dos criptoativos e sua relação com a CPI das \'Pirâmides Financeiras\'. Leia o artigo completo em: __ https://www.conjur.com.br/2023-ago-01/opiniao-cpi-piramides-aspectos-legais-criptos',
+            textDesktop: 'O sócio Frederico, em colaboração com Hugo Maciel(criminalista) e Natanael Oliveira Cruz(tributarista), escreveu um artigo no CONJUR sobre a legalidade dos criptoativos e sua relação com a CPI das \'Pirâmides Financeiras\'. Leia o artigo completo em: __ https://www.conjur.com.br/2023-ago-01/opiniao-cpi-piramides-aspectos-legais-criptos',
         
         },
     ]

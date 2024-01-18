@@ -119,6 +119,64 @@
     opacity: 0;
 }
 
+.swiper-navigation {
+    position: relative;
+    z-index: 10;
+    color: #f00;
+    background-color: #f00;
+}
+
+.swiper-prev,
+.swiper-next-2, 
+.swiper-next-3 {
+    font-size: 2.5em;
+    z-index: 20;
+    position: absolute;
+    top: 14%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    background-color: #fff;
+    color: #000;
+    border: 1px solid rgba(255, 255, 255, .6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.swiper-prev {
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, .5);
+}
+.swiper-next-2, 
+.swiper-next-3 {
+    box-shadow: -2px 2px 3px rgba(0, 0, 0, .5);
+}
+
+.swiper-prev:hover,
+.swiper-next-2:hover, 
+.swiper-next-3:hover {
+    background-color: rgba(126, 126, 126, .7);
+    color: #fff;
+    border: 1px solid #fff;
+}
+.swiper-prev {
+    left: 5px;
+}
+.swiper-next-2, 
+.swiper-next-3 {
+    right: 5px;
+}
+
+.swiper-next-2 {
+    display: flex;
+}
+.swiper-next-3 {
+    display: none;
+}
+
 @media (min-width: 930px) {
     .containerCarousel .swiperSlider .swiperSliderItem.swiperSliderItem5 .contentTexts h3 {
         font-size: 1.6em;
@@ -148,6 +206,12 @@
     .containerCarousel .swiperSlider .swiperSliderItem.swiperSliderItem5 .contentTexts h3 {
         font-size: 1.4em;
         width: 100%;
+    }
+    .swiper-next-2 {
+        display: none;
+    }
+    .swiper-next-3 {
+        display: flex;
     }
 }
 @media (min-width: 1400px) { 

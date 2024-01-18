@@ -3,13 +3,14 @@
 import './CarouselDesktop.css'
 // Next/React
 import Image from 'next/image'
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 // Datas
 import { DatasFieldPageDesktop } from '@/app/datas/FieldWork'
 // Interfaces
 import { ICardFieldWork } from '@/app/interfaces/FieldWork/FieldWork'
 // Swiper
 import { Swiper, SwiperSlide } from 'swiper/react'
+import SwiperCore from 'swiper/core'
 // Framer-motion
 import { motion, AnimatePresence } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
@@ -27,6 +28,11 @@ export const CarouselDesktop = () => {
             triggerOnce: true,
             threshold: 0.3,
         });
+        const [centerFirstElement, setCenterFirstElement] = useState<boolean>(false)
+        const [centerLastElement2, setCenterLastElement2] = useState<boolean>(false)
+        const [centerLastElement3, setCenterLastElement3] = useState<boolean>(false)
+
+        const swiperRef = useRef<any>()
         
         const onMouseEnterCard = (card: ICardFieldWork) => {
             setCards(() => {
@@ -40,9 +46,28 @@ export const CarouselDesktop = () => {
                 })
                 return newValuesCards
             })
-            console.log('Hover')
             
         }
+        const onSlideChange = () => {
+            setCenterFirstElement(false)
+            setCenterLastElement2(false)
+            setCenterLastElement3(false)
+            const activeIndex = swiperRef.current?.realIndex;
+            const totalSlides = cards.length;
+            
+            if (activeIndex === totalSlides - 2) {
+                setCenterLastElement2(true)
+            }
+    
+            if (activeIndex === 0) {
+                setCenterFirstElement(true)
+                setCenterLastElement2(false)
+                setCenterLastElement3(false)
+            } else if (activeIndex === totalSlides - 1) {
+                setCenterFirstElement(false)
+                setCenterLastElement3(true)
+            }
+        };
 
         return (
         <motion.section 
@@ -51,6 +76,7 @@ export const CarouselDesktop = () => {
             initial={{ opacity: 0, scale: 0.75 }}
             animate={inView ? { opacity: 1, scale: 1, transition: { duration: .6 } } : {}}
         >
+            
             <Swiper
                 className='swiperSlider'
                 slidesPerView={'auto'}
@@ -58,7 +84,15 @@ export const CarouselDesktop = () => {
                 initialSlide={1}
                 centeredSlides={false}
                 grabCursor={true}
+                ref={swiperRef}
+                onSwiper={(swiper) => (swiperRef.current = swiper)}
+                onSlideChange={onSlideChange}
             >
+                {!centerFirstElement && (
+                    <div className="swiper-prev" onClick={() => swiperRef.current?.slidePrev()}>
+                        &lt;
+                    </div>
+                )}
                 
                 <SwiperSlide style={{ display: 'none' }} className='swiperSliderItem spareElement' />
                 
@@ -136,6 +170,17 @@ export const CarouselDesktop = () => {
                     ))}
                 </AnimatePresence>
                 <SwiperSlide style={{ display: 'none' }} className='swiperSliderItem spareElement' />
+                
+                {!centerLastElement2 && (
+                    <div className="swiper-next-2" onClick={() => swiperRef.current?.slideNext()}>
+                        &gt;
+                    </div>
+                )}
+                {!centerLastElement3 && (
+                    <div className="swiper-next-3" onClick={() => swiperRef.current?.slideNext()}>
+                        &gt;
+                    </div>
+                )}
             </Swiper>
         </motion.section>
     )
