@@ -5,7 +5,7 @@ import Head from 'next/head'
 const raleway = Raleway({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Cevithereza Paiva',
+  title: 'Cevithereza Paiva Advocacia',
   description: 'Site de divulgação do serviço de advocacia, prestado pela empresa Cevithereza Paiva.',
   icons: {
     icon: [
